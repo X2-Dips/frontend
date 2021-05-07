@@ -255,15 +255,14 @@ import axios from "axios";
         </div>
 
 
-        <form>
+        <form action="" className="property_form">
 
 
-            <div class="row">
-                <div class="col">
-                    <div class="form-group">
-                        <label for="FormSelect1">Apartment Type* </label>
-                        <br></br>
-                        <select class="form_control" id="FormSelect1"  value ={this.state.apartmentType} onChange={this.changeApartmentTypeHandler} > 
+            <div className="row">
+                <div className="col">
+                    <div className="form-group">
+                        <label htmlfor="Apartment_Type">Apartment Type* </label>
+                        <select className="form_control" id="FormSelect1"  value ={this.state.apartmentType} onChange={this.changeApartmentTypeHandler} > 
                             <option>Select</option>
                             <option>Apartments</option>
                             <option>Hostel</option>
@@ -273,20 +272,19 @@ import axios from "axios";
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label for="FormSelect1">Apartment Name*</label>
-                        <br></br>
-                        <input type="text" class="form_control" id="formInput" placeholder="  Apartment Size"  value ={this.state.apartmentName} onChange={this.changeApartmentNameHandler}/>
+                        <label htmlFor="FormSelect1">Apartment Name*</label>
+                        <input type="text" class="form_control" id="formInput" placeholder="  Apartment Name"  value ={this.state.apartmentName} onChange={this.changeApartmentNameHandler}/>
 
                     </div>
                 </div>
             </div>
-            <br></br>
+            
 
             <div class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">Property Age*</label>
-                    <br></br>
+                   
                         <select class="form_control" id="FormSelect1"  value ={this.state.propertyAge}
                         onChange={this.changePropertyAgeHandler} >
                             <option>Select</option>
@@ -300,7 +298,7 @@ import axios from "axios";
                 <div class="col">
                     <div class="form-group">
                         <label for="FormSelect1">Facing</label>
-                        <br></br>
+                       
                         <select class="form_control" id="FormSelect1"  value ={this.state.facing} onChange={this.changeFacingHandler}>
                             <option>Select</option>
                             <option>North</option>
@@ -311,20 +309,20 @@ import axios from "axios";
                     </div>
                 </div>
             </div>
-            <br></br>
+            
 
             <div class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="formInput">Property Size*</label>
-                    <br></br>
+                   
                 <input type="text" class="form_control" id="formInput" placeholder="Property Size" value={this.state.propertySize} onChange={this.changePropertySizeHandler}/>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">BHK Type*</label>
-                    <br></br>
+                    
                         <select class="form_control" id="FormSelect1"  value ={this.state.bhkType} onChange={this.changeBhkTypeHandler}>
                         <option>Select</option>
                             <option>1 BHK</option>
@@ -334,12 +332,12 @@ import axios from "axios";
                     </div>
                 </div>
             </div>
-            <br></br>
+            
             <div class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">Floor*</label>
-                    <br></br>
+                   
                         <select class="form_control" id="FormSelect1"  value ={this.state.floor} onChange={this.changeFloorHandler}>
                             <option>Select</option>
                             <option>Ground</option>
@@ -352,7 +350,7 @@ import axios from "axios";
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">Total Floor*</label>
-                    <br></br>
+                    
                         <select class="form_control" id="FormSelect1"  value ={this.state.totalFloor} onChange={this.changeTotalFloorHandler}>
                             <option>Select</option>
                             <option>Ground Only</option>
@@ -363,7 +361,7 @@ import axios from "axios";
                     </div>
                 </div>
             </div>
-            <br></br>            
+                       
             <hr class="hr"/>
             <div class="text-center">
             {/* <h1>Locality Details</h1> */}
@@ -373,9 +371,9 @@ import axios from "axios";
             <div class="row">
                 <div class="col">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">City*</label>
-                        <br></br>
-                        <select class="form_control" id="exampleFormControlSelect1" value={this.state.city} onChange={this.changeCityHandler}>
+                        <label htmlFor="FormSelect1">City*</label>
+                        
+                        <select class="form_control" id="FormSelect1" value={this.state.city} onChange={this.changeCityHandler}>
                             <option>Select</option>
                             <option>Bangalore</option>
                             <option>gwalior</option>
@@ -384,22 +382,28 @@ import axios from "axios";
                         </select>
                     </div>
                 </div>
-                <div class="col">
-                    <div class="form-group">
-                        <label for="exampleFormControlSelect1">Locality</label>
-                        <br></br>
-                        <input type="text" class="form_control" id="formGroupExampleInput"
+                <div className="col">
+                    <div className="form-group">
+                        <label for="FormSelect1">Locality</label>
+                        
+                        <input type="text" class="form_control" id="FormSelect1"
                             placeholder="Near By LandMark" value={this.state.locality} onChange={this.changeLocalityHandler} />
                     </div>
                 </div>
 
             </div>
-            <br></br>
+            
+            <div className="row">
+            <div className="col">
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Street/Area</label>
-                <br></br>
-                <textarea name="" class="form-control1" id="" cols="30" rows="10" value={this.state.street} onChange={this.changeStreetHandler}></textarea>
-            </div><br></br>
+                <label htmlFor="FormSelect1">Street/Area</label>
+                
+                <textarea name="" className="form-control1" id="" cols="30" rows="10" value={this.state.street} onChange={this.changeStreetHandler}></textarea>
+            </div>
+            </div>
+            </div>
+            
+            <br></br>
             <hr class="hr"/>
             <div class="text-center">
             <h1 className="heading">Mark Locality on Map</h1>
@@ -412,86 +416,88 @@ import axios from "axios";
                 tabindex="0"></iframe> */}
             <br></br>
             <hr class="hr"/>
-            <div class="text-center">
+         
             <div class="text-center">
             <h1 className="heading">Rental Details</h1>
             <h4>Provide Rental Details About Your Property</h4>
             </div>
            
            
-            </div>
+            
             <hr class="hr"/>
-            <h4>Property Available For</h4>
+            <label>Property Available For</label>
             <div class="form-group">
-            <br></br>
-                <input type="radio" id="formGroupExampleInput"/>
             
-                <label for="formGroupExampleInput">  Only Rent</label>
-                
-            
-                <label for="formGroupExampleInput">  Only lease</label>
+            <input type="radio" name="radio" checked/> 
+                         <label class="formGroupExampleInput">  Only Rent 
+                        <span class="check"></span> 
+                        </label> 
+                        <br></br>
+                        
+                         
+                       
+                         <input type="radio"name="radio"/>  
+                         <label class="formGroupExampleInput">  Only Lease 
+                         <span class="check"></span>  
+                               </label>
             </div>
-            <br></br>
-            <br></br>
+            
             <div class="row">
                 <div class="col">
+                <div className="form-group">
                     <label for="formGroupExampleInput">Expected Rent*</label>
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"  value ={this.state.expectedRent} onChange={this.changeExpectedRentHandler}>
-                                Rs.
-                            </span>
-                        </div>
+                   
+                       
                         <input type="text" class="form_control" placeholder="max upto 1.2lacks" aria-label="Username"
-                            aria-describedby="basic-addon1"/>
-                    </div>
+                            aria-describedby="basic-addon1" value ={this.state.expectedRent} onChange={this.changeExpectedRentHandler}/>
+                    
+                </div>
                 </div>
                 <div class="col">
+                <div className="form-group">
                     <label for="formGroupExampleInput">Expected Deposit*</label>
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"  value ={this.state.expectedDeposit} onChange={this.changeExpectedDepositHandler}>
-                                Rs.
-                            </span>
-                        </div>
                         <input type="text" class="form_control" placeholder="max upto 10k" aria-label="Username"
                             aria-describedby="basic-addon1"/>
                     </div>
                 </div>
 
             </div>
-            <br></br>
+            
             <div class="form-group">
                 <input type="checkbox" id="formGroupExampleInput"/>
                 <label for="formGroupExampleInput">  Negotiable</label>
             </div>
-            <br>
 
-            </br>
+            
+           
+            <div className="row">
+                <div className="col">
+            
             <div class="form-group">
-                <label for="exampleFormControlSelect1">Maintenance</label>
-                <br></br>
-                <select class="form_control-2" id="exampleFormControlSelect1"  value ={this.state.maintenance} onChange={this.changeMaintenanceHandler}>
+                <label for="FormSelect1">Maintenance</label>
+                
+                <select className="form_control" id="FormSelect1"  value ={this.state.maintenance} onChange={this.changeMaintenanceHandler}>
                     <option>Select</option>
                     <option>Maintenance Included</option>
                 </select>
             </div>
-            <br></br>
+          </div>
+            </div>
 
              <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Available From*</label>
-                        <br></br>
+                        
                         <input type="date" class="form_control"  value ={this.state.availableFrom} onChange={this.changeAvailableFromHandler}/>
                     </div>
                 </div>
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Preferd Tenants*</label>
-                        <br></br>
+                      
                         <select class="form_control" id="exampleFormControlSelect1"  value ={this.state.preferdTenants} onChange={this.changePreferdTenantsHandler}>
                             <option>Select</option>
                             <option>Faminly</option>
@@ -501,13 +507,13 @@ import axios from "axios";
                 </div>
 
             </div>
-            <br></br> 
+            
 
             <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Furnishing*</label>
-                        <br></br>
+                        
                         <select class="form_control" id="exampleFormControlSelect1"  value ={this.state.furnishing} onChange={this.changeFurnishingHandler}>
                             <option>Select</option>
                             <option>Furnished</option>
@@ -518,7 +524,7 @@ import axios from "axios";
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Parking*</label>
-                        <br></br>
+                       
                         <select class="form_control" id="exampleFormControlSelect1"  value ={this.state.parking} onChange={this.changeParkingHandler}>
                             <option>Select</option>
                             <option>Bike</option>
@@ -528,15 +534,20 @@ import axios from "axios";
                 </div>
 
             </div>
-            <br></br>
+
+            <div className="row">
+                <div className="col">
+           
 
             <div class="form-group">
                 <label for="exampleFormControlSelect1">Description</label>
-                <br></br>
+            
                 <textarea name="" class="form-control1" id="" cols="30" rows="10"  value ={this.state.description} onChange={this.changeDescriptionHandler}></textarea>
             </div>
+            </div>
+            </div>
 
-            <br></br>
+          
             <hr class="hr"/>
 
 
@@ -605,31 +616,29 @@ import axios from "axios";
 
             <div class="row">
                 <div class="col">
+                <div className="form-group">
                     <label for="formGroupExampleInput">Bathrooms(s)*</label>
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                           
-                        </div>
+                   
                         <input type="text" class="form-control-1" placeholder="0" aria-label="Username"
                             aria-describedby="basic-addon1"value ={this.state.bathroom} onChange={this.changeBathroomHandler}/>
                     </div>
                 </div>
                 <div class="col">
+                <div className="form-group">
                     <label for="formGroupExampleInput">Balcony</label> 
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                           
-                        </div>
+                    
+                        
                         <input type="text" class="form-control-1" placeholder="0" aria-label="Username"
                             aria-describedby="basic-addon1" value ={this.state.balcony} onChange={this.changeBalconyHandler}/>
-                    </div> 
+                     
                  </div> 
+                 </div>
                  <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Water Supply</label>
-                        <br></br>
+                       
                         <select class="form-control-1" id="exampleFormControlSelect1"  value ={this.state.waterSupply} onChange={this.changeWaterSupplyHandler}>
                             <option>Select</option>
                             <option>Borewell</option>
@@ -639,14 +648,14 @@ import axios from "axios";
                 </div>
 
             </div>
-            <br></br>
+           
 
 
             <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Gyms*</label>
-                        <br></br>
+                     
                         <select class="form-control-1" id="exampleFormControlSelect1"  value ={this.state.gyms} onChange={this.changeGymsHandler}>
                             <option>Select</option>
                             <option>yes</option>
@@ -657,7 +666,7 @@ import axios from "axios";
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Non Veg Allowed*</label>
-                        <br></br>
+                       
                         <select class="form-control-1" id="exampleFormControlSelect1"  value ={this.state.nonVeg} onChange={this.changeNonVegHandler}>
                             <option>Select</option>
                             <option>yes</option>
@@ -668,7 +677,7 @@ import axios from "axios";
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Gated Security*</label>
-                        <br></br>
+                        
                         <select class="form-control-1" id="exampleFormControlSelect1"  value ={this.state.gatedSecurity} onChange={this.changeGatedSecurityHandler}>
                             <option>Select</option>
                             <option>yes</option>
@@ -684,7 +693,7 @@ import axios from "axios";
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Who will show the house*</label>
-                        <br></br>
+                        
                         <select class="form_control" id="exampleFormControlSelect1" value ={this.state.whoWillShowTheHouse} onChange={this.changeWhoWillShowTheHouseHandler}>
                             <option>Select</option>
                             <option>Neighbours</option>
@@ -694,20 +703,20 @@ import axios from "axios";
                     </div>
                 </div> 
                 <div class="col">
+                <div className="form-group">
                     <label for="exampleFormControlSelect1">Contact No*</label>
-                    <br></br>
+                    
 
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            {/* <span class="input-group-text" id="basic-addon1"  value ={this.state.contactNo} onChange={this.changeContactNoHandler}>
-                                 <span><img src="./images/adds/india.svg" width="20px" alt=""/></span> 
-                                 <span> +91</span> 
-                             </span>  */}
-                         </div>
+        
+                         
                         <input type="number" class="form_control" placeholder="+91" aria-label="Secondary Number"
                             aria-describedby="basic-addon1"  value ={this.state.contactNo} onChange={this.changeContactNoHandler}/>
-                    </div>
-                </div> 
+                   
+                   </div>
+                    {/* </div>
+                    
+                </div>  */}
+                </div>
 
 
             </div>

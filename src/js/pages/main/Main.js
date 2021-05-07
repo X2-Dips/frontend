@@ -17,6 +17,7 @@ import Amenities from "./Amenities";
 import PhotosVideos from "./PhotosVideos";
 import Hostel from "./Hostel";
 
+
 const Main = () => {
   return (
     <div className="main">
@@ -25,7 +26,7 @@ const Main = () => {
           <Route path="/" exact component={Home} />
           <Route path="/products" exact component={Products} />
           <Route path="/products/product:id" exact component={ProductScreen} />
-          <Route path="/" exact component={Homeform} />
+          <Route path="/homeform" exact component={Homeform} />
 
           <Route path="/services" exact component={Services} />
           <Route path="/contact" exact component={Contact} />
@@ -38,6 +39,7 @@ const Main = () => {
           <Route path="/photos" exact component={PhotosVideos}/>
           <Route path="/hostel" exact component={Hostel}/>
           <Route path="/signup" exact component={SignUp} />
+         
           <Route path="*" component={ErrorPage} />
         </Switch>
       </div>
