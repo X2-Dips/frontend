@@ -27,8 +27,10 @@ import axios from "axios";
           city:'',
           locality:'',
           street:'',
+          propertyAvailableFor:'',
           expectedRent:'',
           expectedDeposit:'',
+          negotiable:[],
           maintenance:'',
           availableFrom:'',
           preferdTenants:'',
@@ -43,10 +45,7 @@ import axios from "axios";
           gatedSecurity:'',
           whoWillShowTheHouse:'',
           contactNo:'',
-          lift:'',
-          internetService:'',
-          airConditioner:'',
-          gym:''
+          amenity:[]
 
         }
         this.changeApartmentTypeHandler=this.changeApartmentTypeHandler.bind(this);
@@ -60,8 +59,10 @@ import axios from "axios";
         this.changeCityHandler=this.changeCityHandler.bind(this);
         this.changeLocalityHandler=this.changeLocalityHandler.bind(this);
         this.changeStreetHandler=this.changeStreetHandler.bind(this);
+        this.changePropertyAvailabeFor = this.changePropertyAvailabeFor.bind(this);
         this.changeExpectedRentHandler=this.changeExpectedRentHandler.bind(this);
         this.changeExpectedDepositHandler=this.changeExpectedDepositHandler.bind(this);
+        this.changeNegotiable=this.changeNegotiable.bind(this);
         this.changeMaintenanceHandler=this.changeMaintenanceHandler.bind(this);
         this.changeAvailableFromHandler=this.changeAvailableFromHandler.bind(this);
         this.changePreferdTenantsHandler=this.changePreferdTenantsHandler.bind(this);
@@ -76,10 +77,7 @@ import axios from "axios";
         this.changeGatedSecurityHandler=this.changeGatedSecurityHandler.bind(this);
         this.changeWhoWillShowTheHouseHandler=this.changeWhoWillShowTheHouseHandler.bind(this);
         this.changeContactNoHandler=this.changeContactNoHandler.bind(this);
-        this.changeLiftHandler=this.changeLiftHandler.bind(this);
-        this.changeInternetServiceHandler=this.changeInternetServiceHandler.bind(this);
-        this.changeAirConditionerHandler=this.changeAirConditionerHandler.bind(this);
-        this.changeGymHandler=this.changeGymHandler.bind(this);
+        this.changeAmenity=this.changeAmenity.bind(this);
         
 
         
@@ -103,8 +101,10 @@ import axios from "axios";
         city:this.state.city,
         locality:this.state.locality,
         street:this.state.street,
+        propertyAvailableFor:this.state.propertyAvailableFor,
         expectedRent:this.state.expectedRent,
         expectedDeposit:this.state.expectedDeposit,
+        negotiable:this.state.negotiable,
         maintenance:this.state.maintenance,
         availableFrom:this.state.availableFrom,
         preferdTenants:this.state.preferdTenants,
@@ -119,10 +119,7 @@ import axios from "axios";
         gatedSecurity:this.state.gatedSecurity,
         whoWillShowTheHouse:this.state.whoWillShowTheHouse,
         contactNo:this.state.contactNo,
-        lift:this.state.lift,
-        internetService:this.state.internetService,
-        airConditioner:this.state.airConditioner,
-        gym:this.state.gym
+       amenity:this.state.amenity
     }
 
         console.log(" property details "+ JSON.stringify(propertyDetails));
@@ -162,12 +159,27 @@ import axios from "axios";
     changeStreetHandler=(e)=>{
         this.setState({street: e.target.value});
     }
+    changePropertyAvailabeFor=(e)=>{
+        this.setState({propertyAvailableFor: e.target.value});
+    }
     changeExpectedRentHandler=(e)=>{
         this.setState({expectedRent: e.target.value});
     }
     
     changeExpectedDepositHandler=(e)=>{
         this.setState({expectedDeposit: e.target.value});
+    }
+    changeNegotiable=(e)=>{
+        const target=e.target;
+        var value=target.value;
+        if(target.checked){
+            
+            this.setState({negotiable:[...this.state.negotiable, value]});
+            
+           
+        }else{
+            this.state.negotiable.splice(value,1);
+        }
     }
     
     changeMaintenanceHandler=(e)=>{
@@ -225,19 +237,17 @@ import axios from "axios";
         this.setState({contactNo: e.target.value});
     }
     
-    changeLiftHandler=(e)=>{
-        this.setState({lift: e.target.value});
-    }
-    
-    changeInternetServiceHandler=(e)=>{
-        this.setState({internetService: e.target.value});
-    }
-    changeAirConditionerHandler=(e)=>{
-        this.setState({airConditioner: e.target.value});
-    }
-    
-    changeGymHandler=(e)=>{
-        this.setState({gym: e.target.value});
+    changeAmenity=(e)=>{
+        const target=e.target;
+        var value=target.value;
+        if(target.checked){
+            
+            this.setState({amenity:[...this.state.amenity, value]});
+            
+           
+        }else{
+            this.state.amenity.splice(value,1);
+        }
     }
     
     
@@ -428,7 +438,7 @@ import axios from "axios";
             <label>Property Available For</label>
             <div class="form-group">
             
-            <input type="radio" name="radio" checked/> 
+            <input type="radio" name="radio"  value="rent" onChange={this.changePropertyAvailabeFor}/> 
                          <label class="formGroupExampleInput">  Only Rent 
                         <span class="check"></span> 
                         </label> 
@@ -436,7 +446,7 @@ import axios from "axios";
                         
                          
                        
-                         <input type="radio"name="radio"/>  
+                         <input type="radio"name="radio"  value="lease" onChange={this.changePropertyAvailabeFor}/>  
                          <label class="formGroupExampleInput">  Only Lease 
                          <span class="check"></span>  
                                </label>
@@ -459,14 +469,14 @@ import axios from "axios";
                     <label for="formGroupExampleInput">Expected Deposit*</label>
 
                         <input type="text" class="form_control" placeholder="max upto 10k" aria-label="Username"
-                            aria-describedby="basic-addon1"/>
+                            aria-describedby="basic-addon1" value ={this.state.expectedDeposit} onChange={this.changeExpectedDepositHandler}/>
                     </div>
                 </div>
 
             </div>
             
             <div class="form-group">
-                <input type="checkbox" id="formGroupExampleInput"/>
+                <input type="checkbox" id="formGroupExampleInput"  value="negotiable" onChange={this.changeNegotiable}/>
                 <label for="formGroupExampleInput">  Negotiable</label>
             </div>
 
@@ -729,27 +739,27 @@ import axios from "axios";
                 <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="checkbox" id="formGroupExampleInput"  value ={this.state.lift} onChange={this.changeLiftHandler}/>
+                            <input type="checkbox" id="formGroupExampleInput"  value="lift" onChange={this.changeAmenity}/>
                             <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> Lift</label>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="checkbox" id="formGroupExampleInput"  value ={this.state.internetService} onChange={this.changeInternetServiceHandler}/>
+                            <input type="checkbox" id="formGroupExampleInput"   value="internet" onChange={this.changeAmenity}/>
                             <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> Internet
                                 Services          </label>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="checkbox" id="formGroupExampleInput"  value ={this.state.airConditioner} onChange={this.changeAirConditionerHandler}/>
+                            <input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAmenity}/>
                             <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> Air
                                 Conditioner       </label>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                            <input type="checkbox" id="formGroupExampleInput"  value ={this.state.gym} onChange={this.changeGymHandler}/>
+                            <input type="checkbox" id="formGroupExampleInput"   value="gym" onChange={this.changeAmenity}/>
                             <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> Gym</label>
                         </div>
                     </div>
