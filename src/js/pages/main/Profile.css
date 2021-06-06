@@ -1,0 +1,18 @@
+.circle{
+    width: 180px;
+      height: 180px;
+      -webkit-border-radius: 25px;
+      -moz-border-radius: 25px;
+      border-radius: 180px;
+      border:1px solid black;
+      background-image: url(../../images/ants/profile.png);
+      background-size: cover;
+}
+
+.profile_img{
+    width: 180px;
+      height: 180px;
+      border-radius: 180px;
+
+}
+
