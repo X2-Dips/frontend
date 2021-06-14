@@ -10,17 +10,11 @@ import SignUp from "./SignUp";
 import AddProperty from "./AddProperty"
 
 import PostProperty from "./PostProperty";
-<<<<<<< HEAD
-// import Homeform from "./Homeform";
-// import LocalityDetails from "./LocalityDetails";
-// import RentalDetails from "./RentalDetails";
-// import Amenities from "./Amenities";
-// import PhotosVideos from "./PhotosVideos";
+
+
  import Hostel from "./Hostel";
-// import CardDetail from "./CardDetail";
-// import AxiosTable from "./AxiosTable";
+
 import Rent from "./Rent";
-=======
 import Homeform from "./Homeform";
 import LocalityDetails from "./LocalityDetails";
 import RentalDetails from "./RentalDetails";
@@ -110,12 +104,10 @@ class Main extends Component {
           <Route path="/products/:id" exact component={Product} />
           <Route path="/rent/:id" exact component={Rent}/>
        
-          {/* <Route path="/homeform" exact component={Homeform} /> */}
-
+         
 =======
-          <Route path="/products" exact component={Products} />
-          <Route path="/products/product:id" exact component={ProductScreen} />
-          <Route path="/homeform" exact component={Homeform} />
+         
+          
           
 >>>>>>> 056ef308774ba527a9eb8b27ba36ec54b15a4624
           <Route path="/services" exact component={Services} />
@@ -130,10 +122,6 @@ class Main extends Component {
           <Route path="/hostel" exact component={Hostel}/>
           <Route path="/signup" exact component={SignUp} />
 <<<<<<< HEAD
-          {/* <Route path="/card_detail" exact component={CardDetail} /> */}
-           {/* <Route path="/axiostable/:id" exact component={AxiosTable} /> 
-          <Route path="/axiostable" exact component={AxiosTable} /> */}
-         
          
 =======
           <Route path="/signuptest"
