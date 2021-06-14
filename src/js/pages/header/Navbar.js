@@ -1,18 +1,20 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link , NavLink} from "react-router-dom";
 import Menus from "./Menus";
+import { ACCESS_TOKEN } from '../constants';
 import "./navbar.css";
 import rprLogo from "../../images/adds/rprLogo.jpg";
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
   const [click, setClick] = useState(false);
 
   const handleClick = () => {
     setClick(!click);
   };
 
+  //const name=props.currentUser.name;
   const closeMenu = () => {
     setClick(false);
   };
@@ -22,6 +24,21 @@ const Navbar = () => {
   } else {
     document.body.style.overflow = "initial";
   }
+
+
+  const logoutfun=()=>{
+    localStorage.removeItem(ACCESS_TOKEN);
+    Object.assign(false, props.authenticated);
+    Object.assign(null, props.currentUser);
+    console.log("hello");
+
+  }
+
+
+  const style = {
+    marginLeft:'20px',
+    color:'maroon'
+  };
   return (
     <>
       <nav className="container nav flexBox jcspb h-100">
@@ -33,18 +50,42 @@ const Navbar = () => {
         </Link>
 
         <div className="nav-items">
-          <Link className="nav-member-links" to="/add_property">
+          <Link className="nav-member-links"   to="/add_property">
             Add Property
           </Link>
 
 
         <div className="nav-items">
-          <Link className="nav-member-links" to="/login">
-            Login
-          </Link>
-          <Link className="nav-member-links" to="/signup">
-            SignUp
-          </Link>
+        { props.authenticated ? (
+          <div className="row">
+                  <div className="col-sm-2">
+                  <ul>
+                  <Link to={{
+                    pathname:'/profile',
+                    
+                      name:props.currentUser.name,
+                    
+                  }} ><p className="nav-member-links" style={style}>{props.currentUser.name}</p></Link>
+                  
+                  </ul>
+                  </div>
+                  <div className="col-sm-2">
+                  <a onClick={props.onLogout} className="nav-member-links">Logout</a>
+                  </div>
+              </div>
+      ): (
+          
+              <>
+              <div>
+                  <NavLink className="nav-member-links" to="/logintest">Login</NavLink>        
+                  </div>
+                  <div>
+                  <NavLink className="nav-member-links" to="/signuptest">Signup</NavLink>       
+                  </div>
+             </>
+      )}
+
+         
           
           <div
             onClick={handleClick}
