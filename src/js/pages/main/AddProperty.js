@@ -57,24 +57,24 @@
 // export default AddProperty;
 
 
-import React,{useState} from 'react'
+import React from 'react'
 import "./bootstrap.css"
 
-const types = ['Rent', 'Hostel/PG'];
-function ToogleGroup(){
-    const [active, setActive] = useState(types[0]);
-    return <div>
+// const types = ['Rent', 'Hostel/PG'];
+// function ToogleGroup(){
+//     const [active, setActive] = useState(types[0]);
+//     return <div>
      
-        {types.map(type => (
+//         {types.map(type => (
            
-            <button className="inp-btn1">
-                {type}
-            </button>
+//             <button className="inp-btn1">
+//                 {type}
+//             </button>
            
-        ))}
+//         ))}
         
-    </div>
-}
+//     </div>
+// }
 
 
 const AddProperty = () => {

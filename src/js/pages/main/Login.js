@@ -76,13 +76,15 @@ firebase.auth().signInWithPhoneNumber(phoneNumber, appVerifier)
           
           <div className="form-group">
         
-          <span className="mobi" >India(+91) </span>
+          {/* <span className="mobi" >India(+91) </span> */}
+          <label>India(+91)</label>
            <input type="number" className="loginmobile" placeholder="Mobile Number" />
            <br></br>
-           <span><h5>We'll call or text you to confirm your number.Standard message and data rates apply.</h5>
+           <span><h6>We'll call or text you to confirm your number.
+    </h6>
 </span>
 <br></br>
- <input type="button" value="Continue" className="inp-btn" />
+ <input type="button" value="Continue" className="inp-btn1" />
           </div>
 
           {/* <form action="" className="login-form">
