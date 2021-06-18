@@ -5,8 +5,8 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Products from "./Products";
 import Services from "./Services";
-import Login from "./Login";
-import SignUp from "./SignUp";
+
+
 import AddProperty from "./AddProperty"
 import ProductScreen from "./screens/ProductScreen";
 import PostProperty from "./PostProperty";
@@ -23,14 +23,16 @@ import NotFound from '../header/NotFound';
 import LoadingIndicator from '../header/LoadingIndicator';
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
-import PrivateRoute from '../header/PrivateRoute';
-import Alert from 'react-s-alert';
+
 import 'react-s-alert/dist/s-alert-default.css';
 import 'react-s-alert/dist/s-alert-css-effects/slide.css';
-import Header from '../header/Header';
+
 import LoginForm from '../user/login/LoginForm';
 import Profile from './Profile';
-
+import MyProperty from "./MyProperty";
+import Dashboard from "../admin_dashboard/Dashboard";
+import OrderList from "../admin_dashboard/OrderList";
+import Customer from "../admin_dashboard/Customer";
 
 
 
@@ -55,12 +57,15 @@ class Main extends Component {
     })
     getCurrentUser()
     .then(response => {
+      console.log("hello loads")
       this.setState({
         currentUser: response,
         authenticated: true,
         loading: false
       });
+      this.props.history.push("/")
     }).catch(error => {
+      console.log("not ok");
       this.setState({
         loading: false
       });  
@@ -71,9 +76,12 @@ class Main extends Component {
     localStorage.removeItem(ACCESS_TOKEN);
     this.setState({
       authenticated: false,
-      //currentUser: null
+      currentUser: null,
+      
     });
-    Alert.success("You're safely logged out!");
+    alert("You're safely logged out!");
+    this.props.history.push("/")
+    
   }
 
   componentDidMount() {
@@ -100,7 +108,7 @@ class Main extends Component {
           
           <Route path="/services" exact component={Services} />
           <Route path="/contact" exact component={Contact} />
-          <Route path="/login" exact component={Login} />
+         
           <Route path="/add_property" exact component={AddProperty}/>
           <Route path="/addpropertyform" exact component={PostProperty}/>
           <Route path="/locality_details" exact component={LocalityDetails}/>
@@ -108,7 +116,7 @@ class Main extends Component {
           <Route path="/amenities_details" exact component={Amenities}/>
           <Route path="/photos" exact component={PhotosVideos}/>
           <Route path="/hostel" exact component={Hostel}/>
-          <Route path="/signup" exact component={SignUp} />
+          
           <Route path="/signuptest"
               component={Signuptest}></Route>
           <Route path="/logintest"
@@ -117,7 +125,12 @@ class Main extends Component {
              component={LoginForm} authenticated={this.state.authenticated} currentUser={this.state.currentUser} loading={this.state.loading} loadCurrentlyLoggedInUser={this.loadCurrentlyLoggedInUser}></Route>
           
              <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>
-             <Route path="/profile" component={Profile} name="antra"/>
+             <Route path="/profile" component={Profile} />
+             <Route path="/myproperty" component={MyProperty}/>
+             <Route path="/dashboard" component={Dashboard}/>
+             <Route path="/orderlist" component={OrderList}/>
+             <Route path="/customer" component={Customer}/>
+            
           <Route path="*" component={ErrorPage} />
         </Switch>
       </div>

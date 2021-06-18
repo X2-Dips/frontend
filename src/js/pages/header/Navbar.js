@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { Link , NavLink} from "react-router-dom";
+import { Link } from "react-router-dom";
 import Menus from "./Menus";
-import { ACCESS_TOKEN } from '../constants';
+
 import "./navbar.css";
 import rprLogo from "../../images/adds/rprLogo.jpg";
-
+import {CgProfile} from 'react-icons/cg';
 
 
 const Navbar = (props) => {
@@ -21,24 +21,22 @@ const Navbar = (props) => {
 
   if (click) {
     document.body.style.overflow = "hidden";
+    
   } else {
     document.body.style.overflow = "initial";
   }
 
 
-  const logoutfun=()=>{
-    localStorage.removeItem(ACCESS_TOKEN);
-    Object.assign(false, props.authenticated);
-    Object.assign(null, props.currentUser);
-    console.log("hello");
 
-  }
 
 
   const style = {
     marginLeft:'20px',
     color:'maroon'
   };
+
+ 
+
   return (
     <>
       <nav className="container nav flexBox jcspb h-100">
@@ -61,6 +59,7 @@ const Navbar = (props) => {
 
 
         <div className="nav-items">
+
         { props.authenticated ? (
           <div className="row">
                   <div className="col-sm-2">
@@ -70,25 +69,26 @@ const Navbar = (props) => {
                     
                       name:props.currentUser.name,
                     
-                  }} ><p className="nav-member-links" style={style}>{props.currentUser.name}</p></Link>
+                  }} ><p className="nav-member-links" style={style}><CgProfile className="prof_img" size={25}/> &nbsp;{props.currentUser.name}</p></Link>
                   
                   </ul>
                   </div>
                   <div className="col-sm-2">
-                  <a onClick={props.onLogout} className="nav-member-links">Logout</a>
+                  <a onClick={props.onLogout}  className="nav-member-links">Logout</a>
                   </div>
               </div>
       ): (
           
               <>
               <div>
-                  <NavLink className="nav-member-links" to="/logintest">Login</NavLink>        
+                  <Link className="nav-member-links" to="/logintest">Login</Link>        
                   </div>
                   <div>
-                  <NavLink className="nav-member-links" to="/signuptest">Signup</NavLink>       
-                  </div>
+                  <Link className="nav-member-links" to="/signuptest">Signup</Link>       
+              </div>
              </>
-      )}
+      )
+    }
 
          
           
@@ -103,7 +103,7 @@ const Navbar = (props) => {
         </div>
         </div>
       </nav>
-      <Menus click={click} closeMenu={closeMenu} />
+      <Menus click={click} closeMenu={closeMenu} authenticated={props.authenticated} onLogout={props.onLogout}  />
     </>
   );
 };

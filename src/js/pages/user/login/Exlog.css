@@ -15,6 +15,12 @@
     padding: 35px;
 }
 
+@media screen and (max-width:600px){
+  .signup-content{
+    width: 80%;
+  }
+}
+
 .social-btn {
     margin-bottom: 15px;
     font-weight: 400;

@@ -243,6 +243,19 @@
 
   }
   
+  @media (max-width: 1000px){
+    .signup-container{
+      width: 100%;
+  }
+  
+  .signup-content {
+    width: 100vw;
+  }
+  }
+
+
+
+
  
   .property_form{background-color:#fff;border-radius:1rem;padding:4rem 5rem;display:flex;flex-direction:column;grid-gap:2rem;gap:2rem;width:100%}
   .property_form .row .col .form-group .FormSelect1{display:flex;align-items:center;justify-content:center;width:50%;grid-gap:0 1rem;gap:0rem;height:6rem}
@@ -314,5 +327,4 @@
 
 
  
-  
   
