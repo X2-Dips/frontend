@@ -3,18 +3,14 @@ import { Route, Switch } from "react-router";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home";
 import Contact from "./Contact";
-import Products from "./Products";
+import Products from "../main/Product";
 import Services from "./Services";
 
 
 import AddProperty from "./AddProperty"
-import ProductScreen from "./screens/ProductScreen";
+// import ProductScreen from "./screens/ProductScreen";
 import PostProperty from "./PostProperty";
-import Homeform from "./Homeform";
-import LocalityDetails from "./LocalityDetails";
-import RentalDetails from "./RentalDetails";
-import Amenities from "./Amenities";
-import PhotosVideos from "./PhotosVideos";
+
 import Hostel from "./Hostel";
 import Signuptest from "../user/signup/Signup"
 import Logintest from "../user/login/Login"
@@ -29,7 +25,7 @@ import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 import LoginForm from '../user/login/LoginForm';
 import Profile from './Profile';
-import MyProperty from "./MyProperty";
+import MyProperty from "./MyProperty"
 import Dashboard from "../admin_dashboard/Dashboard";
 import OrderList from "../admin_dashboard/OrderList";
 import Customer from "../admin_dashboard/Customer";
@@ -102,19 +98,17 @@ class Main extends Component {
       <div className="container-full h-100">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/products" exact component={Products} />
-          <Route path="/products/product:id" exact component={ProductScreen} />
-          <Route path="/homeform" exact component={Homeform} />
+         <Route path="/products" exact component={Products} />
+         
+         
           
           <Route path="/services" exact component={Services} />
           <Route path="/contact" exact component={Contact} />
          
           <Route path="/add_property" exact component={AddProperty}/>
           <Route path="/addpropertyform" exact component={PostProperty}/>
-          <Route path="/locality_details" exact component={LocalityDetails}/>
-          <Route path="/rental_details" exact component={RentalDetails}/>
-          <Route path="/amenities_details" exact component={Amenities}/>
-          <Route path="/photos" exact component={PhotosVideos}/>
+          
+        
           <Route path="/hostel" exact component={Hostel}/>
           
           <Route path="/signuptest"

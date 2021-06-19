@@ -6,7 +6,7 @@
       width: 22rem;
       height: 22rem;     
       border-radius: 4px;
-      position: relative;
+     
 
 }
 
@@ -138,8 +138,7 @@
 
 
 .imageblock{
-  float:right;
-  margin-right: 20%;
+
 }
 
 .profile-form{
@@ -188,15 +187,12 @@
 
   .imagecol
   {
-    
     float: none;
     display: block;
     width: 100%;
   }
   .formcol{
-    float: none;
-    display: block;
-    width: 100%;
+   width:100%;
   }
 
   .form-group{
@@ -204,5 +200,11 @@
   }
   input{
     width: 90%;
+  }
+  .sign-up-form{
+    width: 90%;
+  }
+  .form-center{
+    width: 80%;
   }
 }

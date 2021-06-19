@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import './bootstrap.css'
 
-
+import profimage from '../../images/ants/square_profile.png';
 import './Profile.css';
 
 import { Link } from 'react-router-dom';
@@ -50,7 +50,7 @@ const[image]=useState("");
         
         <div className="imagecol sign-up-form">
         <div className="imageblock">
-        <img src={image} className="profile-img" alt="Profile"/>
+        <img src={profimage} className="profile-img" alt="Profile pic"/>
         <br/>
         <input type="file" name="Choose profile pic" className="files" id="Profile"/> 
         <h3>Choose profile Picture </h3>
