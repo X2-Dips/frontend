@@ -299,4 +299,8 @@ width: 100%;
 .signup-content {
   width: 100vw;
 }
+
+.form-center .sign-up-form .form-col-div{
+  width: 100vw;
+}
 }

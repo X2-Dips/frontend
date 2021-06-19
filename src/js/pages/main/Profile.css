@@ -148,11 +148,7 @@
 
 }
 
-.formcol{
-  width: 55%;
-  float: right;
-  margin-right: 2%;
-}
+
 
 .imagecol{
   width: 40%;
@@ -205,6 +201,6 @@
     width: 90%;
   }
   .form-center{
-    width: 80%;
+    margin-left: -140px;
   }
 }
