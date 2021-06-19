@@ -13,7 +13,7 @@ import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 const Header=(props)=>{
  
-      
+      {/*NOTE: Props Come from App.js*/}
   
   return (
     <div className="header">
