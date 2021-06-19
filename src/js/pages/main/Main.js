@@ -131,8 +131,8 @@ class Main extends Component {
              <Route path="/orderlist" component={OrderList}/>
              <Route path="/customer" component={Customer}/>
             
-          <Route path="*" component={ErrorPage} />
-        </Switch>
+
+             </Switch>
       </div>
     </div>
   );

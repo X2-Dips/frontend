@@ -1,0 +1,118 @@
+
+.productdetail{
+    width: 30%;
+    display: inline;
+  }
+.image1{
+    width: 30%;
+    display: inline-block;
+    padding-left: 25px;
+    padding-right: 25px;
+} 
+.rentdetail{
+    width: 30%;
+    display: inline;
+  }
+
+.picdetail{
+  font: bold;
+  margin-left: 15%;
+  margin-top: 0%;
+
+ 
+  
+}
+.btn8{
+  margin-left: 15%;
+  right: 30px;
+  width: 30%;
+  flex: center;
+  height: 4rem;
+  border-radius:.5rem;
+  font-size: 1.6rem;
+  background-color: rgb(3, 3, 73);
+  color: antiquewhite;
+
+ 
+  
+}
+
+ 
+.image2{
+   width: 35%;
+  display: inline-block;
+  padding-left: 25px;
+  padding-right: 25px; 
+ 
+} 
+.box{
+  flex: 1;
+  min-width: 300px;
+  min-height: 400px;
+  overflow: hidden;
+  margin: 15px;
+  padding: 15px;
+  box-shadow: 4px 5px 10px #ddd;
+  transition: 0.5s ease-in-out;
+  cursor: pointer;
+}
+.box:hover{
+  box-shadow: none;
+}
+.box h3{
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 10px;
+}
+.details span{
+  color: teal;
+  padding-right: 10px;
+}
+.text p{
+  line-height: 1.4;
+  margin: 5px 0;
+}
+.text span{
+  color:teal;
+  padding-right: 10px;
+}
+.link{
+text-decoration: none;
+color: white;
+background: #555;
+display: block;
+text-align: center;
+height: 40px;
+line-height: 40px;
+text-transform: uppercase;
+margin-top: 15px;
+}
+.heart{
+  padding-left: 75%;
+  
+  
+  
+  
+  
+  
+}
+.leftright{
+  padding-top: 25%;
+  padding-left: 0%;
+  
+}
+.box .box1{
+  letter-spacing: normal;
+  font-weight: 400;
+}
+.leftright h5{
+  font-size: x-large;
+  color: wheat;
+  letter-spacing: 3px;
+}
+.arrow{
+  align-items: center;
+  margin-top: 30%;
+  background:transparent;
+  color: beige;
+}

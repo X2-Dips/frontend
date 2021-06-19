@@ -54,13 +54,21 @@
     display: flex;
     -ms-flex-wrap: wrap; /* IE10 */
     flex-wrap: wrap;
-    margin: 0 -16px;
+    margin: 0px;
   }
   
   .col {
-    -ms-flex: 25%; /* IE10 */
-    flex: 25%;
+    -ms-flex: 15%; /* IE10 */
+    flex: 15%;
+    margin-left: 0%;
+    margin-right: 0cm;
   }
+  .rent-heading{
+    text-align: center;
+    margin-bottom: 3%;
+    margin-top: 2%;
+  }
+   
   .label {
     margin-bottom: 10px;
     display: block;
@@ -254,8 +262,19 @@
   
   .hostel_form .row .col{flex-direction:column;grid-gap:2rem 0;gap:2rem 0;margin:4rem 0}
   .hostel_form .row .col .form-group{width:100%}
-
-
+  .form-group3 img{
+    width: 80px;
+  }
+  .text-center img{
+    width: 100px;
+  }
+  .overview{
+    margin-inline-end: 20%;
+  }
+  .view{
+    margin-inline-start: 15%;
+  }
+ 
  
   
   

@@ -41,14 +41,9 @@ const Navbar = (props) => {
     <>
       <nav className="container nav flexBox jcspb h-100">
         <Link to="/" className="brand-logo">
-          {/* SabziMandi.com */}
-          {/* <img src={require('../../images/adds/logo_site1.jpg')}/> */}
-          {/* <img src='../../images/adds/rprLogo.jpg'/> */}
+          
           <img src={rprLogo} alt="Logo" />
-          {/* <img src= ''/> */}
-
-          {/* alt="logo"/> */}
-
+         
           
         </Link>
 

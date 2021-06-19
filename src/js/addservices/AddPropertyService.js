@@ -1,9 +1,9 @@
 import axios from 'axios';
 
 const ADD_PROPERTY_REST_API_URL='http://localhost:8080/api/postProperty';
-const ADD_HOSTEL_REST_API_URL='http://localhost:8081/api/postHostel';
-// const ADD_RENTAL_REST_API_URL='http://localhost:8080/api/rental';
-// const ADD_AMENITIES_REST_API_URL='http://localhost:8080/api/amenities';
+const ADD_HOSTEL_REST_API_URL='http://localhost:8082/api/postHostel';
+
+
 // const ADD_PROPERTY_REST_API_URL='http://localhost:8080/swagger-ui.html';
 
 class AddPropertyService{
