@@ -35,7 +35,7 @@ const Navbar = (props) => {
     color:'maroon'
   };
 
- 
+   {/*NOTE: Props Come from App.js*/}
 
   return (
     <>
