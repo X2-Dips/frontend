@@ -242,7 +242,20 @@
 
   }
    */
- 
- 
   
+  @media (max-width: 1000px){
+    .signup-container{
+      width: 100%;
+  }
+  
+  .signup-content {
+    width: 100vw;
+  }
+  }
+
+
+
+
+ 
+ 
   

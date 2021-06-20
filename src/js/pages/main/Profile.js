@@ -1,66 +1,145 @@
-import React, { Component, useState } from 'react';
-import { getCurrentUser, showall} from '../util/APIUtils';
-import './bootstrap.css'
-import Profilephoto from '../../images/ants/profile.png';
+import React, { useState } from 'react';
 
+import './bootstrap.css'
+
+import profimage from '../../images/ants/square_profile.png';
 import './Profile.css';
 
-import axios from 'axios'; 
+import { Link } from 'react-router-dom';
 
-const Profile=(props)=>{
-
-const name=props.location.name;
-const showdataRequest=props.location.name;
-
-const[names, nameState]=useState("");
-const[email, emailState]= useState("");
-const[dob, dobState]=useState("null");
-const[image, imageState]=useState("");
+const Profile=()=>{
 
 
-const shows=()=>{
-axios.get("http://localhost:8080/auth/showdata",{
-    params:{
-        name:props.location.name
-    }
-}).then((response)=>{
-    console.log(response.data);
-    nameState(response.data.name);
-    emailState(response.data.email);
-    dobState(response.data.dob);
-    imageState(response.data.imageUrl);
+const[image]=useState("");
 
-   
-})
 
-}
+
+
+
 
 
     return(
         
         <div>
-        {shows()}
+        
         <div className="login-container">
-        <div className="login-content">
-        <h5 className="login-title">User Profile</h5>
+         
+        <div className="row">
+        
+        <div className="labels">
+        <h1 className="head">Manage Your Account</h1>
+        <hr className="horizontals"/>
+        
+        <div className="side_icons">
 
-            <fieldset>
-            <legend><div className="circle"><img src={image} className="profile_img"/></div></legend>
-                <br/>
+            <ul type="">
+            <li><Link to="/profile"><h3 className="s_icon active">Basic Profile</h3></Link></li>
+            <li><Link to="/myproperty"><h3 className="s_icon">Check Property</h3></Link></li>
 
-                <h3>User Id:  {email}</h3>
-                <h3>Name: {names} </h3>
-                <h3>Email Id: {email}</h3>
-                <h3>D.O.B: {dob}</h3>
-            </fieldset>
-
-            </div>
+            </ul>
+        </div>
         </div>
         
+        <div className="frontform">
+        <h1 className="head1">Edit Your Profile</h1>
+        <hr className="horizontals"/>
+        <br/>
 
+
+        <div className="rows ">
+        
+        <div className="imagecol sign-up-form">
+        <div className="imageblock">
+        <img src={profimage} className="profile-img" alt="Profile pic"/>
+        <br/>
+        <input type="file" name="Choose profile pic" className="files" id="Profile"/> 
+        <h3>Choose profile Picture </h3>
         </div>
+          
+        
+        </div>
+        
+        <div className="formcol">
+        {formconst()}
+        </div>
+        
+        </div>
+
+
+
+        
+        </div>
+        
+        </div>
+        
+        </div>
+        </div>
+        
+        
+      
+       
+       
     );
 }
+
+
+const formconst=()=>{
+
+
+  
+return (
+<>
+<div className="form-center ">
+        
+        <form action="" className="sign-up-form">
+
+        <div className="form-group">
+            <label htmlFor="email">Full Name*</label>
+            <input type="email" placeholder="Full Name*" id="full_name" required />
+          </div>
+
+
+          <div className="form-group">
+            <label htmlFor="email">E-mail*</label>
+            <input type="email" placeholder="E-mail*" id="email" required />
+          </div>
+         
+          <div className="form-group">
+          <label htmlFor="email">Mobile Number*</label>
+          <input type="email" placeholder="Mobile Number*" id="mobile_no" required />
+        </div>
+
+          <div className="form-group">
+            <label htmlFor="password">Whatsapp Number</label>
+            <input type="text" placeholder="Whatsapp Number" id="whatsapp_no" required />
+          </div>
+
+
+          
+          <span src="" className="whats-app-img"></span><span className="para">Get Updated on Whatsapp</span>
+          
+          
+        
+          {/* <h5>Fields that are marked with * sign are required.</h5> */}
+          <div className="form-group">
+            <input type="button" value="Save Profile" className="inp-btn" />
+          </div>
+          
+        </form>
+      </div>
+
+</>
+
+
+);
+
+
+
+}
+
+
+
+
 
 
 export default Profile;

@@ -156,7 +156,7 @@ export const MenuItems = [
     // linkIcon: <FaSignInAlt />,
 
     title: "login",
-    path: "/login",
+    path: "/logintest",
     cname: "nav-link",
   },
 ];

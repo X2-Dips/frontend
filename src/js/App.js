@@ -3,11 +3,8 @@ import Footer from "./pages/footer/Footer";
 import Header from "./pages/header/Header";
 
 import Main from "./pages/main/Main";
-import Signuptest from "./pages/user/signup/Signup"
-import Logintest from "./pages/user/login/Login"
-import OAuth2RedirectHandler from './pages/user/oauth2/OAuth2RedirectHandler';
-import NotFound from './pages/header/NotFound';
-import LoadingIndicator from './pages/header/LoadingIndicator';
+
+
 import { getCurrentUser } from './pages/util/APIUtils';
 import { ACCESS_TOKEN } from './pages/constants';
 import PrivateRoute from './pages/header/PrivateRoute';
@@ -17,19 +14,26 @@ import PrivateRoute from './pages/header/PrivateRoute';
 import { Redirect } from "react-router";
 
 
+
+import { withRouter } from 'react-router';
 class App extends Component {
+  
   constructor(props) {
     super(props);
     this.state = {
       authenticated: false,
       currentUser: null,
-      loading: false
+      loading: false,
+      
     }
-
+    
     this.loadCurrentlyLoggedInUser = this.loadCurrentlyLoggedInUser.bind(this);
     this.handleLogout = this.handleLogout.bind(this);
+    this.logouts = this.logouts.bind(this);
   }
 
+
+ 
   loadCurrentlyLoggedInUser() {
     this.setState({
       loading: true
@@ -39,8 +43,10 @@ class App extends Component {
       this.setState({
         currentUser: response,
         authenticated: true,
-        loading: false
+        loading: false,
+        redirect:null
       });
+      this.props.useHistory.push("/")
     }).catch(error => {
       this.setState({
         loading: false
@@ -48,16 +54,28 @@ class App extends Component {
     });    
   }
 
+  
+    logouts(){
+      this.props.history.push('/');
+    }
+  
+  
+
   handleLogout() {
     
     localStorage.removeItem(ACCESS_TOKEN);
     this.setState({
       authenticated: false,
-      currentUser: null
+      currentUser: null,
+      logouts:true
     });
     return  <Redirect  to="/logintest" />
     // Alert.success("You're safely logged out!");
    
+    this.setState({ redirect: "/logintest" })
+    this.logouts();
+    // Alert.success("You're safely logged out!");
+    
     
   }
 
@@ -66,14 +84,17 @@ class App extends Component {
   }
 
   render(){
-    if(this.state.loading) {
-      return <LoadingIndicator />
-    }
+    
+
+    
+    
+    
 
   return (
+   
     <div className="grid-container">
       <Header  authenticated={this.state.authenticated} currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
-      <Main />
+      <Main authenticated={this.state.authenticated} currentUser={this.state.currentUser} handleLogout={this.handleLogout} />
       <Footer />
       
       
@@ -84,4 +105,4 @@ class App extends Component {
 }
 }
 
-export default App;
+export default withRouter(App);

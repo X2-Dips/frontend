@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import './Signup.css';
 import { Link, Redirect } from 'react-router-dom'
-import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL, GITHUB_AUTH_URL } from '../../constants';
 import { signup } from '../../util/APIUtils';
 import fbLogo from '../../img/fb-logo.png'
 import googleLogo from '../../img/google-logo.png';
@@ -23,28 +22,10 @@ class Signup extends Component {
             <div className="signup-container">
                 <div className="signup-content">
                     
-                    <div className="or-separator">
-                        
-                    </div>
+                    
                     <SignupForm {...this.props} />
-                    <span className="login-link">Already have an account? <Link to="/login">Login!</Link></span>
+                    
                 </div>
-            </div>
-        );
-    }
-}
-
-
-class SocialSignup extends Component {
-    render() {
-        return (
-            <div className="social-signup">
-                <a className="btn btn-block social-btn google" href={GOOGLE_AUTH_URL}>
-                    <img src={googleLogo} alt="Google" /> Sign up with Google</a>
-                <a className="btn btn-block social-btn facebook" href={FACEBOOK_AUTH_URL}>
-                    <img src={fbLogo} alt="Facebook" /> Sign up with Facebook</a>
-                <a className="btn btn-block social-btn github" href={GITHUB_AUTH_URL}>
-                    <img src={githubLogo} alt="Github" /> Sign up with Github</a>
             </div>
         );
     }
@@ -98,7 +79,7 @@ class SignupForm extends Component {
 
     render() {
         return (
-            <div className="container">
+            
       <div className="form-center ">
         <h1>Sign Up</h1>
         <p>Register yourself to access all services.</p>
@@ -171,7 +152,7 @@ class SignupForm extends Component {
           </h4>
         </form>
       </div>
-    </div>         
+         
 
         );
     }

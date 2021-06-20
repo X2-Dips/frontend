@@ -3,19 +3,17 @@ import { Route, Switch } from "react-router";
 import ErrorPage from "./ErrorPage";
 import Home from "./Home";
 import Contact from "./Contact";
-import Product from "./Product";
+import Products from "../main/Product";
 import Services from "./Services";
-import Login from "./Login";
-import SignUp from "./SignUp";
+
+
 import AddProperty from "./AddProperty"
-
+// import ProductScreen from "./screens/ProductScreen";
 import PostProperty from "./PostProperty";
-
-
- import Hostel from "./Hostel";
 
 import Rent from "./Rent";
 
+import Hostel from "./Hostel";
 import Signuptest from "../user/signup/Signup"
 import Logintest from "../user/login/Login"
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
@@ -28,9 +26,15 @@ import PrivateRoute from '../header/PrivateRoute';
 // import 'react-s-alert/dist/s-alert-default.css';
 // import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import Header from '../header/Header';
+
+
+
 import LoginForm from '../user/login/LoginForm';
 import Profile from './Profile';
-
+import MyProperty from "./MyProperty"
+import Dashboard from "../admin_dashboard/Dashboard";
+import OrderList from "../admin_dashboard/OrderList";
+import Customer from "../admin_dashboard/Customer";
 
 
 
@@ -55,12 +59,15 @@ class Main extends Component {
     })
     getCurrentUser()
     .then(response => {
+      console.log("hello loads")
       this.setState({
         currentUser: response,
         authenticated: true,
         loading: false
       });
+      this.props.history.push("/")
     }).catch(error => {
+      console.log("not ok");
       this.setState({
         loading: false
       });  
@@ -71,9 +78,13 @@ class Main extends Component {
     localStorage.removeItem(ACCESS_TOKEN);
     this.setState({
       authenticated: false,
-      //currentUser: null
+      currentUser: null,
+      
     });
     // Alert.success("You're safely logged out!");
+    alert("You're safely logged out!");
+    this.props.history.push("/")
+    
   }
 
   componentDidMount() {
@@ -89,27 +100,29 @@ class Main extends Component {
 
 
 
-
   return (
     <div className="main">
       <div className="container-full h-100">
         <Switch>
           <Route path="/" exact component={Home} />
-          <Route path="/products/:id" exact component={Product} />
+          <Route path="/products/:id" exact component={Products} />
           <Route path="/rent/:id" exact component={Rent}/>
        
          
+         {/* <Route path="/products" exact component={Products} /> */}
+         
+         
+          
           <Route path="/services" exact component={Services} />
           <Route path="/contact" exact component={Contact} />
-          <Route path="/login" exact component={Login} />
+         
           <Route path="/add_property" exact component={AddProperty}/>
           <Route path="/addpropertyform" exact component={PostProperty}/>
-          {/* <Route path="/locality_details" exact component={LocalityDetails}/>
-          <Route path="/rental_details" exact component={RentalDetails}/>
-          <Route path="/amenities_details" exact component={Amenities}/>
-          <Route path="/photos" exact component={PhotosVideos}/> */}
+          
+        
           <Route path="/hostel" exact component={Hostel}/>
-          <Route path="/signup" exact component={SignUp} />
+          {/* <Route path="/signup" exact component={SignUp} /> */}
+          
           <Route path="/signuptest"
               component={Signuptest}></Route>
           <Route path="/logintest"
@@ -121,7 +134,16 @@ class Main extends Component {
              <Route path="/profile" component={Profile} name="antra"/>
          
           <Route path="*" component={ErrorPage} />
-        </Switch>
+    
+             {/* <Route path="/profile" component={Profile} /> */}
+             <Route path="/myproperty" component={MyProperty}/>
+             <Route path="/dashboard" component={Dashboard}/>
+             <Route path="/orderlist" component={OrderList}/>
+             <Route path="/customer" component={Customer}/>
+            
+
+             </Switch>
+             
       </div>
     </div>
   );

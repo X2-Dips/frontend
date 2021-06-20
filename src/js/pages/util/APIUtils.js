@@ -1,4 +1,6 @@
 import { API_BASE_URL, ACCESS_TOKEN } from '../constants';
+import axios from 'axios'
+
 
 const request = (options) => {
     const headers = new Headers({
@@ -11,7 +13,7 @@ const request = (options) => {
 
     const defaults = {headers: headers};
     options = Object.assign({}, defaults, options);
-
+    console.log(options)
     return fetch(options.url, options)
     .then(response => 
         response.json().then(json => {
@@ -21,18 +23,21 @@ const request = (options) => {
             return json;
         })
     );
+    
 };
 
 export function getCurrentUser() {
     if(!localStorage.getItem(ACCESS_TOKEN)) {
+        
         return Promise.reject("No access token set.");
     }
 
     return request({
-        url: API_BASE_URL + "/user/me",
+        url: API_BASE_URL+"/user/me",
         method: 'GET'
     });
 }
+
 
 export function login(loginRequest) {
     return request({

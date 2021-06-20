@@ -305,7 +305,26 @@ width: 100%;
 @media screen and (max-width:500px){
   .form-center h1{font-size:3.5rem}
 .form-center p{margin-bottom:1rem}
-.form-center .login-form{padding:3rem 1rem}}
+.form-center .login-form{padding:3rem 1rem}
+.sign-up-form{width: 100%;}
+
+.signup-container{
+  width: 100%;
+}
+}
 
 
 
+@media (max-width: 1000px){
+  .signup-container{
+    width: 100%;
+}
+
+.signup-content {
+  width: 100vw;
+}
+
+.form-center .sign-up-form .form-col-div{
+  width: 100vw;
+}
+}
