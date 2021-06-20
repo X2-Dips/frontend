@@ -9,9 +9,9 @@ import LoadingIndicator from '../header/LoadingIndicator';
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 import PrivateRoute from '../header/PrivateRoute';
-import Alert from 'react-s-alert';
-import 'react-s-alert/dist/s-alert-default.css';
-import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+// import Alert from 'react-s-alert';
+// import 'react-s-alert/dist/s-alert-default.css';
+// import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 
 
 

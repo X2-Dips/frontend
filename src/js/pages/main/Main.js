@@ -15,12 +15,7 @@ import PostProperty from "./PostProperty";
  import Hostel from "./Hostel";
 
 import Rent from "./Rent";
-import Homeform from "./Homeform";
-import LocalityDetails from "./LocalityDetails";
-import RentalDetails from "./RentalDetails";
-import Amenities from "./Amenities";
-import PhotosVideos from "./PhotosVideos";
-import Hostel from "./Hostel";
+
 import Signuptest from "../user/signup/Signup"
 import Logintest from "../user/login/Login"
 import OAuth2RedirectHandler from '../user/oauth2/OAuth2RedirectHandler';
@@ -29,9 +24,9 @@ import LoadingIndicator from '../header/LoadingIndicator';
 import { getCurrentUser } from '../util/APIUtils';
 import { ACCESS_TOKEN } from '../constants';
 import PrivateRoute from '../header/PrivateRoute';
-import Alert from 'react-s-alert';
-import 'react-s-alert/dist/s-alert-default.css';
-import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+// import Alert from 'react-s-alert';
+// import 'react-s-alert/dist/s-alert-default.css';
+// import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import Header from '../header/Header';
 import LoginForm from '../user/login/LoginForm';
 import Profile from './Profile';
@@ -78,7 +73,7 @@ class Main extends Component {
       authenticated: false,
       //currentUser: null
     });
-    Alert.success("You're safely logged out!");
+    // Alert.success("You're safely logged out!");
   }
 
   componentDidMount() {
@@ -91,7 +86,7 @@ class Main extends Component {
 
 
 
->>>>>>> 056ef308774ba527a9eb8b27ba36ec54b15a4624
+
 
 
 
@@ -100,16 +95,10 @@ class Main extends Component {
       <div className="container-full h-100">
         <Switch>
           <Route path="/" exact component={Home} />
-<<<<<<< HEAD
           <Route path="/products/:id" exact component={Product} />
           <Route path="/rent/:id" exact component={Rent}/>
        
          
-=======
-         
-          
-          
->>>>>>> 056ef308774ba527a9eb8b27ba36ec54b15a4624
           <Route path="/services" exact component={Services} />
           <Route path="/contact" exact component={Contact} />
           <Route path="/login" exact component={Login} />
@@ -121,9 +110,6 @@ class Main extends Component {
           <Route path="/photos" exact component={PhotosVideos}/> */}
           <Route path="/hostel" exact component={Hostel}/>
           <Route path="/signup" exact component={SignUp} />
-<<<<<<< HEAD
-         
-=======
           <Route path="/signuptest"
               component={Signuptest}></Route>
           <Route path="/logintest"
@@ -133,7 +119,7 @@ class Main extends Component {
           
              <Route path="/oauth2/redirect" component={OAuth2RedirectHandler}></Route>
              <Route path="/profile" component={Profile} name="antra"/>
->>>>>>> 056ef308774ba527a9eb8b27ba36ec54b15a4624
+         
           <Route path="*" component={ErrorPage} />
         </Switch>
       </div>

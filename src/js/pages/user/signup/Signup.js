@@ -6,7 +6,7 @@ import { signup } from '../../util/APIUtils';
 import fbLogo from '../../img/fb-logo.png'
 import googleLogo from '../../img/google-logo.png';
 import githubLogo from '../../img/github-logo.png';
-import Alert from 'react-s-alert';
+// import Alert from 'react-s-alert';
 import { RiLoginCircleFill } from "react-icons/ri";
 
 class Signup extends Component {
@@ -88,10 +88,10 @@ class SignupForm extends Component {
         else{
         signup(signUpRequest)
         .then(response => {
-            Alert.success("You're successfully registered. Please login to continue!");
+            // Alert.success("You're successfully registered. Please login to continue!");
             this.props.history.push("/logintest");
         }).catch(error => {
-            Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');            
+            // Alert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');            
         });
     }
   }

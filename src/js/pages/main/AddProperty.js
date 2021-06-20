@@ -1,82 +1,8 @@
-// import React,{useState} from "react";
-// // import { Link } from "react-router-dom";
-
-// import { RiLoginCircleFill } from "react-icons/ri";
-// function clickMe(){
-//     alert("next page");
-// }
-// const types = ['Rent', 'Hostel/PG'];
-// function ToogleGroup(){
-//     const [active, setActive] = useState(types[0]);
-//     return <div>
-//         {types.map(type => (
-//             <button>
-//                 {type}
-//             </button>
-//         ))}
-//     </div>
-// }
-
-// const AddProperty = () => {
-//   return (
-//     <div className="container">
-//       <div className="form-center ">
-//         <h1>Post Your Property Advertisement For Free
-// </h1>
-        
-
-//         <form action="" className="add_property_form">
-//           {/* <div className="form-col-div"> */}
-//             <div className="form-group">
-//               {/* <label htmlFor="firstName">First Name*</label> */}
-//               <input
-//                 type="text"
-//                 placeholder="Enter Your City*"
-//                 id="city_name"
-//                 required
-//               />
-//             </div>
-//             <h1><h2>PROPERTY TYPE</h2></h1>
-
-//             <ToogleGroup/>
-            
-//             <div className="form-group">
-//             <input type="button" value="POST YOUR PROPERTY" className="inp-btn" />
-//           </div>
-            
-
 
         
-          
-//         </form>
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default AddProperty;
-
 
 import React from 'react'
 import "./bootstrap.css"
-
-// const types = ['Rent', 'Hostel/PG'];
-// function ToogleGroup(){
-//     const [active, setActive] = useState(types[0]);
-//     return <div>
-     
-//         {types.map(type => (
-           
-//             <button className="inp-btn1">
-//                 {type}
-//             </button>
-           
-//         ))}
-        
-//     </div>
-// }
-
-
 const AddProperty = () => {
     return (
         < div class="container">

@@ -1,9 +1,4 @@
-/* .details-title {
-    font-size: 2.0rem;
-    font-weight: 700;
-    font-style: bold;
-    margin-top: 0%;
-}
+/* 
 .name-address{
     padding-top: 0px;
 }
@@ -22,15 +17,36 @@
     font-style: bold;
     text-align: center;
 }
+.col-1 {
+    padding: 5rem;
+    
+    
+
+    text-align: center;
+    }
+    .details-sub-title {
+        font-size: 1.2rem;
+        color: #464646;
+    }
+    .details-title {
+        font-size: 2.0rem;
+        font-weight: 700;
+        font-style: bold;
+        margin-top: 0%;
+    }
+    .detail-title{
+        font-size: 1.5rem;
+        font-weight: 700;
+        font-style: bold;
+        margin-top: 0%;
+
+    }
 /*
 img{
     width: 100%;
     margin-right: 0cm;
   }
-.details-sub-title {
-    font-size: 1.2rem;
-    color: #464646;
-}
+
  .room_photo img{
     margin-left: 10%;
     width: 55%;
@@ -87,13 +103,7 @@ img{
         
     }
     
-    .col-1 {
-        padding: 5rem;
-        
-        
     
-        text-align: center;
-        }
         .col-5 {
             padding: 1rem;
             

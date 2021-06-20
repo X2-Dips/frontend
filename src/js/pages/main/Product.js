@@ -43,6 +43,8 @@ import {GiLift} from "react-icons/gi";
 import {CgGym} from "react-icons/cg";
 import '../main/Card_detail.css'
 import '../main/Rent.css';
+import { Carousel } from 'bootstrap';
+import Carousels from '../../components/Carousels';
 
 function Product() {
     const {id} = useParams()
@@ -106,11 +108,12 @@ function Product() {
             </h1>
              
             <div className="location">
-            <GoLocation/> {product.data.street} {product.data.city}
+            <GoLocation/>{product.data.street} {product.data.city}
             <span className="rent">${product.data.expectedRent}/month</span>
             <ul className="sale">For Rent</ul>
             </div>
             </div>
+            <Carousels/>
            
            
             
@@ -151,7 +154,7 @@ function Product() {
                     </div>
                 </div>
                 <div class="col-1">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button className="btn2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+        <button className="btn2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                     
                 </div>
                 {/* <div class="col-1 d-flex flex-column align-items-center justify-content-center ">
@@ -162,20 +165,20 @@ function Product() {
 </div>
                    
             </div>
-            <br></br>
-            <br></br>
+            <hr className="hr"></hr>
+            
             {/* ***************************************************************************************** */}
-            <div className="flex-container">
-<div className=" flex-child box4">
+            <div className="flex-container1">
+<div className=" box4">
     <div className="title">
     Overview
 
     </div>
     <br></br>
     <hr className="hr"></hr>
-    <div className="row1">
+    <div className="row2">
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {product.data.preferdGuest}
                     </div>
@@ -186,7 +189,7 @@ function Product() {
 
         </div>
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {product.data.foodAvailable}
                     </div>
@@ -210,9 +213,9 @@ function Product() {
        */}
         </div>
         <br></br>
-        <div className="row1">
+        <div className="row2">
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {product.data.roomAmenities}
                     </div>
@@ -223,7 +226,7 @@ function Product() {
 
         </div>
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {product.data.rules}
                     </div>
@@ -235,6 +238,7 @@ function Product() {
     </div>
 </div>
 
+
             {/* ******************************************************************************************* */}
            
 
@@ -242,7 +246,8 @@ function Product() {
 
 
 {/* ************************************************************************************************* */}
-<div className="flex-child box5">
+{/* <div className="flex-child box5"> */}
+<div className="box5">
     <div className="title">
     Details
 
@@ -251,52 +256,52 @@ function Product() {
     <hr className="hr"></hr>
     <div className="row1">
         <div className="col1">
-            <span className="detail">Expected Deposit :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail">$ {product.data.expectedDeposit}</span>
+            <span className="detail">Expected Deposit :</span>
+            <span className="sub-detail11">$ {product.data.expectedDeposit}</span>
             <hr class="thin"></hr>
 
         </div>
 
         
         <div className="col1">
-            <span className="detail">Parking : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {product.data.parking}</span>
+            <span className="detail">Parking : </span>
+            <span className="sub-detail12"> {product.data.parking}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     <div className="row1">
         <div className="col1">
-         <span className="detail">Posted On : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {product.data.availableFrom}</span>
+         <span className="detail">Posted On :</span>
+            <span className="sub-detail13"> {product.data.availableFrom}</span>
             <hr class="thin"></hr>
         </div>
         <div className="col1">
-            <span className="detail">Closing Time :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {product.data.closingTime}</span>
-            <hr class="thin"></hr>
-        </div>
-    </div>
-    <div className="row1">
-        <div className="col1">
-         <span className="detail">Food :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {product.data.food}</span>
-            <hr class="thin"></hr>
-        </div>
-        <div className="col1">
-         <span className="detail">Laundry : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {product.data.laundry}</span>
+            <span className="detail">Closing Time : </span>
+            <span className="sub-detail14"> {product.data.closingTime}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     <div className="row1">
         <div className="col1">
-         <span className="detail">Warden :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {product.data.wardenFacility}</span>
+         <span className="detail">Food :</span>
+            <span className="sub-detail15"> {product.data.food}</span>
             <hr class="thin"></hr>
         </div>
         <div className="col1">
-         <span className="detail">Room Cleaning : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {product.data.roomCleaning}</span>
+         <span className="detail">Laundry :</span>
+            <span className="sub-detail16"> {product.data.laundry}</span>
+            <hr class="thin"></hr>
+        </div>
+    </div>
+    <div className="row1">
+        <div className="col1">
+         <span className="detail">Warden : </span>
+            <span className="sub-detail17"> {product.data.wardenFacility}</span>
+            <hr class="thin"></hr>
+        </div>
+        <div className="col1">
+         <span className="detail">Room Cleaning :</span>
+            <span className="sub-detail18"> {product.data.roomCleaning}</span>
             <hr class="thin"></hr>
         </div>
     </div>
@@ -304,6 +309,7 @@ function Product() {
    
     </div>
     </div>
+    <hr className="hr"></hr>
     {/* ************************************************************************************************* */}
     <div className="flex-container">
 <div className="box6">
@@ -313,12 +319,12 @@ function Product() {
     </div>
     <br></br>
     <hr className="hr"></hr>
-    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
+   <p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. 
     Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.
 <br></br>
 Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum. Typi non habent claritatem insitam; est usus legentis in iis qui facit eorum claritatem. Investigationes demonstraverunt lectores legere me lius quod ii legunt saepius.
  Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
-
+</p>
 </div>
 <div className="box9">
     <div className="title">
@@ -391,6 +397,7 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 {/* *********************************************************************************************** */}
 <br></br>
 <br></br>
+<hr className="hr"></hr>
     
 {/* *************************************************************************************************** */}
         </div>
@@ -400,7 +407,7 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 //*********************************************************************************************************************** */
     }
     return (
-        <div>
+        <div >
              {content}
             </div>
 

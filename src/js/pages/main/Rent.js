@@ -11,6 +11,7 @@ import {GiLift} from "react-icons/gi";
 import {CgGym} from "react-icons/cg";
 
 import {GoLocation} from "react-icons/go";
+import Carousels from "../../components/Carousels";
 
 
 
@@ -85,6 +86,7 @@ function Rent() {
             </div>
             
             </div>
+            <Carousels/>
            {/* <div className="picture">
            <RentCarousels/>  
 
@@ -109,7 +111,7 @@ function Rent() {
             </div> */}
             {/* </div> */}
             {/* </div> */}
-
+            <hr className="hr"></hr>
             <div className="box7">
             <div class="container">
             <div class="row">
@@ -136,26 +138,26 @@ function Rent() {
                 </div>
                 <div class="col-1">
                     <div class="details-title">
-                        {/* 560 */}
+                        
                         {rent.data.propertySize}
                     </div>
                     <div class="details-sub-title">
                         sq.Ft
                     </div>
                 </div>
-                <div class="col-1 ">
+                {/* <div class="col-1 ">
                     <div class="details-title">
                         <span><i class="fas fa-rupee-sign"></i></span>
-                        {/* 10,000 */}
+                       
                       Rs  {rent.data.expectedDeposit}
 
                     </div>
                     <div class="details-sub-title ">
                         Deposit
                     </div>
-                </div>
+                </div> */}
                 <div class="col-1 ">
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <button className="btn2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Owner Details&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+                 <button className="btn2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Appointment&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
                 </div>
                 {/* <div class="col-1 d-flex flex-column align-items-center justify-content-center ">
                     <span><i class="fa fa-heart nav-icon-size"></i></span>
@@ -165,8 +167,8 @@ function Rent() {
             </div>
 
             </div>
-            <br></br>
-            <br></br>
+            <hr className="hr"></hr>
+            
 {/* ***********************************************************************************************/}
 <div className="flex-container">
 <div className=" flex-child box4">
@@ -176,9 +178,9 @@ function Rent() {
     </div>
     <br></br>
     <hr className="hr"></hr>
-    <div className="row1">
+    <div className="row2">
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {rent.data.apartmentType}
                     </div>
@@ -189,7 +191,7 @@ function Rent() {
 
         </div>
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {rent.data.bhkType}
                     </div>
@@ -200,7 +202,7 @@ function Rent() {
 
         </div>
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {rent.data.bathroom}
                     </div>
@@ -211,7 +213,7 @@ function Rent() {
 
         </div>
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {rent.data.propertySize}
                     </div>
@@ -223,9 +225,9 @@ function Rent() {
         </div>
         </div>
         <br></br>
-        <div className="row1">
+        <div className="row2">
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {rent.data.propertyAge}
                     </div>
@@ -236,7 +238,7 @@ function Rent() {
 
         </div>
         <div className="col1">
-        <div class="details-title">
+        <div class="detail-title">
                         
                         {rent.data.waterSupply}
                     </div>
@@ -247,8 +249,10 @@ function Rent() {
                     </div>
     </div>
 </div>
+<br></br>
+<br></br>
 {/* ****************************************************************************** */}
-<div className="flex-child box5">
+<div className=" box5">
     <div className="title">
     Details
 
@@ -257,69 +261,71 @@ function Rent() {
     <hr className="hr"></hr>
     <div className="row1">
         <div className="col1">
-            <span className="detail">Expected Deposit :&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail">$ {rent.data.expectedDeposit}</span>
+            <span className="detail">Expected Deposit :</span>
+            <span className="sub-detail1">${rent.data.expectedDeposit}</span>
             <hr class="thin"></hr>
 
         </div>
 
         
         <div className="col1">
-            <span className="detail">Parking : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {rent.data.parking}</span>
+            <span className="detail">Parking :  </span>
+            <span className="sub-detail2"> {rent.data.parking}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     <div className="row1">
         <div className="col1">
-         <span className="detail">Property Size : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {rent.data.propertySize}</span>
+         <span className="detail">Property Size : </span>
+            <span className="sub-detail3"> {rent.data.propertySize}</span>
             <hr class="thin"></hr>
         </div>
         <div className="col1">
-            <span className="detail">Property Age : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail"> {rent.data.propertyAge}</span>
+            <span className="detail">Property Age :</span>
+            <span className="sub-detail4">{rent.data.propertyAge}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     <div className="row1">
         <div className="col1">
-         <span className="detail">Bathroom :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {rent.data.bathroom}</span>
+         <span className="detail">Bathroom :</span>
+            <span className="sub-detail5"> {rent.data.bathroom}</span>
             <hr class="thin"></hr>
         </div>
         <div className="col1">
-         <span className="detail">Balcony :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {rent.data.balcony}</span>
+         <span className="detail">Balcony :</span>
+            <span className="sub-detail6"> {rent.data.balcony}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     <div className="row1">
         <div className="col1">
-          <span className="detail">Facing : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail">{rent.data.facing}</span>
+          <span className="detail">Facing :</span>
+            <span className="sub-detail7">{rent.data.facing}</span>
             <hr class="thin"></hr>
         </div>
         <div className="col1">
-            <span className="detail">Floor :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {rent.data.floor}</span>
+            <span className="detail">Floor :</span>
+            <span className="sub-detail8"> {rent.data.floor}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     <div className="row1">
         <div className="col1">
-      <span className="detail">Preferd Tenants : &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
-            <span className="sub-detail">{rent.data.preferdTenants}</span>
+      <span className="detail">Preferd Tenants :</span>
+            <span className="sub-detail9">{rent.data.preferdTenants}</span>
             <hr class="thin"></hr>
         </div>
         <div className="col1">
-            <span className="detail">Furnishing :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
-            <span className="sub-detail"> {rent.data.furnishing}</span>
+            <span className="detail">Furnishing :</span>
+            <span className="sub-detail10"> {rent.data.furnishing}</span>
             <hr class="thin"></hr>
         </div>
     </div>
     </div>
     </div>
+    <br></br>
+    <hr className="hr"></hr>
 {/* ******************************************************************************* */}
 <br></br>
 <br></br>
@@ -338,6 +344,8 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
  Claritas est etiam processus dynamicus, qui sequitur mutationem consuetudium lectorum. Mirum est notare quam littera gothica, quam nunc putamus parum claram, anteposuerit litterarum formas humanitatis per seacula quarta decima et quinta decima. Eodem modo typi, qui nunc nobis videntur parum clari, fiant sollemnes in futurum.
 
 </div>
+<br></br>
+<br></br>
 {/* ********************************************************************************************* */}
 <div className="box9">
     <div className="title">
@@ -346,7 +354,7 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
     </div>
     <br></br>
     <hr className="hr"></hr>
-    <div className="row1">
+    <div className="row2">
         <div className="col1">
         <div class="details-title">
         <CgGym size={30}/> 
@@ -396,9 +404,11 @@ Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming 
 
     </div>
 </div>
+<br></br>
+<br></br>
+<hr className="hr"></hr>
 {/* *********************************************************************************************** */}
-<br></br>
-<br></br>
+
 
             
         </div>

@@ -572,7 +572,7 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                       
                         <select class="form_control" id="exampleFormControlSelect1"  value ={this.state.preferdTenants} onChange={this.changePreferdTenantsHandler}>
                             <option>Select</option>
-                            <option>Faminly</option>
+                            <option>Family</option>
                             <option>Single</option>
                         </select>
                     </div>
@@ -804,26 +804,26 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 <div class="row d-flex align-items-center justify-content-between">
                 <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
+                        <input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
                             <label for="formGroupExampleInput"> Lift</label>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
+                        <input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
                             <label for="formGroupExampleInput"> Internet
                                 Services          </label>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAC}/>
+                        <input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAC}/>
                             <label for="formGroupExampleInput"> Air Conditioner       </label>
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="formGroupExampleInput"   value="Gym" onChange={this.changeGym}/>
+                    <input type="checkbox" id="formGroupExampleInput"   value="Gym" onChange={this.changeGym}/>
                             <label for="formGroupExampleInput"> Gym</label>
                         </div>
                     </div>

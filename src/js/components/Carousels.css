@@ -1,0 +1,230 @@
+.container9{
+        
+    /* position:absolute; */
+    margin-top: -25%;
+    padding-top: 2em;
+    
+
+    
+    transform:translate( -50%, -50%);
+    width: 300px;
+    height: 27em;
+    margin-left: 12em;
+    border-radius:10px;
+    /* display:flex; */
+    flex-direction: column;
+    backdrop-filter:blur(4px); 
+     background-color: #fff;
+    border:.7px solid rgb(44, 37, 37);
+    align-items: center; justify-content: space-evenly;
+    color:white;
+    
+    }
+    @media   (max-width: 760px){
+        .container9{
+            display: block;
+            /* margin-left: 1em; */
+            margin-top: 13em;
+            width: 22em;
+            right: 9em;
+            
+         
+            height: 70%;
+
+        }
+       
+        .city-input label{
+            margin-left: 0.5em;
+        }
+        .city-input input{
+            margin-left: 0.5em;
+            margin-right: .5em;
+        }
+        .state-input label{
+            margin-left: 0.5em;
+        }
+        .state-input input{
+            margin-left: 0.5em;
+            margin-right: .5em;
+        }
+        .budget h3{
+            margin-left: 0.1em;
+        }
+        
+        .btn-box {
+            margin-left: 3em;
+            width: 100%;
+        }
+        .max{
+            margin-left: 5em;
+        }
+        .mini{
+            margin-left: 2em;
+        }
+        
+    }
+     
+    .inputs {
+     width:260px;
+     height:260px;
+         }
+        
+    .name-input{
+        display:flex;  
+        }
+    
+    .name-input input{
+    
+     width:130px;
+    height:50px;
+    padding:5px;
+    outline: none;
+    border: 5px solid #dbdbdb;
+    padding:.9rem;
+    }
+            
+    /* #inputone input{
+            
+    border-radius: 3px 0 0 3px;
+            
+    }  */
+    
+    /* #inputTwo input{
+            border-radius:0 3px 3px 0;
+                     } */
+            
+    input::placeholder{ color:#bfbfbf; }
+    
+    
+    .location-input{
+    
+        display:flex;
+     flex-direction: column;
+    
+    }
+    
+    .location-input input {
+    
+        height:50px;
+        outline: none;
+        border:.5px solid #dbdbdb; border-radius: 3px;
+        padding: .9rem;
+        margin-left: 0.5em;
+
+        /* border-radius: 20px; */
+    
+    }
+    .city-input label{
+        font-size: large;
+        color: black;
+        font-weight: 600;
+        margin-left: 0.5em;
+    }
+    .state-input label{
+        font-size: large;
+        color: black;
+        font-weight: 600;
+        margin-left: 0.5em;
+    }
+    .budget h3{
+        color: black;
+        font-weight: 600;
+    }
+    
+    
+    .city-input{
+    
+        display:flex;
+     flex-direction: column;
+    
+    }
+    
+    .city-input input {
+    
+        height:50px;
+        outline: none;
+        border:.5px solid #dbdbdb; border-radius: 3px;
+        padding: .9rem;
+        margin-left: 0.5em;
+        margin-right: .5em;
+        /* border-radius: 20px; */
+    
+    }
+            
+     .state-input{
+            
+    display:flex;
+     flex-direction: column;
+     }
+            
+    .state-input input{
+            
+    height:50px;
+    outline: none;
+    border:.5px solid #dbdbdb; border-radius: 3px;
+    padding: .9rem;
+    margin-left: 0.5em;
+    margin-right: 0.5em;
+    /* border-radius: 20px; */
+            
+    } 
+    
+     /* label{
+            padding:10px 0 0 0;
+            font-size:.9rem;
+             color:#fff; 
+            } 
+             */
+     .btn-box{   
+            height:100px;  
+            }
+            
+            .btn-box p{
+            font-size:.6rem; padding: 1rem 0;
+            }
+    
+    
+    .btn-box button{
+    
+    width:260px;
+    height:45px;
+    margin: 20px 0px;
+    font-size: large;
+    font-weight: 600;
+    border-radius:2px;
+    border:none;
+    outline: none; background: rgb(12, 12, 12);
+    color:white;
+    margin-left: 1em;
+    /* border-radius: 20px; */
+    }
+                
+    
+    
+    .budget{
+    
+        margin-top: 20px;
+        margin-left: 0.5em;
+    
+    }
+    
+    
+    .mini{
+    
+        font-size:small;
+        color: black;
+    }
+    
+    
+    .max{
+        font-size:small;
+        position: relative;
+        left: 160px;
+        color: black;
+    }
+
+
+
+     /* label{position:absolute;top:-.7rem;left:.65rem;color:#0052cc;font-size:1.2rem;background-color:#fff;padding:0 .5rem;font-weight:400;pointer-events:none;cursor:text} */
+
+    

@@ -5,6 +5,7 @@ import "./Card_detail.css";
 //import Rating from "../../components/Rating";
 
 import axios from "axios";
+import "../../components/Carousels.css";
 
 import ProductCard from "../../components/ProductCard";
 import RentCard from "../../components/RentCard";
@@ -134,6 +135,39 @@ function Home(){
   return (
     <div>
       <Carousels />
+      {/* <div class="container9"> */}
+                <form className="container9">
+                {/* <div class="inputs"> */}
+                <div class="city-input">
+                <label>Location</label> 
+                <input type="text" required placeholder="Enter your Location"/>
+                </div>
+                <div class="city-input">
+
+                <label>City</label> <input type="text" required placeholder="Enter your City"/>
+
+                  </div>
+                  <div class="state-input">
+
+                    <label>State</label> <input type="text" required placeholder="Enter your State"/>
+
+               </div>
+               <div class="budget">
+                    <h3>Budget range</h3>
+
+                    <span class="mini">Minimum</span> <span class="max">Maximum</span>
+                </div>
+                <div class="btn-box">
+
+ {/* <p>By joining, you agree to the and Privacy policy</p>  */}
+
+<button>Search property</button>
+
+</div>
+
+
+                </form>
+                {/* </div> */}
       <hr className="hr"></hr>
       <h1 className="heading2" >Hostel & PG</h1>
       <hr className="hr"></hr>

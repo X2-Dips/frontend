@@ -18,6 +18,8 @@
   font: bold;
   margin-left: 15%;
   margin-top: 0%;
+ 
+
 
  
   
@@ -71,6 +73,7 @@
 .text p{
   line-height: 1.4;
   margin: 5px 0;
+  
 }
 .text span{
   color:teal;
@@ -109,10 +112,23 @@ margin-top: 15px;
   font-size: x-large;
   color: wheat;
   letter-spacing: 3px;
+  margin-top: 40%;
 }
 .arrow{
   align-items: center;
-  margin-top: 30%;
+  margin-top: 25%;
   background:transparent;
   color: beige;
 }
+@media (max-width: 650px){
+  .image2{
+    width: 80%;
+    
+    display: block;
+  }
+  .leftright h5{
+    margin-top: 30%;
+  }
+  
+}
+

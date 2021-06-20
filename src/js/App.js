@@ -11,9 +11,9 @@ import LoadingIndicator from './pages/header/LoadingIndicator';
 import { getCurrentUser } from './pages/util/APIUtils';
 import { ACCESS_TOKEN } from './pages/constants';
 import PrivateRoute from './pages/header/PrivateRoute';
-import Alert from 'react-s-alert';
-import 'react-s-alert/dist/s-alert-default.css';
-import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+// import Alert from 'react-s-alert';
+// import 'react-s-alert/dist/s-alert-default.css';
+// import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import { Redirect } from "react-router";
 
 
@@ -56,7 +56,7 @@ class App extends Component {
       currentUser: null
     });
     return  <Redirect  to="/logintest" />
-    Alert.success("You're safely logged out!");
+    // Alert.success("You're safely logged out!");
    
     
   }

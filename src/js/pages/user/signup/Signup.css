@@ -1,5 +1,6 @@
 .signup-container {
     text-align: center;
+    width: 100%;
 }
 
 
@@ -7,13 +8,16 @@
     background: #fff;
     box-shadow: 0 1px 11px rgba(0, 0, 0, 0.27);
     border-radius: 2px;
-    width: 40%;
+    width: 60%;
     display: inline-block;
     margin-top: 30px;
     vertical-align: middle;
     position: relative;    
     padding: 35px;
 }
+
+  
+
 
 .social-btn {
     margin-bottom: 15px;
@@ -65,11 +69,7 @@
       
 }
 
-.searchCity{
-    width: 100%;
-    height: 40px;
-    
-}
+
 
 
 .inp-btn{
@@ -84,15 +84,14 @@
 }
 
 
-.inp-btn1 {
-    background-color: #4CAF50; /* Green background */
+/* .inp-btn1 {
+    background-color: #4CAF50; 
     width: 50%;
-    border: 1px solid green; /* Green border */
-    color: white; /* White text */
-    padding: 10px 24px; /* Some padding */
-    cursor: pointer; /* Pointer/hand icon */
-    float: left; /* Float the buttons side by side */
-  }
+    border: 1px solid green; 
+    color: white;    padding: 10px 24px; 
+        cursor: pointer; 
+    float: left; 
+  } */
 
  
 
@@ -106,22 +105,22 @@
       width: 100%;
   }
 
-  .row {
-    display: -ms-flexbox; /* IE10 */
+  /* .row {
+    display: -ms-flexbox; 
     display: flex;
-    -ms-flex-wrap: wrap; /* IE10 */
+    -ms-flex-wrap: wrap; 
     flex-wrap: wrap;
     margin: 0 -16px;
   }
-  
-  .col {
-    -ms-flex: 25%; /* IE10 */
+   */
+  /* .col {
+    -ms-flex: 25%; 
     flex: 25%;
-  }
-  .label {
+  } */
+  /* .label {
     margin-bottom: 10px;
     display: block;
-  }
+  } */
   /* form_control{ */
       /* width: 70%;
       height: 30px;*/
@@ -147,7 +146,7 @@
   
     
   
-  .btn4{
+  /* .btn4{
     background-color:#225991;
     right: 30px;
     width: 100%;
@@ -158,26 +157,26 @@
     font-size:1.6rem;
     height:5rem
 
-  }
-  .form_control-2{
+  } */
+  /* .form_control-2{ */
       /* width: 86%;
       height: 30px; */
-      border-radius: 8px; 
+      /* border-radius: 8px; 
       border: 2px solid black;
       padding: 20px;
       width: 86%;
       height: 70px;
-  }
-  .form-control1{
+  } */
+  /* .form-control1{ */
       /* width: 86%;
       height: 30%; */
-      border-radius: 8px; 
+      /* border-radius: 8px; 
       border: 2px solid black;
       padding: 20px;
       width: 86%;
       height: 100px;
-  }
-  .form_control11{
+  } */
+  /* .form_control11{
     background-color:black;
     right: 30%;
     width: 50%;
@@ -194,13 +193,13 @@
   }
 
 
-
+ */
 
 
 
   
   
-  .btn{
+  /* .btn{
     background-color:#08090a;
     right: 30px;
     width: 30%;
@@ -211,15 +210,15 @@
     font-size:1.6rem;
     height:5rem
 
-  }
-  .form-group{
+  } */
+  /* .form-group{
     white-space: nowrap;
     padding-left: 0.4em;
     pointer-events: 0.4em;
     margin: 8px;
     
-  }
-  .form-group .formSelect1 .label{
+  } */
+  /* .form-group .formSelect1 .label{
     position:absolute;
     top:-.7rem;left:.65rem;
     color:#0052cc;
@@ -242,77 +241,8 @@
     height:5rem
 
   }
-  
+   */
  
-  .property_form{background-color:#fff;border-radius:1rem;padding:4rem 5rem;display:flex;flex-direction:column;grid-gap:2rem;gap:2rem;width:100%}
-  .property_form .row .col .form-group .FormSelect1{display:flex;align-items:center;justify-content:center;width:50%;grid-gap:0 1rem;gap:0rem;height:6rem}
-  .property_form .row .col .form-group{width:30%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-  .property_form .row .col .form-group label{position:absolute;top:-.7rem;left:4.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400} 
-  
-  .property_form .row .col .form-control1 label{position:absolute;top:-.7rem;left:4.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
-  .property_form .form-group .form_control select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .property_form .row .col .form-group select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .property_form .row .col .form-group  textarea{width:95%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .property_form .row .col .form-group{width:90%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-  /* .property_form .row .col .form-group label{position:absolute;top:-.7rem;left:.65rem;color:#0052cc;font-size:1.2rem;background-color:#fff;padding:0 .5rem;font-weight:400;pointer-events:none;cursor:text} */
-  .property_form .row .col .form-group select{width:90%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .property_form .row .col .form-group input{width:90%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .property_form .row .col .form-group select:focus{border:2px solid #0052cc}
-  .property_form .row .col .form-group .inp-btn{background-color:#0052cc;color:#fff;cursor:pointer;border:none;outline:none;border-radius:.5rem;font-size:1.6rem;height:5rem}
-  .property_form  h4{font-weight:400;text-align:center;color:#9698a6}
-  
-  
-  /* .property_form h4 span{color:#0052cc;display:-ms-grid;display:grid;place-items:center;margin:0 .2rem} */
-  
-  
-  .property_form{padding:3rem 0}
-  
-  .property_form .row .col{flex-direction:column;grid-gap:2rem 0;gap:2rem 0;margin:4rem 0}
-  .property_form .row .col .form-group{width:100%}
-
-
-
-
-  .hostel_form{background-color:#fff;border-radius:1rem;padding:4rem 5rem;display:flex;flex-direction:column;grid-gap:2rem;gap:2rem;width:100%}
-  .hostel_form .row .col .form-group .FormSelect1{display:flex;align-items:center;justify-content:center;width:50%;grid-gap:0 1rem;gap:0rem;height:6rem}
-  .hostel_form .row .col .form-group{width:30%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-  .hostel_form .row .col .form-group1{width:98%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-  .hostel_form .row .col .form-group2{width:98%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-  .hostel_form .row .col .form-group3{width:98%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-  .hostel_form .row .col .form-group label{position:absolute;top:-.7rem;left:4.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400} 
-  .hostel_form .row .col .form-group1 label{position:absolute;top:-.7rem;left:3.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
-  .hostel_form .row .col .form-group2 label{position:absolute;top:-.7rem;left:3.45rem;color:#0052cc;font-size:2.0rem;background-color:#fff;padding:0 .5rem;font-weight:400}
-  .hostel_form .row .col .form-group3 label{position:absolute;top:-.7rem;left:3.45rem;color:#0052cc;font-size:2.0rem;background-color:#fff;padding:0 .5rem;font-weight:400} 
-  .hostel_form .row .col .form-control-1 label{position:absolute;top:-.7rem;left:2.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
-  
-  .hostel_form .row .col .form-control1 label{position:absolute;top:-.7rem;left:4.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
-  .hostel_form .form-group .form_control select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .hostel_form .form-group .form-control-1 select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .hostel_form .row .col .form-group select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .hostel_form .row .col .form-group1 select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .hostel_form .row .col .form-group  textarea{width:95%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group{width:90%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
- 
-  .hostel_form .row .col .form-group select{width:90%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group1 select{width:95%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group input{width:90%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group1 input{width:95%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group2 input{width:55%;height:1.5rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group2 input{width:55%;height:2 rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group select:focus{border:2px solid #0052cc}
-  .hostel_form .row .col .form-group .inp-btn{background-color:#0052cc;color:#fff;cursor:pointer;border:none;outline:none;border-radius:.5rem;font-size:1.6rem;height:5rem}
-  .hostel_form  h4{font-weight:400;text-align:center;color:#9698a6}
-  
-  
-  /* .property_form h4 span{color:#0052cc;display:-ms-grid;display:grid;place-items:center;margin:0 .2rem} */
-  
-  
-  .hostel_form{padding:3rem 0}
-  
-  .hostel_form .row .col{flex-direction:column;grid-gap:2rem 0;gap:2rem 0;margin:4rem 0}
-  .hostel_form .row .col .form-group{width:100%}
-
-
  
   
   

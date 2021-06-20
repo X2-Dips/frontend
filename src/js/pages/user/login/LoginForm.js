@@ -6,13 +6,13 @@ import { Link, Redirect } from 'react-router-dom'
 import fbLogo from '../../img/fb-logo.png';
 import googleLogo from '../../img/google-logo.png';
 import githubLogo from '../../img/github-logo.png';
-import SAlert from 'react-s-alert';
+// import SAlert from 'react-s-alert';
 import Header from '../../header/Header';
 import LoadingIndicator from '../../header/LoadingIndicator';
 import { RiLoginCircleFill } from "react-icons/ri";
 import  * as AiIcons from 'react-icons/ai'; 
-import 'react-s-alert/dist/s-alert-default.css';
-import 'react-s-alert/dist/s-alert-css-effects/slide.css';
+// import 'react-s-alert/dist/s-alert-default.css';
+// import 'react-s-alert/dist/s-alert-css-effects/slide.css';
 import './Exlog.css';
 
 class LoginForm extends Component {
@@ -63,7 +63,7 @@ class LoginForm extends Component {
             console.log(this.props.CurrentUser);
             
         }).catch(error => {
-            SAlert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
+            // SAlert.error((error && error.message) || 'Oops! Something went wrong. Please try again!');
            this.setState({email:''})
            this.setState({password:''});
             this.setState({messages:error.message+"!"});
@@ -76,9 +76,9 @@ class LoginForm extends Component {
         // Here we display the error and then remove the error query parameter from the location.
         if(this.props.location.state && this.props.location.state.error) {
             setTimeout(() => {
-                SAlert.error(this.props.location.state.error, {
-                    timeout: 5000
-                });
+                // SAlert.error(this.props.location.state.error, {
+                //     timeout: 5000
+                // });
                 //this.state.alerts=this.props.location.state.error;
                 this.setState({messages:this.props.location.state.error});
                 this.props.history.replace({

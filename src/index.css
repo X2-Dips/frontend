@@ -62,7 +62,13 @@ code {
 .sub-menu li:hover{border-left:1rem solid #2d314d;background-color:#f3f4f6;transition:all .2s ease}
 .sub-menu li .nav-link{display:flex;align-items:center;text-transform:capitalize;transition:all .2s ease;color:#2d314d;padding-left:1rem}
 .sub-menu li .nav-link .icon{font-size:2rem}
-@media screen and (min-width:1024px){.header .nav .brand-logo{font-size:2.2rem}.header .nav .nav-items{display:flex;align-items:center}
+@media screen and (min-width:1024px)
+{.header .nav .brand-logo{
+  font-size:2.2rem
+}
+.header .nav .nav-items{
+  display:flex;align-items:center
+}
 
 .header .nav .nav-items .nav-member-links{display:flex;margin:0 1rem}
 .header .nav .nav-items .menu-btn{margin-left:1rem}
@@ -197,7 +203,14 @@ h6{font-size:1.2rem}
 .carousels .next-btn:hover,.carousels .prev-btn:hover{background-color:rgba(0,0,0,.7)}
 .carousels .next-btn{right:1rem}.carousels .prev-btn{left:1rem}@keyframes moveB{0%{transform:rotate(0deg)}50%{transform:rotate(5deg)}to{transform:rotate(-5deg)}}
 @media screen and (max-width:760px){
-  .carousels .next-btn,.carousels .prev-btn{top:auto;bottom:5rem;padding:.5rem;font-size:1.5rem}
+  .carousels .next-btn,.carousels .prev-btn{
+    top:auto;
+    bottom:5rem;
+    padding:.5rem;
+    font-size:1.5rem;
+    
+  }
+  
 
 .carousels .next-btn{right:40%}
 .carousels .prev-btn{left:40%}}
@@ -240,12 +253,23 @@ h6{font-size:1.2rem}
 
 
 .form-center .sign-up-form h4 span{color:#0052cc;display:-ms-grid;display:grid;place-items:center;margin:0 .2rem}
-@media screen and (max-width:500px){.form-center h1{font-size:3.5rem}
+@media screen and (max-width:500px){
+  .form-center h1{
+    font-size:3.5rem;
+  }
+  
+  .form-center{
+    width: 100%;
+  }
 .form-center p{margin-bottom:1rem}
-.form-center .sign-up-form{padding:3rem 0}
+.form-center .sign-up-form{
+  padding:3rem 0;
+  width: 100%;
+}
 
 .form-center .sign-up-form .form-col-div{flex-direction:column;grid-gap:2rem 0;gap:2rem 0;margin:4rem 0}
 .form-center .sign-up-form .form-col-div .form-group{width:100%}}
+
 .form-center{max-width:60rem;padding:2rem 1rem;margin:0 auto 5rem}
 .form-center h1{font-size:4rem;font-weight:700;text-align:center;color:#2d314d;margin-bottom:2rem}
 

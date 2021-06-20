@@ -69,10 +69,10 @@ function RentCard(props) {
     <span> <FiShare2 size={30}/> </span>
     
     </div>
-    <div className="arrow">
+    {/* <div className="arrow">
      <HiArrowCircleLeft size={30}/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <HiArrowCircleRight size={30}/>
     </div>
-    
+     */}
 
     <div className="leftright">
     <span><h5 >${props.rent.expectedRent}/month </h5></span> 
