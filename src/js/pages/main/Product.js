@@ -45,6 +45,7 @@ import '../main/Card_detail.css'
 import '../main/Rent.css';
 import { Carousel } from 'bootstrap';
 import Carousels from '../../components/Carousels';
+import RentCarousels from '../../components/RentCarousels';
 
 function Product() {
     const {id} = useParams()
@@ -113,7 +114,7 @@ function Product() {
             <ul className="sale">For Rent</ul>
             </div>
             </div>
-            <Carousels/>
+            <RentCarousels/>
            
            
             

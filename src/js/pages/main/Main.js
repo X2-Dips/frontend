@@ -5,6 +5,7 @@ import Home from "./Home";
 import Contact from "./Contact";
 import Products from "../main/Product";
 import Services from "./Services";
+// import SliderDemo from "../../components/SliderDemo";
 
 
 import AddProperty from "./AddProperty"
@@ -35,6 +36,7 @@ import MyProperty from "./MyProperty"
 import Dashboard from "../admin_dashboard/Dashboard";
 import OrderList from "../admin_dashboard/OrderList";
 import Customer from "../admin_dashboard/Customer";
+
 
 
 
@@ -140,6 +142,7 @@ class Main extends Component {
              <Route path="/dashboard" component={Dashboard}/>
              <Route path="/orderlist" component={OrderList}/>
              <Route path="/customer" component={Customer}/>
+             {/* <Route path="/sliderDemo" component={SliderDemo}/> */}
             
 
              </Switch>

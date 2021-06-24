@@ -54,7 +54,7 @@ function RentCard(props) {
     </Link>
      */}
      <div className="image2">
-       <div className="box">
+       <div className="boxes">
        <div 
     style={{
       width: "100%", height: "300px",  display:"block", object:"cover",

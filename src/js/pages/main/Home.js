@@ -9,6 +9,10 @@ import "../../components/Carousels.css";
 
 import ProductCard from "../../components/ProductCard";
 import RentCard from "../../components/RentCard";
+import ServicePage from "../../components/ServicePage";
+import WhyChooseUs from "../../components/WhyChooseUs";
+import Testimonial from "../../components/Testimonial";
+import SliderDemo from "../../components/SliderDemo";
 
 
 
@@ -138,15 +142,17 @@ function Home(){
       {/* <div class="container9"> */}
                 <form className="container9">
                 {/* <div class="inputs"> */}
-                <div class="city-input">
+                <div class="location-input">
                 <label>Location</label> 
                 <input type="text" required placeholder="Enter your Location"/>
                 </div>
+                <br></br>
                 <div class="city-input">
 
                 <label>City</label> <input type="text" required placeholder="Enter your City"/>
 
                   </div>
+                  <br></br>
                   <div class="state-input">
 
                     <label>State</label> <input type="text" required placeholder="Enter your State"/>
@@ -178,6 +184,31 @@ function Home(){
       
       {contents}
       <hr className="hr"></hr>
+      
+     <div>
+       <h1 className="heading2">Services</h1>
+       <hr className="hr"></hr>
+       <ServicePage/>
+       <hr className="hr"></hr>
+     </div>
+     <div>
+     <h1 className="heading2">Why Use RentPayRooms</h1>
+       <hr className="hr"></hr>
+       <WhyChooseUs/>
+
+       <hr className="hr"></hr>
+     </div>
+     <div>
+     <h1 className="heading2">Our Happy Customers </h1>
+       <hr className="hr"></hr>
+       {/* <Testimonial/> */}
+       {/* <SliderDemo/> */}
+       
+       
+
+       <hr className="hr"></hr>
+     </div>
+    
     
 
           

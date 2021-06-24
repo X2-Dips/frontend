@@ -1,15 +1,15 @@
 .container9{
         
     /* position:absolute; */
-    margin-top: -25%;
+    margin-top: -26%;
     padding-top: 2em;
     
 
     
     transform:translate( -50%, -50%);
-    width: 300px;
-    height: 27em;
-    margin-left: 12em;
+    width: 400px;
+    height: 25em;
+    margin-left: 14em;
     border-radius:10px;
     /* display:flex; */
     flex-direction: column;
@@ -26,7 +26,7 @@
             /* margin-left: 1em; */
             margin-top: 13em;
             width: 22em;
-            right: 9em;
+            right: 4em;
             
          
             height: 70%;
@@ -52,14 +52,14 @@
         }
         
         .btn-box {
-            margin-left: 3em;
+            margin-left: 0em;
             width: 100%;
         }
         .max{
-            margin-left: 5em;
+            margin-left: -2em;
         }
         .mini{
-            margin-left: 2em;
+            margin-left: 1em;
         }
         
     }
@@ -100,6 +100,7 @@
     
         display:flex;
      flex-direction: column;
+
     
     }
     
@@ -110,21 +111,60 @@
         border:.5px solid #dbdbdb; border-radius: 3px;
         padding: .9rem;
         margin-left: 0.5em;
+        margin-right: 0.5em;
 
         /* border-radius: 20px; */
     
     }
-    .city-input label{
-        font-size: large;
+    .location-input label{
+        /* font-size: large;
         color: black;
-        font-weight: 600;
-        margin-left: 0.5em;
+        font-weight: 600;*/
+        /* margin-left: 0.7em;  */
+         position:absolute; 
+        top:2.3rem;
+        left:.9rem;
+        color:#0052cc;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
+
+    }
+    .city-input label{
+        /* font-size: large;
+        color: black;
+        font-weight: 600;*/
+        margin-left: 0.5em; 
+        position:fixed;
+        top:9.3rem;
+        left:.1rem;
+        color:#0052cc;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
     }
     .state-input label{
-        font-size: large;
+        /* font-size: large;
         color: black;
         font-weight: 600;
-        margin-left: 0.5em;
+        margin-left: 0.5em; */
+        margin-left: 0.5em; 
+         position:absolute; 
+        top:16.3rem;
+        left:.1rem;
+        color:#0052cc;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
     }
     .budget h3{
         color: black;
@@ -176,7 +216,7 @@
             } 
              */
      .btn-box{   
-            height:100px;  
+            height:80px;  
             }
             
             .btn-box p{
@@ -186,7 +226,7 @@
     
     .btn-box button{
     
-    width:260px;
+    width:360px;
     height:45px;
     margin: 20px 0px;
     font-size: large;
@@ -219,7 +259,7 @@
     .max{
         font-size:small;
         position: relative;
-        left: 160px;
+        left: 250px;
         color: black;
     }
 

@@ -129,8 +129,8 @@ code {
   -webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;font-size:1.8rem;font-weight:300;height:100vh;background-color:#fafafa}body::-webkit-scrollbar{display:none;scrollbar-width:none}#root{height:100%}.grid-container{max-width:192rem;margin:0 auto;display:-ms-grid;display:grid;-ms-grid-columns:1fr;grid-template-columns:1fr;-ms-grid-rows:6rem 1fr 1fr;grid-template-rows:6rem 1fr 1fr;height:100%;grid-template-areas:"headers" "main" "footer"}header{-ms-grid-row:1;grid-area:headers}header,main{-ms-grid-column:1}main{-ms-grid-row:2;grid-area:main}footer{-ms-grid-row:3;-ms-grid-column:1;grid-area:footer}
 a,a:active,a:visited{text-decoration:none;transition:all .2s ease}
 ul{list-style:none}hr{width:50%;height:.3rem;background-color:#9698a6;border-radius:50%;margin:0 auto 4rem}
-.container-full{max-width:500rem;margin:0 auto;width:100%}.container{max-width:124rem;margin:0 auto;width:95%}
-.gridBox{display:-ms-grid;display:grid;place-items:center}
+/* .container-full{max-width:500rem;margin:0 auto;width:100%}.container{max-width:124rem;margin:0 auto;width:95%}
+.gridBox{display:-ms-grid;display:grid;place-items:center} */
 .flexBox{display:flex;align-items:center}.flexBox.fdr{flex-direction:column}
 
 
@@ -193,9 +193,34 @@ h6{font-size:1.2rem}
 .carousels .slider-div{height:100%;height:inherit;width:inherit;opacity:0;transition:all .5s ease;transition-duration:2s ease}
 .carousels .slider-div:after{content:"";position:absolute;top:0;left:0;width:100%;height:100%;background-color:rgba(0,0,0,.5);z-index:100}
 .carousels .slider-div .slider-img{width:100vw;height:100%;object-fit:cover;max-width:144rem;position:relative}
-.carousels .slider-div .slider-info{position:absolute;padding:1rem;top:0;left:0;width:100%;height:100%;z-index:150;display:flex;align-items:center;flex-direction:column;justify-content:center}
-.carousels .slider-div .slider-info h1{text-align:center;font-size:3.5rem;font-weight:600;color:#fff;margin:0 1rem;word-wrap:anywhere;white-space:normal}
-.carousels .slider-div .slider-info p{text-align:center;margin-bottom:5rem;color:#f3f4f6;font-weight:400}
+.carousels .slider-div .slider-info{
+  position:absolute;
+  padding:1rem;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  z-index:150;
+  display:flex;
+  align-items:flex-end;
+  flex-direction:column;
+  justify-content:center
+}
+.carousels .slider-div .slider-info h1
+{text-align: right;
+  font-size:3.5rem;
+  font-weight:600;
+  color:#fff;
+  margin:0 1rem;
+  word-wrap:anywhere;
+  white-space:normal
+}
+.carousels .slider-div .slider-info p{
+  text-align:right;
+  margin-bottom:5rem;
+  color:#f3f4f6;
+  font-weight:400
+}
 .carousels .slider-div .slider-info a{padding:1.2rem 3.5rem;font-size:1.5rem;border-radius:.5rem;color:#2d314d;letter-spacing:.1rem;transition:all .3s ease;background:#fff}
 .carousels .slider-div .slider-info a:hover{animation:moveB .2s linear .15s alternate;opacity:.9}.carousels .slider-div.active{opacity:1;transition:all 1s ease;transition-duration:2s ease}
 
@@ -213,7 +238,10 @@ h6{font-size:1.2rem}
   
 
 .carousels .next-btn{right:40%}
-.carousels .prev-btn{left:40%}}
+.carousels .prev-btn{left:40%}
+.carousels .slider-div .slider-info{align-items: center;}
+}
+
 .search-form{width:100%;margin:5rem auto;padding:1rem 5rem;font-family:inherit}
 .form-control{background:hsla(0,0%,100%,.5);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);border-radius:1.5rem;padding:2rem;box-shadow:.1rem .1rem .5rem rgba(0,0,0,.5)}
 

@@ -17,16 +17,16 @@ const Carousels = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  useEffect(() => {
-    const length = carouselSliders.length;
+  // useEffect(() => {
+  //   const length = carouselSliders.length;
 
-    const CarouselInterval = setInterval(() => {
-      // nextSlide();
-      setCurrent(current === length - 1 ? 0 : current + 1);
-    }, 5000);
+    // const CarouselInterval = setInterval(() => {
+      
+    //   setCurrent(current === length - 1 ? 0 : current + 1);
+    // }, 5000);
     
-    return () => clearInterval(CarouselInterval);
-  }, [current]);
+  //   return () => clearInterval(CarouselInterval);
+  // }, [current]);
 
   return (
     <div className="carousels">
@@ -52,45 +52,9 @@ const Carousels = () => {
                 <div className="slider-info">
                   <h1>{slider.title}</h1>
                   <p>{slider.subTitle}</p>
-                  {/* <div to="/products" className="btn">
-                    {slider.btnName}
-                  </div> */}
+                 
                 </div>
-                {/* ************************form****************** */}
-                {/* <div class="container9">
-                <form> */}
-                {/* <div class="inputs"> */}
-                {/* <div class="city-input">
-                <label>Location</label> 
-                <input type="text" required placeholder="Enter your Location"/>
-                </div>
-                <div class="city-input">
-
-                <label>City</label> <input type="text" required placeholder="Enter your City"/>
-
-                  </div>
-                  <div class="state-input">
-
-                    <label>State</label> <input type="text" required placeholder="Enter your State"/>
-
-               </div>
-               <div class="budget">
-                    <h3>Budget range</h3>
-
-                    <span class="mini">Minimum</span> <span class="max">Maximum</span>
-                </div>
-                <div class="btn-box"> */}
-
- {/* <p>By joining, you agree to the and Privacy policy</p>  */}
-
-{/* <button>Search property</button>
-
-</div>
-
-
-                </form>
-                </div> */}
-              </>
+          </>
               
             )}
           </div>

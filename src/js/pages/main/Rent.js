@@ -12,6 +12,7 @@ import {CgGym} from "react-icons/cg";
 
 import {GoLocation} from "react-icons/go";
 import Carousels from "../../components/Carousels";
+import RentCarousels from "../../components/RentCarousels";
 
 
 
@@ -86,11 +87,11 @@ function Rent() {
             </div>
             
             </div>
-            <Carousels/>
-           {/* <div className="picture">
+            {/* <Carousels/> */}
+           <div className="picture">
            <RentCarousels/>  
 
-           </div> */}
+           </div>
             {/* */}
            
             {/* <div className="rent-display">  */}
