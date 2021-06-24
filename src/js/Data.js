@@ -88,6 +88,13 @@ export const carouselSliders = [
     
   },
 ];
-
+const TestimonialData={
+  customers:[
+    {
+      id:"1",
+      
+    }
+  ]
+}
 
 
