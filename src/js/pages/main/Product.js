@@ -45,11 +45,10 @@ import '../main/Card_detail.css'
 import '../main/Rent.css';
 import { Carousel } from 'bootstrap';
 import Carousels from '../../components/Carousels';
-import RentCarousels from '../../components/RentCarousels';
 
 function Product() {
     const {id} = useParams()
-    const url = `http://localhost:8082/api/getHostel/${id}`
+    const url = `http://localhost:8080/api/getHostel/${id}`
     const [product, setProduct] = useState({
         loading:false,
         data:null,
@@ -114,7 +113,7 @@ function Product() {
             <ul className="sale">For Rent</ul>
             </div>
             </div>
-            <RentCarousels/>
+            <Carousels/>
            
            
             

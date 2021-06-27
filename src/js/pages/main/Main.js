@@ -6,6 +6,7 @@ import Contact from "./Contact";
 import Products from "../main/Product";
 import Services from "./Services";
 // import SliderDemo from "../../components/SliderDemo";
+import ViewMore_Room from "../main/ViewMore_Room";
 
 
 import AddProperty from "./AddProperty"
@@ -36,6 +37,7 @@ import MyProperty from "./MyProperty"
 import Dashboard from "../admin_dashboard/Dashboard";
 import OrderList from "../admin_dashboard/OrderList";
 import Customer from "../admin_dashboard/Customer";
+import ViewMore_Hostel from "./ViewMore_Hostel";
 
 
 
@@ -120,6 +122,8 @@ class Main extends Component {
          
           <Route path="/add_property" exact component={AddProperty}/>
           <Route path="/addpropertyform" exact component={PostProperty}/>
+          <Route path="/viewmoreRoom" exact component={ViewMore_Room}/>
+          <Route path="/viewmoreHostel" exact component={ViewMore_Hostel}/>
           
         
           <Route path="/hostel" exact component={Hostel}/>
@@ -142,6 +146,7 @@ class Main extends Component {
              <Route path="/dashboard" component={Dashboard}/>
              <Route path="/orderlist" component={OrderList}/>
              <Route path="/customer" component={Customer}/>
+             
              {/* <Route path="/sliderDemo" component={SliderDemo}/> */}
             
 

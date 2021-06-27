@@ -43,19 +43,19 @@ import TestimonialCard from "./TestimonialCard";
       
         <div style={{width:'40%'}}>
             <Slider {...settings}>
+            {/* <TestimonialCard/>
             <TestimonialCard/>
-            <TestimonialCard/>
-            <TestimonialCard/>
+            <TestimonialCard/> */}
             {/* <TestimonialCard/>  */}
             
-                {/* <TestimonialCard  data={{img:testimonial, 
+               <TestimonialCard  data={{img:testimonial, 
                 paragraph:"The site really helps us to find good properties in the least amount of time without any headache of brokerage. I was so scared in Pune due to the issues of high deposit as well as brokerage." ,
                          
                   Cname:"Nisha Rai",
                   occupation:"Engineer"           
                              
 
-                }}/> */}
+                }}/> 
                
                  {/* <TestimonialCard  data={{img:testimonial, 
                 paragraph:"The site really helps us to find good properties in the least amount of time without any headache of brokerage. I was so scared in Pune due to the issues of high deposit as well as brokerage." ,

@@ -1,14 +1,14 @@
 import React from "react";
 import { Avatar } from "@material-ui/core";
 const TestimonialCard = (props) => {
-  // const { img, paragraph, Cname, occupation } = props.data;
-  // console.log(props.data);
+  const { img, paragraph, Cname, occupation } = props.data;
+  console.log(props.data);
   return (
     <div>
- <h3>hello</h3>
+ {/* <h3>hello</h3> */}
 
 
-       {/* <div
+        <div
         style={{
           display: "flex",
           alignItems: "center",
@@ -33,7 +33,7 @@ const TestimonialCard = (props) => {
           <span style={{ fontWeight: 700, color: "green" }}>{Cname}</span>,
           {occupation}
         </p>
-      </div>  */}
+      </div>  
     </div>
   );
 };

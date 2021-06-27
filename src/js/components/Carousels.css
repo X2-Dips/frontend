@@ -1,15 +1,15 @@
 .container9{
         
     /* position:absolute; */
-    margin-top: -26%;
+    margin-top: -25%;
     padding-top: 2em;
     
 
     
     transform:translate( -50%, -50%);
     width: 400px;
-    height: 25em;
-    margin-left: 14em;
+    height: 29em;
+    margin-left: 16em;
     border-radius:10px;
     /* display:flex; */
     flex-direction: column;
@@ -24,7 +24,7 @@
         .container9{
             display: block;
             /* margin-left: 1em; */
-            margin-top: 13em;
+            margin-top: 15em;
             width: 22em;
             right: 4em;
             
@@ -107,24 +107,26 @@
     .location-input input {
     
         height:50px;
+        width: 80%;
         outline: none;
         border:.5px solid #dbdbdb; border-radius: 3px;
         padding: .9rem;
-        margin-left: 0.5em;
-        margin-right: 0.5em;
+        margin-left: 3em;
+        margin-right: 5.5em;
 
         /* border-radius: 20px; */
     
     }
+  
     .location-input label{
         /* font-size: large;
         color: black;
         font-weight: 600;*/
         /* margin-left: 0.7em;  */
          position:absolute; 
-        top:2.3rem;
-        left:.9rem;
-        color:#0052cc;
+        top:6.8rem;
+        left:4.9rem;
+        color:black;
         font-size:1.9rem;
         background-color:#fff;
         padding:0 .5rem;
@@ -139,9 +141,9 @@
         font-weight: 600;*/
         margin-left: 0.5em; 
         position:fixed;
-        top:9.3rem;
-        left:.1rem;
-        color:#0052cc;
+        top:13.9rem;
+        left:3.5rem;
+        color:black;
         font-size:1.9rem;
         background-color:#fff;
         padding:0 .5rem;
@@ -156,9 +158,25 @@
         margin-left: 0.5em; */
         margin-left: 0.5em; 
          position:absolute; 
-        top:16.3rem;
-        left:.1rem;
-        color:#0052cc;
+        top:21rem;
+        left:3.5rem;
+        color:black;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
+    }
+    .propertyType-input label{
+        /* font-size: large;
+        color: black;
+        font-weight: 600;*/
+        margin-left: 0.5em; 
+        position:fixed;
+        top:28.3rem;
+        left:3.5rem;
+        color:black;
         font-size:1.9rem;
         background-color:#fff;
         padding:0 .5rem;
@@ -182,28 +200,48 @@
     .city-input input {
     
         height:50px;
+        width: 80%;
         outline: none;
         border:.5px solid #dbdbdb; border-radius: 3px;
         padding: .9rem;
-        margin-left: 0.5em;
+        margin-left: 3em;
         margin-right: .5em;
         /* border-radius: 20px; */
     
     }
+    .propertyType-input{
+            
+        display:flex;
+         flex-direction: column;
+         }
+            
             
      .state-input{
             
     display:flex;
      flex-direction: column;
      }
+     .propertyType-input select{
+            
+        height:50px;
+        width: 80%;
+        outline: none;
+        border:.5px solid #dbdbdb; border-radius: 3px;
+        padding: .9rem;
+        margin-left: 3em;
+        margin-right: 0.5em;
+        /* border-radius: 20px; */
+                
+        } 
             
     .state-input input{
             
     height:50px;
+    width: 80%;
     outline: none;
     border:.5px solid #dbdbdb; border-radius: 3px;
     padding: .9rem;
-    margin-left: 0.5em;
+    margin-left: 3em;
     margin-right: 0.5em;
     /* border-radius: 20px; */
             
@@ -226,22 +264,22 @@
     
     .btn-box button{
     
-    width:360px;
+    width:80%;
     height:45px;
-    margin: 20px 0px;
+    margin: 25px 0px;
     font-size: large;
     font-weight: 600;
-    border-radius:2px;
+    border-radius:9px;
     border:none;
-    outline: none; background: rgb(12, 12, 12);
+    outline: none; background:#007bff;
     color:white;
-    margin-left: 1em;
+    margin-left: 2.5em;
     /* border-radius: 20px; */
     }
                 
     
     
-    .budget{
+    /* .budget{
     
         margin-top: 20px;
         margin-left: 0.5em;
@@ -261,6 +299,38 @@
         position: relative;
         left: 250px;
         color: black;
+    } */
+    .budget label{
+    
+            display: inline-block;
+            margin-bottom: .5rem;
+            margin-top: 1rem;
+            color: black;
+            margin-left:2.5em ;
+        
+    }
+    .budget input{
+        overflow: visible;
+    }
+    .budget-range input[type="range" i] {
+        appearance: auto;
+        color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+        cursor: default;
+        padding: initial;
+        border: initial;
+        margin: 2px;
+    }
+    .budget-range{
+        display: block;
+    width: 80%;
+    margin-left: 3em;
+    appearance: auto;
+        color: -internal-light-dark(rgb(16, 16, 16), rgb(255, 255, 255));
+        cursor: default;
+        padding: initial;
+        border: initial;
+        /* margin: 2px; */
+    /* margin-right: .1em; */
     }
 
 

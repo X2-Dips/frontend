@@ -89,7 +89,8 @@ function Rent() {
             </div>
             {/* <Carousels/> */}
            <div className="picture">
-           <RentCarousels/>  
+           {/* <RentCarousels/>   */}
+           <Carousels/>
 
            </div>
             {/* */}

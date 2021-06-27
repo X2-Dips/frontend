@@ -1,10 +1,8 @@
 import React,{useState, useEffect} from "react";
 import Carousels from "../../components/Carousels";
-//import data from "../../Data";
 import "./Card_detail.css";
-//import Rating from "../../components/Rating";
-
 import axios from "axios";
+import { Link } from 'react-router-dom'
 import "../../components/Carousels.css";
 
 import ProductCard from "../../components/ProductCard";
@@ -12,7 +10,8 @@ import RentCard from "../../components/RentCard";
 import ServicePage from "../../components/ServicePage";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import Testimonial from "../../components/Testimonial";
-import SliderDemo from "../../components/SliderDemo";
+import ViewMore_Room from "../main/ViewMore_Room";
+
 
 
 
@@ -20,7 +19,7 @@ import SliderDemo from "../../components/SliderDemo";
 //   const deals = data.products.filter((product) => product.deals === true);
 function Home(){
 
-    const url = `http://localhost:8082/api/getHostel?page=1&limit=4`
+    const url = `http://localhost:8080/api/getHostel?page=1&limit=4`
   const [products, setProducts]=useState({
      loading:false,
     data:null,
@@ -139,11 +138,16 @@ function Home(){
   return (
     <div>
       <Carousels />
-      {/* <div class="container9"> */}
+     
+
                 <form className="container9">
                 {/* <div class="inputs"> */}
+                <div>
+                  <h1  style={{color:"black", textAlign:"center", fontWeight:"600"}}>Search Property</h1>
+                </div>
+                <br></br>
                 <div class="location-input">
-                <label>Location</label> 
+                <label>Landmark</label> 
                 <input type="text" required placeholder="Enter your Location"/>
                 </div>
                 <br></br>
@@ -158,55 +162,92 @@ function Home(){
                     <label>State</label> <input type="text" required placeholder="Enter your State"/>
 
                </div>
-               <div class="budget">
+               <br></br>
+               <div class="propertyType-input">
+
+                <label>Property Type</label><select >
+                <option>Select</option>
+                            <option>Apartments</option>
+                            <option>Hostel</option>
+                            <option>Rooms</option>
+                </select>
+
+                
+
+
+</div>
+               
+               {/* <div class="budget">
                     <h3>Budget range</h3>
 
                     <span class="mini">Minimum</span> <span class="max">Maximum</span>
-                </div>
+                </div> */}
+                <div class="budget">
+                      <label for="price">Rs.500/- - Rs.1,00,000/- </label>
+                      <input type="range" min="500" max="1000000" class="budget-range"/>
+                    </div>
+                
+                
                 <div class="btn-box">
 
  {/* <p>By joining, you agree to the and Privacy policy</p>  */}
 
-<button>Search property</button>
+<button>Search</button>
 
 </div>
 
 
                 </form>
                 {/* </div> */}
-      <hr className="hr"></hr>
+      <hr className="hr1"></hr>
       <h1 className="heading2" >Hostel & PG</h1>
-      <hr className="hr"></hr>
+      <Link  to="/viewmoreHostel">
+      <button 
+      style={{background:"black", border:"none", color:"white",width:"80px",height:"30px",
+      borderRadius:"5px",marginLeft:"85em"
+      }}>View More</button>
+      </Link>
+      <br></br>
       {content}
-      <hr className="hr"></hr>
+      <hr className="hr1"></hr>
       <h1 className="heading2">Rooms</h1>
-      <hr className="hr"></hr>
+      <Link  to="/viewmoreRoom">
+      <button 
+      style={{background:"black", border:"none", color:"white",width:"80px",height:"30px",
+      borderRadius:"5px",marginLeft:"85em"
+      }}>View More
+      </button>
+      </Link>
+      <br></br>
       
       {contents}
-      <hr className="hr"></hr>
+      <hr className="hr1"></hr>
       
      <div>
        <h1 className="heading2">Services</h1>
-       <hr className="hr"></hr>
+   <br></br>
+   <br></br>
        <ServicePage/>
-       <hr className="hr"></hr>
+       <hr className="hr1"></hr>
      </div>
      <div>
      <h1 className="heading2">Why Use RentPayRooms</h1>
-       <hr className="hr"></hr>
+     <br></br>
+     <br></br>
        <WhyChooseUs/>
 
-       <hr className="hr"></hr>
+       <hr className="hr1"></hr>
      </div>
      <div>
      <h1 className="heading2">Our Happy Customers </h1>
-       <hr className="hr"></hr>
-       {/* <Testimonial/> */}
+      <br></br>
+      <br></br>
+       <Testimonial/>
        {/* <SliderDemo/> */}
        
        
 
-       <hr className="hr"></hr>
+       <hr className="hr1"></hr>
      </div>
     
     

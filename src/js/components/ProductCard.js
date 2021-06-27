@@ -51,7 +51,7 @@ function ProductCard(props) {
        <div className="boxes">
        <div 
     style={{
-      width: "100%", height: "300px", display:"block", object:"cover",
+      width: "100%", height: "300px",display:"block", object:"cover",
  
          backgroundImage:`url(${image33})`,
       
