@@ -1,7 +1,29 @@
 import React from 'react'
 import {Component} from 'react';
+import { Link } from 'react-router-dom'
+import {AiFillCamera} from "react-icons/ai";
+import {FcFilingCabinet} from "react-icons/fc";
+import {GoDeviceDesktop} from 'react-icons/go';
+import {FaBed} from 'react-icons/fa';
+import {FaMale} from "react-icons/fa";
+import {GiFruitBowl} from "react-icons/gi";
+import {FaFemale} from "react-icons/fa";
+import {FaBeer} from "react-icons/fa";
+import {GiChickenOven} from "react-icons/gi";
+import {MdSmokeFree} from "react-icons/md";
+import {ImManWoman} from "react-icons/im";
+import {RiBatterySaverFill} from "react-icons/ri";
+import {CgSmartHomeRefrigerator} from "react-icons/cg";
+import {GrUserManager} from "react-icons/gr";
+import {ImMan} from "react-icons/im";
+import {FaHotTub} from 'react-icons/fa';
+import AC from "../../images/ants/AC.PNG";
+import {FaBath} from 'react-icons/fa';
+import {GiLift} from 'react-icons/gi';
+import {BsWifi} from 'react-icons/bs';
 import double1 from "../../images/adds/double1.png";
 import first2 from "../../images/adds/first2.png";
+import upload from "../../images/ants/upload.png";
 
 import third1 from "../../images/adds/third1.png";
 import four1 from "../../images/adds/four1.png";
@@ -261,7 +283,7 @@ class Hostel extends Component {
     <h1 className="heading">Room Details</h1>
     
     <h8>Provide details about your place to find a tenant soon</h8>
-    <hr class="hr"></hr>
+    {/* <hr class="hr"></hr> */}
     </div>
     <form action="" className="hostel_form">
    <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the type of rooms available in your Hostel/PG*</h2>
@@ -304,8 +326,8 @@ class Hostel extends Component {
                 </div>
 
 
-                <br></br>
-                <br></br>
+                
+                
                 <div class ="text-center">
                 <img src={third1} alt="Logo" />
                 <br></br>
@@ -313,7 +335,8 @@ class Hostel extends Component {
 
                 </div>
                 <br></br>
-                <div class="row">
+                <div style={{marginTop:"-55px", marginBottom:"-55px"}}
+                class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="FormSelect1">Expected Rent Per Person* </label>
@@ -330,67 +353,77 @@ class Hostel extends Component {
                 </div>
             </div>
             <br></br>
-            <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Room Amenities</h2>
+            <h2 style={{marginLeft:"3em"}}>Room Amenities</h2>
             
            
-                <div class ="row">
-                <div class="col">
+                <div style={{marginLeft:"3em"}}
+                class ="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group3">
                             <input type="checkbox"   value="cupboard" onChange={this.changeRoomAmenitiesHandler}/>
-                            <label for="formGroupExampleInput">Cupboard 
+                            <label for="formGroupExampleInput"> <FcFilingCabinet/> Cupboard 
                             </label>
                         </div>
                         </div>
                
-                        <div class="col">
+                        <div style={{marginRight:"3em"}}
+                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group3">
                             <input type="checkbox"   value="tv" onChange={this.changeRoomAmenitiesHandler}/>
-                            <label for="formGroupExampleInput">  TV
+                            <label for="formGroupExampleInput"> <GoDeviceDesktop/> TV
                          </label>
                         </div>
                         </div>
                    
-                        <div class="col">
+                        <div style={{marginRight:"3em"}}
+                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group3">
                             <input type="checkbox"  value="bedding" onChange={this.changeRoomAmenitiesHandler}/>
-                            <label for="formGroupExampleInput">
-                              Bedding     </label>
+                            <label for="formGroupExampleInput"> <FaBed/> Bedding     </label>
                         </div>
                         </div>
-                        </div>
-                        <div className="row">
-                        <div class="col">
+                        
+                        
+                        <div style={{marginRight:"3em"}}
+                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group3">
                             <input type="checkbox"  value="geyser" onChange={this.changeRoomAmenitiesHandler}/>
-                            <label for="formGroupExampleInput"> Geyser    </label>
+                            <label for="formGroupExampleInput"> <FaHotTub/> Geyser    </label>
                         </div>
                         </div>
-                        <div class="col">
+                        <div style={{marginRight:"3em"}}
+                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group3">
                             <input type="checkbox"  value="ac" onChange={this.changeRoomAmenitiesHandler} />
-                            <label for="formGroupExampleInput">  AirConditioner</label>
+                            <label for="formGroupExampleInput"> <img style={{width:"20px"}}
+                            src={AC}/>  AirConditioner</label>
                         </div>
                         </div>
-                        <div class="col">
+                        <div style={{marginRight:"3em"}}
+                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group3">
                             <input type="checkbox"  value="attached washroom" onChange={this.changeRoomAmenitiesHandler} />
-                            <label for="formGroupExampleInput">  Washroom   </label>
+                            <label for="formGroupExampleInput"> <FaBath/>  Washroom   </label>
+                        </div>
                         </div>
                         </div>
                         
                  
                     
-                       </div>
+                    
                        <br></br>
-                       <hr class="hr"/>
+                       <br></br>
+                       {/* <hr class="hr"/> */}
                        
                        <div class="text-center">
             <h1 className="heading">Locality Details</h1>
             </div>
         <br></br>
-        <hr class="hr"></hr>
+        {/* <hr class="hr"></hr> */}
         {/* <div class="container"> */}
-        <div class="row">
+        <div style={{marginTop:"-55px", marginBottom:"-55px"}}
+        class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="label">City*</label>
@@ -416,7 +449,8 @@ class Hostel extends Component {
 
             </div>
             <br></br>
-            <div className="row">
+            <div style={{marginTop:"-55px", marginBottom:"-55px"}}
+            className="row">
             <div className="col">
             <div class="form-group">
                 <label for="label">Street/Area</label>
@@ -426,38 +460,40 @@ class Hostel extends Component {
              </div>
              </div>
             <br></br>
-            <hr class="hr"/>
+            {/* <hr class="hr"/> */}
 
             <div className="container">
         <div class="text-center">
             <h1 className="heading">PG Details</h1>
-            <hr class="hr"></hr>
+            {/* <hr class="hr"></hr> */}
             </div>
         <br></br>
         
         <lable> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property Available For</lable> 
         <br></br> 
-        <div class ="row">
+        <br></br>
+        <div style={{marginTop:"-35px", marginBottom:"-55px", marginLeft:"30px",marginRight:"20em"}}
+         class ="row">
                      <div class ="col">
                      <div class="form-group2">
 
         
        
                         <input type="radio"  name="propertyAvailableFor" value="male" onChange={this.changePropertyAvailabeFor}></input>
-                        <label for="male">Male</label>
+                        <label for="male"> <FaMale/> Male</label>
                         </div>
                         </div>
                         <div class ="col">
                         <div className="form-group2">
                         <input type="radio"  name="propertyAvailableFor" value="female" onChange={this.changePropertyAvailabeFor}/>
-                        <label for="female">Female</label>
+                        <label for="female"> <FaFemale/> Female</label>
                         </div>
                         </div>
                         
                         <div class ="col">
                         <div className="form-group2">
                         <input type="radio"  name="propertyAvailableFor" value="anyone" onChange={this.changePropertyAvailabeFor}/>
-                        <label for="female">Anyone</label>
+                        <label for="female"> <ImManWoman/> Anyone</label>
                         </div>
                         </div>
                         
@@ -465,8 +501,11 @@ class Hostel extends Component {
       
                               
                  <br></br>
+                 <br></br>
+                 <br></br>
 
-                 <div class="row">
+                 <div style={{marginTop:"-55px", marginBottom:"-55px"}}
+                 class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Available From*</label>
@@ -489,10 +528,14 @@ class Hostel extends Component {
 
             </div>
             <br></br>
+            <br></br>
+            <br></br>
 
             
             <div class = "container">
-            <div className="row">
+
+            <div style={{marginTop:"-55px", marginBottom:"-55px",marginLeft:"20px"}}
+            className="row">
             <div className="col">
             <div class="form-group1">
                         <label for="exampleFormControlSelect1">Food Included</label>
@@ -506,19 +549,21 @@ class Hostel extends Component {
                     </div>
                     </div>
                              <br></br>
+                             <br></br>
 
-                             <div class ="row">
+                             <div 
+                             style={{marginTop:"-35px", marginBottom:"-55px", marginLeft:"30px",marginRight:"20em"}}class ="row">
                 <div class="col">
                         <div class="form-group3">
                             <input type="checkbox" value="Breakfast" onChange={this.changeFoodAvailableHandler}/>
-                            <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> Breakfast</label>
+                            <label for="formGroupExampleInput"> <GiFruitBowl/> Breakfast</label>
                         </div>
                         </div>
                
                         <div class="col">
                         <div class="form-group3">
                             <input type="checkbox"   value="Lunch" onChange={this.changeFoodAvailableHandler}/>
-                            <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i>  Lunch
+                            <label for="formGroupExampleInput"> <GiFruitBowl/>  Lunch
                          </label>
                         </div>
                         </div>
@@ -526,61 +571,88 @@ class Hostel extends Component {
                         <div class="col">
                         <div class="form-group3">
                             <input type="checkbox"  value="Dinner" onChange={this.changeFoodAvailableHandler}/>
-                            <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i>  Dinner    </label>
+                            <label for="formGroupExampleInput"> <GiFruitBowl/> Dinner    </label>
                         </div>
                         </div>
                         </div>
                         </div>
                         <br></br>
+                        <br></br>
                         
-                        <h2>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PG/Hostel Rules</h2>
+                        <h2 style={{marginLeft:"3em"}}>PG/Hostel Rules</h2>
             
-           
-            <div class ="row">
-            <div class="col">
+           <br></br>
+           <div style={{marginLeft:"3em"}}
+                class ="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox" id="formGroupExampleInput"  value="no smoking" onChange={this.changeRulesHandler}/>
-                        <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> No Smoking</label>
+                        <label for="formGroupExampleInput"> <MdSmokeFree/> No Smoking</label>
                     </div>
                     </div>
            
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox" id="formGroupExampleInput"  value="no guardian" onChange={this.changeRulesHandler}/>
-                        <label for="formGroupExampleInput">Guardian Stay
+                        <label for="formGroupExampleInput"> <GrUserManager/> Guardian Stay
                      </label>
                     </div>
                     </div>
                
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                      class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox" id="formGroupExampleInput" value="no boy's entry" onChange={this.changeRulesHandler}/>
-                        <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i>  No Boy's Entry     </label>
+                        <label for="formGroupExampleInput"> <ImMan/> No Boy's Entry     </label>
                     </div>
                     </div>
-                    </div>
-                    <div className ="row">
-                    <div class="col">
+                   
+                    <div style={{marginRight:"3em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox" id="formGroupExampleInput" value="no drinking" onChange={this.changeRulesHandler}/>
-                        <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i>  No Drinking   </label>
+                        <label for="formGroupExampleInput"> <FaBeer/>  No Drinking   </label>
                     </div>
                     </div>
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox" id="formGroupExampleInput" value="no non-veg" onChange={this.changeRulesHandler}/>
-                        <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i>  No Non-Veg   </label>
+                        <label for="formGroupExampleInput"><GiChickenOven/>  No Non-Veg   </label>
                     </div>
                     </div>
                         </div>
-                        <div className="row">
+                        <br></br>
+                        <br></br>
+                        <br></br>
+                        <div  style={{marginTop:"-55px", marginBottom:"-55px",marginLeft:"40px"}}
+                         className="row">
                         <div className="col">
                         <div class="form-group1">
-                        <label for="exampleFormControlSelect1">Gate Closing Time*</label>
+                        <label style={{}}
+                        for="exampleFormControlSelect1">Gate Closing Time*</label>
                         
-                        <input type="time" class="form_control" value={this.state.closingTime} onChange={this.changeClosingTimeHandler}/>
+                        <input 
+                        type="time" class="form_control" value={this.state.closingTime} onChange={this.changeClosingTimeHandler}/>
                     </div>
                     </div>
+                    <div className="col">
+                    <div class="form-group1">
+                        <label for="exampleFormControlSelect1">Parking*</label>
+                        <select class="form_control" id="exampleFormControlSelect1"  value={this.state.parking} onChange={this.changeParkingHandler}>
+                            <option>Select</option>
+                            <option>Bike</option>
+                            <option>Car</option>
+                            <option>Both</option>
+                            <option>None</option>
+                        </select>
+                    </div>
+                    </div>
+                 
+                   
+           
                     </div>
                     <div className="row">
                     <div className="col">
@@ -590,20 +662,22 @@ class Hostel extends Component {
                 <textarea name="" class="form-control1" id="" cols="30" rows="10" value={this.state.description} onChange={this.changeDescriptionHandler}></textarea>
             </div>
             </div>
-            </div>
+                    </div>
+                  
                      </div>
                      <br></br>
-                     <hr class="hr"/>
+                     {/* <hr class="hr"/> */}
                  
                      <div class="text-center">
                <h1 className="heading">Amenities </h1>
                 </div>
-                   <hr class="hr"/>
+                   {/* <hr class="hr"/> */}
                   
-                    <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available Services</h1>
+                    <h1 style={{marginLeft:"3em"}}>Available Services</h1>
                     
                     
-            <div class="row">
+            <div style={{marginTop:"-55px", marginBottom:"-55px"}}
+            class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Laundry</label>
@@ -640,56 +714,63 @@ class Hostel extends Component {
 
             </div>
                              <br></br>
-                             <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Available Amenities</h1>
+                             <h1 style={{marginLeft:"3em"}}>Available Amenities</h1>
                     
                     <div class="container">
-                    <div class="row">
-                    <div class="col">
+                    <div style={{marginLeft:"3em"}}
+                class ="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox"   value="Common TV" onChange={this.changeTv}/>
-                        <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i> TV</label>
+                        <label for="formGroupExampleInput"> <GoDeviceDesktop/> TV</label>
                     </div>
                     </div>
            
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox"  value="Mess" onChange={this.changeMess} />
-                        <label for="formGroupExampleInput"><i class="fa fa-wifi" aria-hidden="true"></i>  Mess
+                        <label for="formGroupExampleInput"> <GiChickenOven/>  Mess
                      </label>
                     </div>
                     </div>
                
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox"  value="Lift" onChange={this.changeLift}/>
-                        <label for="formGroupExampleInput">  Lift    </label>
+                        <label for="formGroupExampleInput"> <GiLift/> Lift    </label>
                     </div>
                     </div>
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox" value="Wifi" onChange={this.changeWifi}/>
-                        <label for="formGroupExampleInput">  Wifi   </label>
-                    </div>
-                    </div>
-                    </div>
-                    <div className="row">
-                    <div class="col">
-                    <div class="form-group3">
-                        <input type="checkbox"  value="Refrigerator" onChange={this.changeRefrigerator}/>
-                        <label for="formGroupExampleInput">  Refrigerator  </label>
+                        <label for="formGroupExampleInput"> <BsWifi/> Wifi   </label>
                     </div>
                     </div>
                    
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div class="form-group3">
+                        <input type="checkbox"  value="Refrigerator" onChange={this.changeRefrigerator}/>
+                        <label for="formGroupExampleInput"> <CgSmartHomeRefrigerator/> Refrigerator  </label>
+                    </div>
+                    </div>
+                   
+                    <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox"  value="Cooking " onChange={this.changeCooking}/>
-                        <label for="formGroupExampleInput">  Cooking   </label>
+                        <label for="formGroupExampleInput"> <GiChickenOven/>  Cooking   </label>
                     </div>
                     </div>
-                    <div class="col">
+                    <div style={{marginRight:"3em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox"  value="Power BackUP" onChange={this.changePowerBackUp}/>
-                        <label for="formGroupExampleInput">  PowerBackUp   </label>
+                        <label for="formGroupExampleInput"> <RiBatterySaverFill/> PowerBackUp   </label>
                     </div>
                     </div>
 
@@ -697,62 +778,94 @@ class Hostel extends Component {
                     </div>
                     </div>
                     <br></br>
-                    <div className="row">
-                    <div className="col">
-                    <div class="form-group1">
-                        <label for="exampleFormControlSelect1">Parking*</label>
-                        <select class="form_control" id="exampleFormControlSelect1"  value={this.state.parking} onChange={this.changeParkingHandler}>
-                            <option>Select</option>
-                            <option>Bike</option>
-                            <option>Car</option>
-                            <option>Both</option>
-                            <option>None</option>
-                        </select>
-                    </div>
-                    </div>
-                    </div>
+                   
                     <br></br>
 
-                    <hr class="hr"></hr>
+                    {/* <hr class="hr"></hr> */}
                     <div class="text-center">
             <h1 className="heading">Gallery</h1>
             
             <h4>Upload Photos and Videos</h4>
             </div>
-            <hr class="hr"/>
+            {/* <hr class="hr"/> */}
 
             <div class="container">
-                <h7>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UPLOAD UPTO 20 PHOTOS</h7>
+                
+            <h5 style={{marginLeft:"5em"}}>UPLOAD UPTO 20 PHOTOS</h5>
                 <br></br>
-                <div class="container d-flex align-items-center justify-content-center">
-                <div class="row">
-                ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
-                            
-                        </div> 
-                        
-                         ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
-                            
-                        </div> 
-                        ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
-                        </div>
-                        ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
-                        </div>
-                    </div>
+                <div style={{marginLeft:"58em", marginTop:"-3em"}}
+                className="webcam">
+                {/* Click Here To Take Image From Camera */}
+                Image From Camera
+                <br></br>
+                <Link to="/camera">
+                <AiFillCamera size={50} style={{marginLeft:"3.5em"}}/>
+                
                     
+                </Link>
+                
+                   
+                </div>
+                
+                <div class="container d-flex align-items-center justify-content-center">
+                
+                <div style={{marginTop:"5em",marginLeft:"2em"}}
+                class="row d-flex align-items-center justify-content-between">
+                    
+                    ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                            
+                       
+                       
+                         </div> 
+                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                            
+                        </div> 
+                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                            
+                        </div> 
+                        ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                        </div>
+                        ​<div 
+                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                        </div>
+                        ​<div 
+                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                        </div>
+                        ​<div 
+                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                        </div>
+                        
+                    </div>
+
+                    <br></br>
+                   
+                       
+                        
+                  
                     ​
                 </div> 
 
 
                 <br></br>
-                <hr class="hr"/>
+               
                 <br></br>
                 <h4 class="text-center">OR</h4>
                 <br></br>
-                <hr class="hr"/>
+               
                 <div class="text-center">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98N-G2yNHOYoeJRr4OKeI_e-hyeWeTMGNyw&usqp=CAU" width="30px" alt=""/>
                     <br></br>
@@ -771,7 +884,8 @@ class Hostel extends Component {
              <div class="row">
                 <div class="col">
                     <div class="form-group">
-                    <button onClick = {this.saveHostelDetails}class="btn1" > Submit
+                    <button style={{width:"94%", marginLeft:"-10px"}}
+                     onClick = {this.saveHostelDetails}class="btn1" > Submit
             
             </button>
                         

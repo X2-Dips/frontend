@@ -17,16 +17,16 @@ const Carousels = () => {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
 
-  // useEffect(() => {
-  //   const length = carouselSliders.length;
+  useEffect(() => {
+    const length = carouselSliders.length;
 
-    // const CarouselInterval = setInterval(() => {
+    const CarouselInterval = setInterval(() => {
       
-    //   setCurrent(current === length - 1 ? 0 : current + 1);
-    // }, 5000);
+      setCurrent(current === length - 1 ? 0 : current + 1);
+    }, 4000);
     
-  //   return () => clearInterval(CarouselInterval);
-  // }, [current]);
+    return () => clearInterval(CarouselInterval);
+  }, [current]);
 
   return (
     <div className="carousels">

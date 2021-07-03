@@ -87,7 +87,8 @@ const Navbar = (props) => {
 
          
           
-          <div
+          <div style={{marginRight:"15px"}}
+      
             onClick={handleClick}
             className={click ? "menu-btn open" : "menu-btn"}
           >

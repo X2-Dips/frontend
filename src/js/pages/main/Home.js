@@ -201,36 +201,48 @@ function Home(){
                 {/* </div> */}
       <hr className="hr1"></hr>
       <h1 className="heading2" >Hostel & PG</h1>
+     
+      <br></br>
+      {content}
+      <br></br>
+      <br></br>
       <Link  to="/viewmoreHostel">
       <button 
-      style={{background:"black", border:"none", color:"white",width:"80px",height:"30px",
-      borderRadius:"5px",marginLeft:"85em"
+      style={{background:"black", border:"none", color:"white",width:"150px",height:"30px",
+      borderRadius:"5px",marginLeft:"45em"
       }}>View More</button>
       </Link>
       <br></br>
-      {content}
+      <br></br>
       <hr className="hr1"></hr>
       <h1 className="heading2">Rooms</h1>
-      <Link  to="/viewmoreRoom">
-      <button 
-      style={{background:"black", border:"none", color:"white",width:"80px",height:"30px",
-      borderRadius:"5px",marginLeft:"85em"
-      }}>View More
-      </button>
-      </Link>
+     
       <br></br>
       
       {contents}
+      <br />
+      <br></br>
+      <Link  to="/viewmoreRoom">
+      <button 
+      style={{background:"black", border:"none", color:"white",width:"150px",height:"30px",
+      borderRadius:"5px",marginLeft:"45em"
+      }}>View More
+      </button>
+     
+      </Link>
+      {/* <br></br> */}
+     
+     
       <hr className="hr1"></hr>
       
-     <div>
+     <div >
        <h1 className="heading2">Services</h1>
    <br></br>
    <br></br>
        <ServicePage/>
        <hr className="hr1"></hr>
      </div>
-     <div>
+     <div >
      <h1 className="heading2">Why Use RentPayRooms</h1>
      <br></br>
      <br></br>

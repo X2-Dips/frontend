@@ -1,6 +1,33 @@
 import React from 'react';
 import {Component} from 'react';
+import { Link } from 'react-router-dom'
+import {AiFillCamera} from "react-icons/ai";
+
+import Webcam from 'react-webcam';
+import { useRef } from 'react';
 import "./bootstrap.css";
+import AC from "../../images/ants/AC.PNG";
+import upload from "../../images/ants/upload.png";
+import {GiLift} from "react-icons/gi";
+import {BsWifi} from "react-icons/bs";
+import {GiClubs} from "react-icons/gi";
+import {CgGym} from "react-icons/cg";
+import {SiIntercom} from "react-icons/si";
+import map from "../../images/ants/map.png";
+import {FaSwimmer} from "react-icons/fa";
+import {RiPlaystationFill} from "react-icons/ri";
+import {GiFireShield} from "react-icons/gi";
+import {ImLocation2} from "react-icons/im";
+import {FaShoppingCart} from "react-icons/fa";
+import {GiTeePipe} from "react-icons/gi";
+import {GiParkBench} from "react-icons/gi";
+import {FaCloudRain} from "react-icons/fa";
+import {ImBin} from "react-icons/im";
+import {BsHouseDoor} from "react-icons/bs";
+import {GiVacuumCleaner} from "react-icons/gi";
+import {GiCarBattery} from "react-icons/gi";
+import {FaParking} from "react-icons/fa";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import AddPropertyService from '../../addservices/AddPropertyService';
 
@@ -312,26 +339,30 @@ import AddPropertyService from '../../addservices/AddPropertyService';
     //}
     
     
-    
+    // const webRef=useRef(null)
     
         render(){
     return (
         
             
-    <div className="container">
+    <div 
+    className="container">
     <div class="text-center">
     
         <h1 className="heading">Property Details</h1>
         <br></br>
-        <hr class="hr"></hr>
+        {/* <hr class="hr"></hr> */}
         </div>
 
 
-        <form action="" className="property_form">
+        <form 
+        action="" className="property_form">
 
 
-            <div className="row">
-                <div className="col">
+            <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
+            className="row">
+                <div 
+                className="col">
                     <div className="form-group">
                         <label htmlfor="Apartment_Type">Apartment Type* </label>
                         <select className="form_control" id="FormSelect1"  value ={this.state.apartmentType} onChange={this.changeApartmentTypeHandler} > 
@@ -349,10 +380,6 @@ import AddPropertyService from '../../addservices/AddPropertyService';
 
                     </div>
                 </div>
-            </div>
-            
-
-            <div class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">Property Age*</label>
@@ -367,6 +394,12 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                         </select>
                     </div>
                 </div>
+            </div>
+            
+
+            <div 
+            class="row">
+               
                 <div class="col">
                     <div class="form-group">
                         <label for="FormSelect1">Facing</label>
@@ -380,10 +413,6 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                         </select>
                     </div>
                 </div>
-            </div>
-            
-
-            <div class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="formInput">Property Size*</label>
@@ -405,12 +434,17 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </div>
             </div>
             
-            <div class="row">
+
+           
+            <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
+            class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">Floor*</label>
                    
-                        <select class="form_control" id="FormSelect1"  value ={this.state.floor} onChange={this.changeFloorHandler}>
+                        <select 
+                        style={{width:"100%", marginLeft:"40px"}} 
+                        class="form_control" id="FormSelect1"  value ={this.state.floor} onChange={this.changeFloorHandler}>
                             <option>Select</option>
                             <option>Ground</option>
                             <option>1</option>
@@ -421,9 +455,11 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </div>
                 <div class="col">
                     <div class="form-group">
-                    <label for="FormSelect1">Total Floor*</label>
+                    <label style={{left:"3rem"}} 
+                    for="FormSelect1">Total Floor*</label>
                     
-                        <select class="form_control" id="FormSelect1"  value ={this.state.totalFloor} onChange={this.changeTotalFloorHandler}>
+                        <select  style={{width:"100%"}} 
+                        class="form_control" id="FormSelect1"  value ={this.state.totalFloor} onChange={this.changeTotalFloorHandler}>
                             <option>Select</option>
                             <option>Ground Only</option>
                             <option>1</option>
@@ -434,16 +470,24 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </div>
             </div>
                        
-            <hr class="hr"/>
-            <div class="text-center">
+         
+         {/* <hr style={{marginTop:"25px"}}
+           className="hr"></hr> */}
+            <div style={{marginTop:"45px"}}
+            class="text-center">
             {/* <h1>Locality Details</h1> */}
-            <h1 className="heading">Locality Details</h1>
+            <h1 style={{marginBottom:"45px"}}
+            className="heading">Locality Details</h1>
+            {/* <hr className="hr"></hr>
+            */}
             </div>
-            <hr class="hr"/>
-            <div class="row">
+           
+            <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
+            class="row">
                 <div class="col">
                     <div class="form-group">
-                        <label htmlFor="FormSelect1">City*</label>
+                        <label style={{left:"5rem"}}
+                        htmlFor="FormSelect1">City*</label>
                         
                         <select class="form_control" id="FormSelect1" value={this.state.city} onChange={this.changeCityHandler}>
                             <option>Select</option>
@@ -456,10 +500,11 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </div>
                 <div className="col">
                     <div className="form-group">
-                        <label for="FormSelect1">Locality</label>
-                        
-                        <input type="text" class="form_control" id="FormSelect1"
-                            placeholder="Near By LandMark" value={this.state.locality} onChange={this.changeLocalityHandler} />
+                        <label style={{left:"5rem"}}
+                         for="FormSelect1">Locality</label>
+
+                        <input type="text" class="form_control" id="FormSelect1" 
+                            placeholder=" Near By LandMark" value={this.state.locality} onChange={this.changeLocalityHandler} />
                     </div>
                 </div>
 
@@ -468,35 +513,40 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             <div className="row">
             <div className="col">
             <div class="form-group">
-                <label htmlFor="FormSelect1">Street/Area</label>
+                <label style={{left:"5rem"}}
+                htmlFor="FormSelect1">Street/Area</label>
                 
-                <textarea name="" className="form-control1" id="" cols="30" rows="10" value={this.state.street} onChange={this.changeStreetHandler}></textarea>
+                <textarea style={{width:"100%",marginLeft:"60px"}}
+                name="" className="form-control1" id="" cols="30" rows="10" value={this.state.street} onChange={this.changeStreetHandler}></textarea>
             </div>
             </div>
             </div>
             
-            <br></br>
-            <hr class="hr"/>
-            <div class="text-center">
+            
+            {/* <hr class="hr"/> */}
+            <div style={{marginTop:"45px"}} class="text-center">
             <h1 className="heading">Mark Locality on Map</h1>
             {/* <h1>Mark Locality on Map</h1> */}
+            <br></br>
+            <img style={{width:"30em"}} 
+             src={map}/>
             </div>
             <hr class="hr"/>
             {/* <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229085.13090970786!2d78.05081053394773!3d26.214396020056427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c5d1792291fb%3A0xff4fb56d65bc3adf!2sGwalior%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1604642810957!5m2!1sen!2sin"
                 width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
                 tabindex="0"></iframe> */}
-            <br></br>
-            <hr class="hr"/>
+           
+            {/* <hr class="hr"/> */}
          
-            <div class="text-center">
+            <div style={{marginTop:"45px"}} class="text-center">
             <h1 className="heading">Rental Details</h1>
             <h4>Provide Rental Details About Your Property</h4>
             </div>
            
            
             
-            <hr class="hr"/>
+            {/* <hr class="hr"/> */}
             <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property Available For</label>
             <div class="form-group">
             
@@ -513,8 +563,16 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                          <span class="check"></span>  
                                </label>
             </div>
-            
-            <div class="row">
+            <div style={{marginLeft:"50em", marginTop:"-50px"}}
+            class="form-group">
+            <input type="checkbox" id="formGroupExampleInput"  value="negotiable" onChange={this.changeNegotiable}/>
+                <label for="formGroupExampleInput">  Negotiable</label>
+            </div>
+
+            <br></br>
+            <br></br>
+            <div  style={{marginTop:"-35px", marginBottom:"-35px"}} 
+             class="row">
                 <div class="col">
                 <div className="form-group">
                     <label for="formGroupExampleInput">Expected Rent*</label>
@@ -534,21 +592,10 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                             aria-describedby="basic-addon1" value ={this.state.expectedDeposit} onChange={this.changeExpectedDepositHandler}/>
                     </div>
                 </div>
-
-            </div>
-            
-            <div class="form-group">
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="checkbox" id="formGroupExampleInput"  value="negotiable" onChange={this.changeNegotiable}/>
-                <label for="formGroupExampleInput">  Negotiable</label>
-            </div>
-
-            
-           
-            <div className="row">
                 <div className="col">
             
             <div class="form-group">
-                <label for="FormSelect1">&nbsp;&nbsp;&nbsp;Maintenance</label>
+                <label for="FormSelect1">Maintenance</label>
                 
                 <select className="form_control" id="FormSelect1"  value ={this.state.maintenance} onChange={this.changeMaintenanceHandler}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                     <option>Select</option>
@@ -556,9 +603,18 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </select>
             </div>
           </div>
-            </div>
 
-             <div class="row">
+            </div>
+            <br></br>
+            <br></br>
+            
+           
+            
+           
+           
+
+             <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
+             class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Available From*</label>
@@ -577,11 +633,6 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                         </select>
                     </div>
                 </div>
-
-            </div>
-            
-
-            <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Furnishing*</label>
@@ -593,34 +644,47 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                         </select>
                     </div>
                 </div>
+
+            </div>
+            
+
+            <div  style={{marginTop:"-5px", marginBottom:"-55px"}} 
+             class="row">
+               
                 <div class="col">
                     <div class="form-group">
-                        <label for="exampleFormControlSelect1">Parking*</label>
+                        <label style={{top:".5rem"}}
+                        for="exampleFormControlSelect1">Parking*</label>
                        
-                        <select class="form_control" id="exampleFormControlSelect1"  value ={this.state.parking} onChange={this.changeParkingHandler}>
+                        <select style={{width:"100%", marginLeft:"40px"}}
+                         class="form_control" id="exampleFormControlSelect1"  value ={this.state.parking} onChange={this.changeParkingHandler}>
                             <option>Select</option>
                             <option>Bike</option>
                             <option>Bike and Car</option>
                         </select>
                     </div>
                 </div>
-
-            </div>
-
-            <div className="row">
                 <div className="col">
            
 
-            <div class="form-group">
-                <label for="exampleFormControlSelect1">Description</label>
+            <div 
+            class="form-group">
+                <label style={{left:"2.5rem"}}
+                for="exampleFormControlSelect1">Description</label>
             
-                <textarea name="" class="form-control1" id="" cols="30" rows="10"  value ={this.state.description} onChange={this.changeDescriptionHandler}></textarea>
-            </div>
+                <textarea style={{width:"100%"}}
+                  name="" class="form-control1" id="" cols="30" rows="10"  value ={this.state.description} onChange={this.changeDescriptionHandler}></textarea>
             </div>
             </div>
 
+            </div>
+
+           
           
-            <hr class="hr"/>
+           <br></br>
+           <br></br>
+           <br></br>
+           {/* <hr class="hr"/> */}
 
 
             <div class="text-center">
@@ -628,44 +692,89 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             
             <h4>Upload Photos and Videos</h4>
             </div>
-            <hr class="hr"/>
+            <br></br>
+            <br></br>
+            <br></br>
+            
+            {/* <hr class="hr"/> */}
 
             <div class="container">
-                <h6>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;UPLOAD UPTO 20 PHOTOS</h6>
+                <h5 style={{marginLeft:"5em"}}>UPLOAD UPTO 20 PHOTOS</h5>
                 <br></br>
-                <div class="container d-flex align-items-center justify-content-center">
-                <div class="row">
+                <div style={{marginLeft:"58em", marginTop:"-3em"}}
+                className="webcam">
+                {/* Click Here To Take Image From Camera */}
+                Image From Camera
+                <br></br>
+                <Link to="/camera">
+                {/* <button style={{marginTop:"10px",border:"none",marginLeft:"6em", width:"15em", height:"2.5em", borderRadius:"5px", color:"white",background:"green"}}>
+                    Take image from Camera
+                </button> */}
+                
+                <AiFillCamera size={50} style={{marginLeft:"3.5em"}}/>
+                
                     
-                    ​<div class="col">
-                            <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADhCAMAAADmr0l2AAAAflBMVEUAAAD///+7u7smJiaQkJB0dHSWlpZ3d3f4+PiEhIT8/PzExMQaGhrOzs7p6enm5uasrKygoKAUFBQ+Pj7Z2dlXV1fz8/Ph4eGBgYEzMzNGRkZsbGxOTk65ubnNzc1iYmI2NjYhISGlpaUsLCxfX18jIyMLCwtVVVU9PT1FRUUU35LkAAAKCUlEQVR4nO2da1vjOAyFXVraUkqvEAq9wFCGmf3/f3AbeiH19ciWnOw+OZ+J8ds4tizJsupQNZzez+7Wm5fx4kt9LX4tPwe97UNBbiaXFOmvp9vBXln19drbjYT6mCQccHSzWtjhLnrtPwp2NU4o4G4dgDup25+I9pcsCHDSC727qjY30p2mCAB8fCPQHTUfyvccVBDw8YmMV6rflBknADj5jMIr9ZEHICQ/YC8a76D9QyYGr3yAu68UvoPWDfgUPYC3iXil7vOROOQEfBwz8Ck1yAljkwvwgwXvoG7NC78DkL70uVXvum8FLN4Z+Q5rYm6oqmyAE1Y8Ve+HaAF85OZT6i0/2FkmoACfUn9qQDvKABThU+qzDrhSOuBUhu9g1dSCZwAWUnxK3TUC8F0OUM0aAMi5vpuqZXdxBdgX5VOqDudiFfBBmE/9Uy/gSJpPqV6tgLIf4FH5/aY/gPcZ+FS3PsAMA7RU9p3FBfAuD2D2mfQMGGOiLWNGdW6T7QwY4d5djqIs88zzzAkwoqevKc9lB6S/wFM/n+mEeS22IyD9RTydG6B/vBujE7v1LacG84eRBggG/yx8MR6cZx2Q3Qmk1O1zFZD8D66mwgnVw29OpBtqBwANKoDUGIvWw4JKaKyFM2IDkI4u529A4pOGF7D4RWtgnmGMlpqeAInr9coYYZ3hb1ILe6MBSogc12J0BKRNMVbfytCRXeKQMc0IGYqf34BD0jOOLd3ob1IjUluZ+xKQ1LhzNzBaEloxdk1S3rzXEnBAeMCYHiqizPVT/WHaECf8I0WaQ318JELDhUj5lSmaKYo1GfJs4ikZRjSGLeCqaaAIi2zYcwsTfulPSnn0NgofHNsgH2HF0QPbtKkc1151XsA/xSLRaGqGkX7R55G+oHYV+tOhCSHggBBzPhXXRlFXgXMMvktdQe3JxXznGiC2zFN24ZDZZZqjXLrRAKFJlOYognZfYtmIOiDye1MdYUiUSiw/SAcEJgXDrgpqHm7U2FBwSQcMr810PsQw2bGTnaQDvod6EjeWgp+2WIKXDhgw4xex38o2ACgWsacBjuNjJTfehvMBdn292KfEgvyE/p0X27/1v8HEMIJ3hyBmq1EmmbHF4enI57Et7rbHL8r2BimuFCKgV9m+wT//d0Bqbj0XYLZ1ENvd8ANSLZli9zG4Xd/2tiEbTwekpm9xAZIMwGJemewXA+/mTQcMWRxSgIQVdmp8Ru8e/4IOuKsHcIHzWZveOE1IHZAauWIChPPyildHC65ZSgekZjgxAaL5vx6XkSMMpAN2SGEhNkBwGfSmONi7YgAS1wkmQMwLEvBpWs09A5A4jTIBQnzBcI7tZzIAibMMDyB2UCTo2rFlZxqAxPg4DyC0lwCiopZ2TEDaR8gDCH2CSJsIIC0+zgOI8EELmHnW2wSkrYQsgJZMlNCrcGgJANLSSFgAoVAHliRvmGwWQNIYZQFE+MDcASMsawEkpXJxAELHJ8C4njHabYCU3nEAQntBcFw96c/ZAClrPQMgtsqDyRHGWm8DpBx6YQDEoqloYgkESEhpTgd8h/h4AQlJSumAoD+NdYgS8nCSAdHoPNgl4/SzHbAD+3+TAdF8FDCd3+iPAxDOWFt1hhbhgOahApew9owB7wCkbuyjhcfmMQvScD+6AKWSxTRBZvZR0EpvDggXIGa8p2qM83U6yGkFM0PQCZjliCvp3BKQjGKkZfoAM5wBJVZDCDdoSfF0A8qf4qUmqAUdfrYp2QMofsyVnFIUmkhtAQofoMghqR9F1CDzZ+taG/QCDnlqjdkVk1fh7ZDd/e8FlDolVeo2gu8w8707G3TkkPsBpQoCJRQ9ciURuFyrAUCp/P6EnKIb24K/cibUhgBlFgtwk2vXyFjx3zwWbRCwQw1qA8K3EA7dVxaMzdybARkG5P8OWUpyTXezfm9+8xhK9gYAO1PeA5mEHQSDEMDO0BX5j1HmWrgQIKfVlrtGDgjINZl+Zq/WjAJ2Cg7DtIZaajAgsFsJ6amOOmMEwM4wqY7xVz2lYSmAhyWRmCZUUQ0lxr5FAzxMNugBymsNartigwp4QKSmdSt1V2NpZjrgYaCSvsWXj1oL+ccAHqabGWrbrOq+NCQO8KDiI1j4ab+qv/R7POBBo4e5E3I82DbjMpQUwG9NDtuW9eYyt47/eVrNt8/QvQRZ7JpkwLNGRxGeeMtSUZwNkKpJeTJA7MTSj+oCPDlC5GehmgAvfiOxw8ln1QNY8RlJ23B1ABbVU5hJHkRANQBqzgHhqwvyAxrHv6I2Us/r34s3ZIeZG3BksX0iFvzTrwR4WDMDPlvjX+QSo5deh2McRMDEq6FcqRtUs/WneKKRH+r/l0HAu+U2YXfnzH8a0xqt5mGFRikRsOziOtb88BQCoYVjrjodqPMcAVg2GrEXmnqLcpICvn3Co3GA5Z/ezkhmVsg1TrG7tWwLb7pNNOD3i8T7FA5uEAa+PhZ8K2kSILyfGyL5p/iAMB71vP4sgGAIFbW7Lcms7phcDkC0XOILCGj7nJ3WUAZAvJQmaHdb0w5dpRbFAQuKIxxLP7SnrDkmKWlAYgYDZHc7fjK7RSsMSC4JjtjdpGdlASNC+2ETyZ1AZ1toJAFHMVHvRdDu9thEFkJBwAmxIvxJQbvbl7ttvn85wOi8jJDd7V12kCOuPIBAjrxLAbvbG0Zf6OaQFGBSvoLf7vY/29WcDjKAQ3qY+0o+uzuUhby/nqVEAKep14L77O5geudfcUCGtC/PkYqw7XDlahMAZCnj7vYlAefiqq42fkCOa92VJ6sUsR4qPw87ILV2oFMuuxt6+MeZwgxY0G578cpeLA+8a+PSNV5A3vRu69km9JzDeYizAjIfQbD6u+ENWI8fkP0WDFs5OXwH1ucGFDiNZ7G7CVuwD15A8o1wiMwjapQjDjNOQM6TBxXpQVzahUU3bICF1D1C+jEE4jx9zwQ4kbms7FvXdjc1M/7hemaPBIy4GBPXdX0R8kx2/UAcoPCt4FdRavwuJ6uiAMWPo1ft7sRvIQZQ5LrHa/3EjlKrF0QASl3idaWL3Z1q7NIBqWWrI3W2u1OPF5EBM/Fd/N3k8taaiICr1P+H61SVMXESpQImO88IOu7RUw0mImBWlXZ38tWZTQYsg9TJJlOjAQ92d3IdpmYDqiIhonNUwwGXyXWmGg6YrhawBWy4WsAWsOFqAVvAhqsFbAEbrhawBWy4WsAWsOFqAVvAhqsFbAEbrhawBWy4WsAWsOFqAVvAhmsfAkwOktesZQgwy3VTglqHAME75BqrebAqV9zJ6sboMQiYK71QRt1OEDDTrXZCmoUB/9PzaLcDAEodccmhZwhwKHgIRFbl8XyktmERV+6+dn0fg8KKN+a4e5Fb42PxAbA65QPbUeRM+n0+8gyX35x+rLs5U7YTNP7T+6kV9C9jxJiFWTFQNAAAAABJRU5ErkJggg==" class="img-thumbnail" width="150px" alt=""/>
+                </Link>
+                
+                   
+                </div>
+                
+                <div class="container d-flex align-items-center justify-content-center">
+                
+                <div style={{marginTop:"5em",marginLeft:"2em"}}
+                class="row d-flex align-items-center justify-content-between">
+                    
+                    ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                             
                        
-                        {/* <div class="container col-xl-3 col-lg-4 col-md-6 col-sm-12 flex-box mb-2 ">
-                             <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt="" />
-                            </div>  */}
+                       
                          </div> 
-                         ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
+                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                             
                         </div> 
-                        ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
+                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                            
+                        </div> 
+                        ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                         </div>
-                        ​<div class="col">
-                            <img src="data:image/png;base64,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" class="img-thumbnail" width="150px" alt=""/>
+                        ​<div 
+                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                         </div>
+                        ​<div 
+                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                        </div>
+                        ​<div 
+                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                        </div>
+                        
                     </div>
-                    
+
+                 
+   
                     ​
                 </div> 
 
 
                 <br></br>
-                <hr class="hr"/>
+                {/* <hr class="hr"/> */}
                 <br></br>
                 <h4 class="text-center">OR</h4>
                 <br></br>
-                <hr class="hr"/>
+                {/* <hr class="hr"/> */}
                 <div class="text-center">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98N-G2yNHOYoeJRr4OKeI_e-hyeWeTMGNyw&usqp=CAU" width="30px" alt=""/>
                     <br></br>
@@ -677,19 +786,24 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                     
 
                 </div> 
+              
 
              </div>
 
             <br></br>
-            <hr class="hr"/>
+            <br></br>
+            {/* <hr class="hr"/> */}
             <div class="text-center">
             <h2 className="heading">Amenities</h2>
             
             <h4>Provide additional details about your property to get maximum visibility</h4>
             </div>
-            <hr class="hr"/>
+            <br></br>
+            <br></br>
+            {/* <hr class="hr"/> */}
 
-            <div class="row">
+            <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
+            class="row">
                 <div class="col">
                 <div className="form-group">
                     <label for="formGroupExampleInput">Bathrooms(s)*</label>
@@ -764,12 +878,14 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             </div> 
             <br></br>
 
-            <div class="row">
+            <div style={{marginTop:"-70px", marginBottom:"-55px"}} 
+            class="row">
                 <div class="col">
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Who will show the house*</label>
                         
-                        <select class="form_control" id="exampleFormControlSelect1" value ={this.state.whoWillShowTheHouse} onChange={this.changeWhoWillShowTheHouseHandler}>
+                        <select style={{width:"100%", marginLeft:"40px"}}
+                         class="form_control" id="exampleFormControlSelect1" value ={this.state.whoWillShowTheHouse} onChange={this.changeWhoWillShowTheHouseHandler}>
                             <option>Select</option>
                             <option>Neighbours</option>
                             <option>Relative</option>
@@ -779,12 +895,14 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </div> 
                 <div class="col">
                 <div className="form-group">
-                    <label for="exampleFormControlSelect1">Contact No*</label>
+                    <label style={{left:"2.5rem"}}
+                    for="exampleFormControlSelect1">Contact No*</label>
                     
 
         
                          
-                        <input type="number" class="form_control" placeholder="+91" aria-label="Secondary Number"
+                        <input style={{width:"100%"}}
+                          type="number" class="form_control" placeholder="+91" aria-label="Secondary Number"
                             aria-describedby="basic-addon1"  value ={this.state.contactNo} onChange={this.changeContactNoHandler}/>
                    
                    </div>
@@ -796,38 +914,153 @@ import AddPropertyService from '../../addservices/AddPropertyService';
 
             </div>
             <br></br>
-            <hr class="hr"/>
-            <h3>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the Available Amenities</h3>
-            <hr class="hr"/>
-            <div class="container ">
+            {/* <hr class="hr"/> */}
+            <h3 style={{marginLeft:"50px",fontSize:"20px",fontWeight:600,marginTop:"3em"}}>Select the Available Amenities</h3>
+           
+            <div style={{marginLeft:"50px"}}
+            class="container ">
             
                 <div class="row d-flex align-items-center justify-content-between">
-                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                <div style={{marginRight:"6em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
                         <input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
-                            <label for="formGroupExampleInput"> Lift</label>
+                            <label for="formGroupExampleInput"> <GiLift/> Lift</label>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div style={{marginRight:"5em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
                         <input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
-                            <label for="formGroupExampleInput"> Internet
+                            <label for="formGroupExampleInput"> <BsWifi/> Internet
                                 Services          </label>
                         </div>
                     </div>
-                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                    <div  style={{marginRight:"5em"}}
+                     class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
                         <input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAC}/>
-                            <label for="formGroupExampleInput"> Air Conditioner       </label>
+                            <label for="formGroupExampleInput"> <img style={{width:"20px"}}
+                            src={AC}/> Air Conditioner       </label>
+                            {/* <FontAwesomeIcon icon="fas fa-air-conditioner" /> */}
                         </div>
                     </div>
                     <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                         <div class="form-group">
                     <input type="checkbox" id="formGroupExampleInput"   value="Gym" onChange={this.changeGym}/>
-                            <label for="formGroupExampleInput"> Gym</label>
+                            <label for="formGroupExampleInput"> <CgGym/> Gym</label>
                         </div>
                     </div>
                 </div>
+                <div class="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"2.1em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
+                            <label for="formGroupExampleInput"> <GiClubs/> Club House</label>
+                        </div>
+                    </div>
+                    <div style={{marginRight:"8.6em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
+                            <label for="formGroupExampleInput"> <SiIntercom/> Intercom
+                                         </label>
+                        </div>
+                    </div>
+                    <div style={{marginRight:"4.8em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAC}/>
+                            <label for="formGroupExampleInput"> <FaSwimmer/> Swimming Pool       </label>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                    <input type="checkbox" id="formGroupExampleInput"   value="Gym" onChange={this.changeGym}/>
+                            <label for="formGroupExampleInput"> <RiPlaystationFill/> Children Play Area</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"2.4em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
+                            <label for="formGroupExampleInput"> <GiFireShield/> Fire Safety</label>
+                        </div>
+                    </div>
+                    <div style={{marginRight:"6.7em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
+                            <label for="formGroupExampleInput"> <BsHouseDoor/> Servant Area  </label>
+                        </div>
+                    </div>
+                    <div style={{marginRight:"4.3em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAC}/>
+                            <label for="formGroupExampleInput"> <FaShoppingCart/> Shopping Center       </label>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                    <input type="checkbox" id="formGroupExampleInput"   value="Gym" onChange={this.changeGym}/>
+                            <label for="formGroupExampleInput"> <GiTeePipe/> Gas PipeLine</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"5.1em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
+                            <label for="formGroupExampleInput"> <GiParkBench/> Park </label>
+                        </div>
+                    </div>
+                    <div style={{marginRight:"2.4em"}}
+                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
+                            <label for="formGroupExampleInput"> <FaCloudRain/> Rain Water Harvesting </label>
+                        </div>
+                    </div>
+                    <div style={{marginRight:"1em"}}
+                     class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="AC" onChange={this.changeAC}/>
+                            <label for="formGroupExampleInput"> <ImBin/> Sewage Treatment Plant  </label>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                    <input type="checkbox" id="formGroupExampleInput"   value="Gym" onChange={this.changeGym}/>
+                            <label for="formGroupExampleInput"> <GiVacuumCleaner/> House keeping</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="row d-flex align-items-center justify-content-between">
+                <div style={{marginRight:"0.7em"}}
+                class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"  value="Lift" onChange={this.changeLift}/>
+                            <label for="formGroupExampleInput"> <GiCarBattery/> Power Backup</label>
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <input type="checkbox" id="formGroupExampleInput"   value="Internet" onChange={this.changeInternet}/>
+                            <label for="formGroupExampleInput"> <FaParking/> Visitor Parking         </label>
+                        </div>
+                    </div>
+                   
+                    
+                </div>
+
+
+
+
 
 
             </div>  
@@ -860,7 +1093,8 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             <div class="row">
                 <div class="col">
                     <div class="form-group">
-                    <button onClick = {this.savePropertyDetails}class="btn1" > Submit 
+                    <button 
+                    style={{width:"100%", marginLeft:"60px"}}onClick = {this.savePropertyDetails}class="btn1" > Submit 
             
             </button>
                         

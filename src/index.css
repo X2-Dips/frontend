@@ -269,19 +269,19 @@ h6{font-size:1.2rem}
 .form-center .sign-up-form{background-color:#fff;border-radius:1rem;padding:4rem 5rem;display:flex;flex-direction:column;grid-gap:2rem;gap:2rem;width:100%}
 .form-center .sign-up-form .form-col-div{display:flex;align-items:center;justify-content:center;width:100%;grid-gap:0 1rem;gap:0 1rem;height:6rem}
 .form-center .sign-up-form .form-col-div .form-group{width:50%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-.form-center .sign-up-form .form-col-div .form-group>label{position:absolute;top:-.7rem;left:.65rem;color:#0052cc;font-size:1.2rem;background-color:#fff;padding:0 .5rem;font-weight:400}
+.form-center .sign-up-form .form-col-div .form-group>label{position:absolute;top:-.0rem;left:1.35rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
 
-.form-center .sign-up-form .form-col-div .form-group input{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
+.form-center .sign-up-form .form-col-div .form-group input{width:100%;height:4rem;padding:0 0 0 1rem;font-size:1.4rem}
 .form-center .sign-up-form .form-group{width:100%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
-.form-center .sign-up-form .form-group label{position:absolute;top:-.7rem;left:.65rem;color:#0052cc;font-size:1.2rem;background-color:#fff;padding:0 .5rem;font-weight:400;pointer-events:none;cursor:text}
-.form-center .sign-up-form .form-group input{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
+.form-center .sign-up-form .form-group label{position:absolute;top:-.7rem;left:1.35rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400;pointer-events:none;cursor:text}
+.form-center .sign-up-form .form-group input{width:100%;height:4rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
 .form-center .sign-up-form .form-group input:focus{border:2px solid #0052cc}
 .form-center .sign-up-form .form-group .inp-btn{background-color:#0052cc;color:#fff;cursor:pointer;border:none;outline:none;border-radius:.5rem;font-size:1.6rem;height:5rem}
 .form-center .sign-up-form h4{font-weight:400;text-align:center;color:#9698a6}
 
 
 .form-center .sign-up-form h4 span{color:#0052cc;display:-ms-grid;display:grid;place-items:center;margin:0 .2rem}
-@media screen and (max-width:500px){
+@media screen and (max-width:1040px){
   .form-center h1{
     font-size:3.5rem;
   }

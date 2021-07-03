@@ -36,7 +36,7 @@ export default function ServicePage(){
     return (
         <ServiceitemStyle>
         <div className="container">
-        <div className="service-item">
+        <div className="service-item"> 
             <ServiceSection/>
             <ServiceSection
                icon={<img src={carpentry}/>}

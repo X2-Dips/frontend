@@ -38,6 +38,8 @@ import Dashboard from "../admin_dashboard/Dashboard";
 import OrderList from "../admin_dashboard/OrderList";
 import Customer from "../admin_dashboard/Customer";
 import ViewMore_Hostel from "./ViewMore_Hostel";
+import Camera from "../main/Camera";
+import MoversPackers from "../main/MoversPackers";
 
 
 
@@ -119,6 +121,8 @@ class Main extends Component {
           
           <Route path="/services" exact component={Services} />
           <Route path="/contact" exact component={Contact} />
+          <Route path="/camera" exact component={Camera} />
+          <Route path="/movers" exact component={MoversPackers} />
          
           <Route path="/add_property" exact component={AddProperty}/>
           <Route path="/addpropertyform" exact component={PostProperty}/>

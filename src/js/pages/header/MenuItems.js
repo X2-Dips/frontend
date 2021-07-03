@@ -131,6 +131,12 @@ export const MenuItems = [
       
     ],
   },
+  {
+    // linkIcon: <BsFillHouseFill />,
+    title: "Movers & Packers",
+    path: "/movers",
+    cname: "nav-link",
+  },
 
   {
     // linkIcon: <IoCall />,

@@ -1,14 +1,38 @@
-.container9{
+.container10{
         
-    /* position:absolute; */
-    margin-top: -25%;
+    position:absolute;
+    margin-top: -23.3%;
     padding-top: 2em;
+    z-index: 100;
     
 
     
     transform:translate( -50%, -50%);
     width: 400px;
-    height: 29em;
+    height: 27em;
+    margin-left: 16em;
+    border-radius:10px;
+    /* display:flex; */
+    flex-direction: column;
+    backdrop-filter:blur(4px); 
+     background-color: #fff;
+    border:.7px solid rgb(44, 37, 37);
+    align-items: center; justify-content: space-evenly;
+    color:white;
+    
+    }
+.container9{
+        
+    position:absolute;
+    margin-top: -23.3%;
+    padding-top: 2em;
+    z-index: 100;
+    
+
+    
+    transform:translate( -50%, -50%);
+    width: 400px;
+    height: 27em;
     margin-left: 16em;
     border-radius:10px;
     /* display:flex; */
@@ -336,5 +360,138 @@
 
 
      /* label{position:absolute;top:-.7rem;left:.65rem;color:#0052cc;font-size:1.2rem;background-color:#fff;padding:0 .5rem;font-weight:400;pointer-events:none;cursor:text} */
-
+     .city label{
+        /* font-size: large;
+        color: black;
+        font-weight: 600;*/
+        margin-left: 0.5em; 
+        position:fixed;
+        top:3.7em;
+        left:3.5rem;
+        color:black;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
+    }
+    .city input {
     
+        height:50px;
+        width: 80%;
+        outline: none;
+        border:.5px solid #dbdbdb; border-radius: 3px;
+        padding: .9rem;
+        margin-left: 3em;
+        margin-right: .5em;
+        /* border-radius: 20px; */
+    
+    }
+    .movingfrom label{
+        /* font-size: large;
+        color: black;
+        font-weight: 600;*/
+        margin-left: 0.5em; 
+        position:fixed;
+        top:7.4em;
+        left:3.5rem;
+        color:black;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
+    }
+    .movingfrom input {
+    
+        height:50px;
+        width: 80%;
+        outline: none;
+        border:.5px solid #dbdbdb; border-radius: 3px;
+        padding: .9rem;
+        margin-left: 3em;
+        margin-right: .5em;
+        /* border-radius: 20px; */
+    
+    }
+    .movingto label{
+        /* font-size: large;
+        color: black;
+        font-weight: 600;*/
+        margin-left: 0.5em; 
+        position:fixed;
+        top:11.2em;
+        left:3.5rem;
+        color:black;
+        font-size:1.9rem;
+        background-color:#fff;
+        padding:0 .5rem;
+        font-weight:400;
+        pointer-events:none;
+        cursor:text
+    }
+    .movingto input {
+    
+        height:50px;
+        width: 80%;
+        outline: none;
+        border:.5px solid #dbdbdb; border-radius: 3px;
+        padding: .9rem;
+        margin-left: 3em;
+        margin-right: .5em;
+        /* border-radius: 20px; */
+        
+    
+    }
+    .bhktype{
+        border-radius: 5px;
+    
+        width:8em;
+         height:2em;
+         background: gray;
+         color: white;
+
+    }
+    .bhktype:hover{
+        background: rgb(107,204,94);
+    }
+    .moversCard{
+        border: 1px solid #111;
+        margin-left: 20em;
+        padding: 20px;
+        width: 60%;
+        border: none;
+        height: 16em;
+        margin-top: -19em;
+        margin-bottom: 10em;
+        background-color: rgb(223, 219, 219);
+        
+    }
+    .moversbtn{
+        display: block;
+        width: 10em;
+        height: 4em;
+        margin-left: 3em;
+        margin-bottom: 2em;
+        border-radius: 3px;
+        font-size: 15px;
+        color: white;
+        background-color: #111;
+    }
+    .moversbtn:hover{
+        background-color: rgb(22, 102, 11);
+    }
+    .moversPara{
+        background-color: bisque;
+        text-align: center;
+        width: 70%;
+        font-size: small;
+    }
+    .moversImg img{
+        width: 120px;
+        height: 120px;
+        margin-left: 32em;
+        margin-top: -11em;
+    }
