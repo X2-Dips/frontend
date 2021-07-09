@@ -1,9 +1,12 @@
 import React,{useState, useEffect} from 'react';
 import axios from "axios";
-import ProductCard from "../../components/ProductCard";
+import * as AddPropertyService from "../../addservices/AddPropertyService";
+
+import HostelDetailCard from '../../components/HostelDetailCard';
 
 const ViewMore_Hostel = () => {
-    const url = `http://localhost:8080/api/getHostel?page=1&limit=4`
+    // const url = `http://localhost:8080/api/getHostel?page=1&limit=4`
+   const url= AddPropertyService.GET_HOSTEL_REST_API_URL
   const [products, setProducts]=useState({
      loading:false,
     data:null,
@@ -52,7 +55,7 @@ const ViewMore_Hostel = () => {
     products.data.map((product,key)=>
     <span>
       {/* {product.city} */}
-      <ProductCard 
+      <HostelDetailCard 
         product={product}
       />
     </span>

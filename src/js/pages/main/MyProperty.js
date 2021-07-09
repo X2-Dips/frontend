@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-import './bootstrap.css'
+import "./Hostel_and_Property_form.css";
 
 import roomimg from '../../images/adds/room_img.jpg';
 import './Profile.css';

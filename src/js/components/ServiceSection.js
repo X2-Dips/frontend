@@ -14,7 +14,7 @@ text-align:center;
 }
 `
 export default function ServiceSection({
-    icon=<img src={agreement}/>,
+    icon=<img src={agreement} alt=""/>,
     title='Agreement',
 }) 
 

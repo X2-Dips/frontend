@@ -84,11 +84,20 @@
     color: rgba(0, 0, 0, 0.65);
 }
 
-.google_img{
-    height: 29px;
-    width: 29px;
+.google_img {
+    height: 25px;
+    width: 25px;
     margin-right: 8px;
+    
+  
 }
+.google_img img{
+ margin-top: 50%;
+    
+  
+}
+
+
 
 .google_con{
     margin: 12px;
@@ -124,8 +133,10 @@
     border-radius: 4px;
     cursor:pointer;
     border-radius:.5rem;
-    
-    height:5rem;
+     height:5rem;
+     align-items: center;
+            text-align: center;
+            margin-bottom: 9em;
 }
 
 .git_con{
@@ -137,10 +148,11 @@
     margin-left: 12px;
     padding: 1rem;
     padding-right: 6rem;
-    padding-left: 7rem;
+    padding-left: 5.5rem;
     cursor:pointer;
     border-radius:.5rem;
     height:5rem;
+   
 }
 
 
@@ -164,7 +176,7 @@
 }
 
 .loginmobile{
-    width: 52%;
+    width: 75%;
     height: 50px;
     border-radius: 4px;
     border-color: gray;
@@ -174,7 +186,7 @@
 
 .logbtn{
     background-color: black;
-    width: 55%;
+    width: 70%;
     color: white;
     height: 5rem;
    
@@ -188,7 +200,7 @@
 
 .loginlabel label{
     position:absolute;
-    left:32%;
+    left:23%;
     top: 22%;
      margin-bottom: 2%;
     color:#0052cc;
@@ -236,22 +248,21 @@
 
     .logbtn
         {
-            width: 55%;
+            width: 70%;
         }
 
 
         .google_con{
-           
+            margin: 12px;
             border: 2px solid  gray;
             box-shadow: 1px 1px 1px 1px gray;
-            font-size: 12px;
+            font-size: 17px;
             color: black;
-            padding: 1rem;
-           
-            
-        
-            cursor:pointer;
+            padding: 1.2rem;
+                cursor:pointer;
             border-radius:.5rem;
+            padding-left: 2.2rem;
+            padding-right: 2.2rem;
             
             height:5rem;
             
@@ -261,29 +272,31 @@
             margin: 12px;
             border: 2px solid  gray;
             box-shadow: 1px 1px 1px 1px gray;
-            font-size: 12px;
+            font-size: 17px;
             color: black;
-            padding: 1rem;
-            
-            
-            border-radius: 4px;
+            padding: 1.2rem;
+            /* border-radius: 4px; */
             cursor:pointer;
             border-radius:.5rem;
             
             height:5rem;
+            
         }
         .git_con{
             margin: 12px;
             border: 2px solid  gray;
             box-shadow: 1px 1px 1px 1px gray;
-            font-size: 12px;
+            font-size: 17px;
             color: black;
-            padding: 1rem;
+            padding: 1.2rem;
+            padding-right: 2.7rem;
+            padding-left: 2.6rem;
             
            
             cursor:pointer;
             border-radius:.5rem;
             height:5rem;
+            
         }
         
         

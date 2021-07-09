@@ -4,15 +4,13 @@ import './Login.css';
 import { GOOGLE_AUTH_URL, FACEBOOK_AUTH_URL} from '../../constants';
 
 import { Link, Redirect } from 'react-router-dom'
-import fbLogo from '../../img/fb-logo.png';
-import googleLogo from '../../img/google-logo.png';
-import githubLogo from '../../img/github-logo.png';
-// import Alert from 'react-s-alert';
-import Header from '../../header/Header';
+
 import LoadingIndicator from '../../header/LoadingIndicator';
-import { RiLoginCircleFill } from "react-icons/ri";
-import  * as AiIcons from 'react-icons/ai';
+
 import '../../../../../src/index.css';
+import {FcGoogle} from "react-icons/fc";
+import {AiFillFacebook} from "react-icons/ai";
+import {AiFillMail} from "react-icons/ai";
 
 
 
@@ -95,13 +93,15 @@ class SocialLogin extends Component {
 <br></br>
                 
                 <a  href={GOOGLE_AUTH_URL} className="google_con">
-                    <img src={googleLogo} alt="Google"  className="google_img"/> Log in with Google</a>
+                    {/* <img  src={googleLogo} alt="Google"  className="google_img"/> */}
+                    <FcGoogle style={{marginBottom:"-1px"}}/>&nbsp;&nbsp; Log in with Google</a>
                     <br/><br/><br></br>
                 <a  href={FACEBOOK_AUTH_URL} className="fb_con">
-                    <img src={fbLogo} alt="Facebook"  className="google_img" /> Log in with Facebook</a>
+                    {/* <img src={fbLogo} alt="Facebook"  className="google_img" /> */}
+                    <AiFillFacebook style={{marginBottom:"-1px"}}/>&nbsp;&nbsp; Log in with Facebook</a>
                     <br/><br/><br></br>
                 <Link to="/loginform" {...this.props} className="git_con">
-                    <AiIcons.AiFillMail/> Log in with Email</Link>
+                    <AiFillMail style={{marginBottom:"-1px"}}/>&nbsp;&nbsp; Log in with Email</Link>
                     <br/><br/><br></br>
             </div>
         );

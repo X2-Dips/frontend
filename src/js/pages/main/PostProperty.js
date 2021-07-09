@@ -1,23 +1,20 @@
 import React from 'react';
 import {Component} from 'react';
-import { Link } from 'react-router-dom'
-import {AiFillCamera} from "react-icons/ai";
 
-import Webcam from 'react-webcam';
-import { useRef } from 'react';
-import "./bootstrap.css";
+import "./Hostel_and_Property_form.css";
 import AC from "../../images/ants/AC.PNG";
-import upload from "../../images/ants/upload.png";
+
 import {GiLift} from "react-icons/gi";
+
 import {BsWifi} from "react-icons/bs";
 import {GiClubs} from "react-icons/gi";
 import {CgGym} from "react-icons/cg";
 import {SiIntercom} from "react-icons/si";
-import map from "../../images/ants/map.png";
+
 import {FaSwimmer} from "react-icons/fa";
 import {RiPlaystationFill} from "react-icons/ri";
 import {GiFireShield} from "react-icons/gi";
-import {ImLocation2} from "react-icons/im";
+
 import {FaShoppingCart} from "react-icons/fa";
 import {GiTeePipe} from "react-icons/gi";
 import {GiParkBench} from "react-icons/gi";
@@ -27,9 +24,10 @@ import {BsHouseDoor} from "react-icons/bs";
 import {GiVacuumCleaner} from "react-icons/gi";
 import {GiCarBattery} from "react-icons/gi";
 import {FaParking} from "react-icons/fa";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
 
 import AddPropertyService from '../../addservices/AddPropertyService';
+import UploadMultipleImages from './UploadMultipleImages';
 
 
     class PostProperty extends Component {
@@ -342,6 +340,7 @@ import AddPropertyService from '../../addservices/AddPropertyService';
     // const webRef=useRef(null)
     
         render(){
+            
     return (
         
             
@@ -430,20 +429,15 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                             <option>2 BHK</option>
                             <option>3 BHK</option>
                         </select>
-                    </div>
-                </div>
-            </div>
-            
-
-           
-            <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
+                    </div> </div></div>
+             <div style={{marginTop:"-55px", marginBottom:"-55px"}} 
             class="row">
                 <div class="col">
                     <div class="form-group">
                     <label for="FormSelect1">Floor*</label>
                    
                         <select 
-                        style={{width:"100%", marginLeft:"40px"}} 
+                        // style={{width:"100%", marginLeft:"40px"}} 
                         class="form_control" id="FormSelect1"  value ={this.state.floor} onChange={this.changeFloorHandler}>
                             <option>Select</option>
                             <option>Ground</option>
@@ -458,7 +452,7 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                     <label style={{left:"3rem"}} 
                     for="FormSelect1">Total Floor*</label>
                     
-                        <select  style={{width:"100%"}} 
+                        <select   
                         class="form_control" id="FormSelect1"  value ={this.state.totalFloor} onChange={this.changeTotalFloorHandler}>
                             <option>Select</option>
                             <option>Ground Only</option>
@@ -516,8 +510,8 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 <label style={{left:"5rem"}}
                 htmlFor="FormSelect1">Street/Area</label>
                 
-                <textarea style={{width:"100%",marginLeft:"60px"}}
-                name="" className="form-control1" id="" cols="30" rows="10" value={this.state.street} onChange={this.changeStreetHandler}></textarea>
+                <textarea
+               name="" className="TextArea1" id="" cols="30" rows="10" value={this.state.street} onChange={this.changeStreetHandler}></textarea>
             </div>
             </div>
             </div>
@@ -526,12 +520,14 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             {/* <hr class="hr"/> */}
             <div style={{marginTop:"45px"}} class="text-center">
             <h1 className="heading">Mark Locality on Map</h1>
-            {/* <h1>Mark Locality on Map</h1> */}
+       
             <br></br>
-            <img style={{width:"30em"}} 
-             src={map}/>
+            {/* <div className="mapmark"> */}
+            {/* <img className ="mapmark" src={map}/> */}
+            
             </div>
-            <hr class="hr"/>
+            {/* </div> */}
+            {/* <hr class="hr"/> */}
             {/* <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d229085.13090970786!2d78.05081053394773!3d26.214396020056427!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3976c5d1792291fb%3A0xff4fb56d65bc3adf!2sGwalior%2C%20Madhya%20Pradesh!5e0!3m2!1sen!2sin!4v1604642810957!5m2!1sen!2sin"
                 width="100%" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
@@ -547,26 +543,28 @@ import AddPropertyService from '../../addservices/AddPropertyService';
            
             
             {/* <hr class="hr"/> */}
-            <label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property Available For</label>
+            <label className="propAvailabeFor">Property Available For</label>
             <div class="form-group">
-            
-            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio" name="radio"  value="rent" onChange={this.changePropertyAvailabeFor}/> 
+            <div className="radioButton">
+            <input type="radio" name="radio"  value="rent" onChange={this.changePropertyAvailabeFor}/> 
                          <label class="formGroupExampleInput">  Only Rent 
                         <span class="check"></span> 
                         </label> 
                         <br></br>
-                        
-                         
-                       
-                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="radio"name="radio"  value="lease" onChange={this.changePropertyAvailabeFor}/>  
+                      
+                        <input type="radio"name="radio"  value="lease" onChange={this.changePropertyAvailabeFor}/>  
                          <label class="formGroupExampleInput">  Only Lease 
                          <span class="check"></span>  
                                </label>
             </div>
-            <div style={{marginLeft:"50em", marginTop:"-50px"}}
+            <div 
+            // style={{marginLeft:"50em", marginTop:"-50px"}}
             class="form-group">
+            <div className="nego">
             <input type="checkbox" id="formGroupExampleInput"  value="negotiable" onChange={this.changeNegotiable}/>
                 <label for="formGroupExampleInput">  Negotiable</label>
+            </div>
+            </div>
             </div>
 
             <br></br>
@@ -648,15 +646,17 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             </div>
             
 
-            <div  style={{marginTop:"-5px", marginBottom:"-55px"}} 
+            <div  style={{marginTop:"10px", marginBottom:"-55px"}} 
              class="row">
                
                 <div class="col">
                     <div class="form-group">
-                        <label style={{top:".5rem"}}
-                        for="exampleFormControlSelect1">Parking*</label>
+                        <label
+                        
+                        for="exampleFormControlSelect1" className="parking">Parking*</label>
                        
-                        <select style={{width:"100%", marginLeft:"40px"}}
+                        <select 
+                      
                          class="form_control" id="exampleFormControlSelect1"  value ={this.state.parking} onChange={this.changeParkingHandler}>
                             <option>Select</option>
                             <option>Bike</option>
@@ -669,10 +669,12 @@ import AddPropertyService from '../../addservices/AddPropertyService';
 
             <div 
             class="form-group">
-                <label style={{left:"2.5rem"}}
+                <label
+                //  style={{left:"2.5rem"}}
                 for="exampleFormControlSelect1">Description</label>
             
-                <textarea style={{width:"100%"}}
+                <textarea
+                //  style={{width:"100%"}}
                   name="" class="form-control1" id="" cols="30" rows="10"  value ={this.state.description} onChange={this.changeDescriptionHandler}></textarea>
             </div>
             </div>
@@ -693,88 +695,74 @@ import AddPropertyService from '../../addservices/AddPropertyService';
             <h4>Upload Photos and Videos</h4>
             </div>
             <br></br>
-            <br></br>
-            <br></br>
+            
             
             {/* <hr class="hr"/> */}
 
             <div class="container">
-                <h5 style={{marginLeft:"5em"}}>UPLOAD UPTO 20 PHOTOS</h5>
+                <h5 className="uploadPhoto">UPLOAD UPTO 20 PHOTOS</h5>
                 <br></br>
-                <div style={{marginLeft:"58em", marginTop:"-3em"}}
-                className="webcam">
-                {/* Click Here To Take Image From Camera */}
-                Image From Camera
-                <br></br>
-                <Link to="/camera">
-                {/* <button style={{marginTop:"10px",border:"none",marginLeft:"6em", width:"15em", height:"2.5em", borderRadius:"5px", color:"white",background:"green"}}>
-                    Take image from Camera
-                </button> */}
-                
-                <AiFillCamera size={50} style={{marginLeft:"3.5em"}}/>
-                
-                    
-                </Link>
-                
-                   
-                </div>
+              
                 
                 <div class="container d-flex align-items-center justify-content-center">
-                
-                <div style={{marginTop:"5em",marginLeft:"2em"}}
-                class="row d-flex align-items-center justify-content-between">
+                <div className="imageContainer">
+                {/* <div
+                      class="row d-flex align-items-center justify-content-between">
                     
-                    ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                            
-                       
-                       
+                    ​<div class="col-xl-3 col-lg-4 col-md-6 col-sm-12">                   
+                            <Link to="/camera">
+                <img src ={cameraIcon} style={{width:"120px"}}/>  
+                </Link>
                          </div> 
-                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                         ​<div 
+                      
+                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
+                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
+                            
+                        </div>
+                        </div>  */}
+                         {/* ​<div 
                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                             <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                             
                         </div> 
-                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                            
-                        </div> 
-                        ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                        ​<div 
+                     
                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                             <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                         </div>
                         ​<div 
-                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                      
                           class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                         </div>
                         ​<div 
-                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                  
                           class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                         </div>
                         ​<div 
-                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
+                      
                           class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
                         </div>
                         
-                    </div>
-
+                    </div> */}
+{/* *********************************************************************************** */}
+  <UploadMultipleImages/> 
                  
-   
-                    ​
+     {/* *************************************************************************************​ */}
                 </div> 
+                </div>
 
 
                 <br></br>
                 {/* <hr class="hr"/> */}
                 <br></br>
-                <h4 class="text-center">OR</h4>
+                <h4 class="h4text">OR</h4>
                 <br></br>
                 {/* <hr class="hr"/> */}
+                <div className="video">
                 <div class="text-center">
                     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT98N-G2yNHOYoeJRr4OKeI_e-hyeWeTMGNyw&usqp=CAU" width="30px" alt=""/>
                     <br></br>
@@ -784,7 +772,7 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                     <button class="btn">Add Videos</button>
                     <br></br>
                     
-
+</div>
                 </div> 
               
 
@@ -884,7 +872,8 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                     <div class="form-group">
                         <label for="exampleFormControlSelect1">Who will show the house*</label>
                         
-                        <select style={{width:"100%", marginLeft:"40px"}}
+                        <select
+                        //  style={{width:"100%", marginLeft:"40px"}}
                          class="form_control" id="exampleFormControlSelect1" value ={this.state.whoWillShowTheHouse} onChange={this.changeWhoWillShowTheHouseHandler}>
                             <option>Select</option>
                             <option>Neighbours</option>
@@ -895,13 +884,14 @@ import AddPropertyService from '../../addservices/AddPropertyService';
                 </div> 
                 <div class="col">
                 <div className="form-group">
-                    <label style={{left:"2.5rem"}}
+                    <label style={{left:"2.9rem"}}
                     for="exampleFormControlSelect1">Contact No*</label>
                     
 
         
                          
-                        <input style={{width:"100%"}}
+                        <input
+                        //  style={{width:"100%"}}
                           type="number" class="form_control" placeholder="+91" aria-label="Secondary Number"
                             aria-describedby="basic-addon1"  value ={this.state.contactNo} onChange={this.changeContactNoHandler}/>
                    

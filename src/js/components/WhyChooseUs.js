@@ -39,25 +39,25 @@ function WhyChooseUs() {
         <div className="containerx1">
             <div className="quality">
                 <WhyChooseSection
-                    icon={<img src={broker}/>}
+                    icon={<img src={broker} alt=""/>}
         title="Avoid Brokers"
         desc="we directly connect you to verified owners to save brokerage" 
         
                 />
                 <WhyChooseSection
-                      icon={<img src={freelisting}/>}
+                      icon={<img src={freelisting} alt=""/>}
             
             title="Free listing"
             desc="Easy listing process. Also using WhatsApp"
                 />
                 <WhyChooseSection
-                      icon={<img src={house}/>}
+                      icon={<img src={house} alt=""/>}
             
             title="Shortlist without visit"
             desc="Extensive information makes it easy"
                 />
                 <WhyChooseSection
-                       icon={<img src={agreement}/>}
+                       icon={<img src={agreement} alt=""/>}
             
             title="Rental Agreement"
             desc="Assistance in creating rental agreement & paper work"
@@ -69,7 +69,7 @@ function WhyChooseUs() {
         <div className="containerx2">
             <div className="quality">
                 <WhyChooseSection
-                      icon={<img src={comfort}/>}
+                      icon={<img src={comfort} alt=""/>}
             
             title="Comfort & convenience"
             desc="Furnished Homes with a wide range of amenities. Just move-in 
@@ -77,14 +77,14 @@ with your bags"
                 
                 />
                 <WhyChooseSection
-                      icon={<img src={safety}/>}
+                      icon={<img src={safety} alt=""/>}
             
             title="Safety & Security"
             desc="” High-end security with CCTV cameras and On-call stay supervisor"
                 />
                 
                 <WhyChooseSection
-                       icon={<img src={pocket}/>}
+                       icon={<img src={pocket} alt=""/>}
             
             title="Pocket Friendly"
             desc="Super affordable rooms on rent available on private or sharing basis."

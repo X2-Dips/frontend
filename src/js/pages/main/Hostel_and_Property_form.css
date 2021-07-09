@@ -210,7 +210,104 @@
     grid-gap:2rem;
     gap:0rem;
     width:100%}
+    @media (max-width: 750px){
+     
+     
+     .property_form .row {
+       display: block;
+       width: 55%;
+       margin-left: 2em;
+     }
+    
+    
+   
+      .property_form h4 {
+     margin-left: -17em;
+     margin-right: 3em;
+        margin-bottom: 2em;
+      }
+      .propAvailabeFor {
+        margin-left: 5em;
+      }
+      .radioButton{
+        margin-left: 5em;
+        
+      }
+      .nego{
+        margin-left: 4.3em;
+      }
+      .property_form h5{
+        margin-left: -1em;
+      }
+      .mapMark img{
+        width: 30em;
+      }
+      .heading{
+     margin-right: 10em;
+      
+      }
+      .imageContainer{
+        margin-left: 8em;
+      }
+      .TextArea{
+        margin-right: 0em;
+      }
+      .video{
+        margin-right: 35em;
+
+      }
+     
+    }
+    @media (max-width: 750px){
+      .hostel_form{
+        width: 25%;
+      }
+      .hostel_form .row {
+        display: block;
+        width: 85%;
+        margin-left: 1em;
+      }
+      .hostel_form .row .col .form-group  textarea{
+      margin-right: -2em;
+      }
+      .hostel_form .row .col .form-group1 select{
+      width: 90%;
+      margin-left: -5em;
+      margin-right: -4.8em;
+      }
+     
+      .imageContainer{
+        margin-left: 8em;
+      }
+      .hostel_form h5{
+        margin-left: 11em;
+      }
+      .hostelAmen{
+        margin-left: 3em;
+      }
+      .hostel_form h2{
+        margin-left: 1em;
+      }
+      .roomCheck{
+        margin-left: 5em;
+      }
+      .propAvailable{
+        margin-left: 3em;
+      }
+      .property_form textarea{width:30%;
+        margin-left:-10px;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
+    
+
+    }
+
+    /* ********************************************************************************* */
   .property_form .row .col .form-group .FormSelect1{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    width:50%;
+    grid-gap:0 1rem;gap:0rem;height:6rem}
+     .property_form .row .col .form-group .FormSelect1{
     display:flex;
     align-items:center;
     justify-content:center;
@@ -233,11 +330,16 @@
     padding:0 0 0 1rem;
     font-size:2.4rem
   }
-  .property_form .row .col .form-group  textarea{width:95%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
+  
+  .property_form .row .col .form-group  textarea{width:95%;
+    margin-left:10px;height:6rem;padding:0 0 0 1rem;
+    font-size:1.8rem;color:#2d314d;
+    border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
   .property_form .row .col .form-group{width:90%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
   /* .property_form .row .col .form-group label{position:absolute;top:-.7rem;left:.65rem;color:#0052cc;font-size:1.2rem;background-color:#fff;padding:0 .5rem;font-weight:400;pointer-events:none;cursor:text} */
   .property_form .row .col .form-group select{
     width:90%;
+   
     height:4rem;
     padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
   .property_form .row .col .form-group input{width:90%;
@@ -254,9 +356,14 @@
   
   .property_form .row .col{flex-direction:column;grid-gap:2rem 0;gap:2rem 0;margin:4rem 0}
   .property_form .row .col .form-group{width:90%}
+  .mapmark img{
+    width: 30em;
+  }
+  .TextArea1{
+    width: 100%;
+  }
 
-
-
+ 
 
   .hostel_form{background-color:#fff;border-radius:1rem;padding:4rem 5rem;display:flex;flex-direction:column;grid-gap:2rem;gap:2rem;width:100%}
   .hostel_form .row .col .form-group .FormSelect1{display:flex;align-items:center;justify-content:center;width:50%;grid-gap:0 1rem;gap:0rem;height:6rem}
@@ -270,17 +377,18 @@
   .hostel_form .row .col .form-group3 label{position:absolute;top:-.7rem;left:3.45rem;color:#0052cc;font-size:2.0rem;background-color:#fff;padding:0 .5rem;font-weight:400} 
   .hostel_form .row .col .form-control-1 label{position:absolute;top:-.7rem;left:2.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
   
-  .hostel_form .row .col .form-control1 label{position:absolute;top:-.7rem;left:4.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
+  .hostel_form .row .col .form-control1 label{position:absolute;top:-.4rem;left:4.45rem;color:#0052cc;font-size:1.8rem;background-color:#fff;padding:0 .5rem;font-weight:400}
   .hostel_form .form-group .form_control select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
   .hostel_form .form-group .form-control-1 select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
   .hostel_form .row .col .form-group select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
   .hostel_form .row .col .form-group1 select{width:100%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem}
-  .hostel_form .row .col .form-group  textarea{width:95%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
+  .hostel_form .row .col .form-group  textarea{margin-left:-1em;width:93%;height:6rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
   .hostel_form .row .col .form-group{width:90%;display:-ms-grid;display:grid;place-items:center;height:100%;position:relative}
  
   .hostel_form .row .col .form-group select{
     width:90%;height:4rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
-  .hostel_form .row .col .form-group1 select{width:95%;height:4rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
+  .hostel_form .row .col .form-group1 select{width:93%;margin-left: -4em;
+    height:4rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
   .hostel_form .row .col .form-group input{
     width:90%;height:4rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
   .hostel_form .row .col .form-group1 input{width:95%;height:4rem;padding:0 0 0 1rem;font-size:1.4rem;color:#2d314d;border-radius:.5rem;border:1.8px solid #9698a6;outline:none}
@@ -310,7 +418,13 @@
   .view{
     margin-inline-start: 15%;
   }
- 
- 
-  
+ .TypeOFRoom{
+   margin-left: 2em;
+ }
+ .propAvailable{
+   margin-left: 2.5em;
+ }
+  .hostelAmen{
+    margin-left: 3em;
+  }
   

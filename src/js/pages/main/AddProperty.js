@@ -2,7 +2,7 @@
         
 
 import React from 'react'
-import "./bootstrap.css"
+import "./Hostel_and_Property_form.css";
 const AddProperty = () => {
     return (
         < div class="container">

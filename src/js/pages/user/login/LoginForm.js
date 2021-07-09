@@ -3,17 +3,10 @@ import './Login.css';
 import {  ACCESS_TOKEN } from '../../constants';
 import {  login } from '../../util/APIUtils';
 import { Link, Redirect } from 'react-router-dom'
-import fbLogo from '../../img/fb-logo.png';
-import googleLogo from '../../img/google-logo.png';
-import githubLogo from '../../img/github-logo.png';
-// import SAlert from 'react-s-alert';
-import Header from '../../header/Header';
+
 import LoadingIndicator from '../../header/LoadingIndicator';
 import { RiLoginCircleFill } from "react-icons/ri";
-import  * as AiIcons from 'react-icons/ai'; 
-// import 'react-s-alert/dist/s-alert-default.css';
-// import 'react-s-alert/dist/s-alert-css-effects/slide.css';
-import './Exlog.css';
+
 
 class LoginForm extends Component {
     constructor(props) {
@@ -110,6 +103,7 @@ class LoginForm extends Component {
 
 
         return (
+          <div className="loginContainer">
                 
             <div className="container">
       <div className="form-center ">
@@ -147,6 +141,7 @@ class LoginForm extends Component {
           </h4>
         </form>
       </div>
+    </div>
     </div>
         );
     }

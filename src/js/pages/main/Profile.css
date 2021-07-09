@@ -191,10 +191,10 @@
    width:100%;
   }
 
-  .form-group{
+  /* .form-group{
     width: 100%;
-  }
-  input{
+  } */
+  .input{
     width: 90%;
   }
   .sign-up-form{
@@ -202,5 +202,11 @@
   }
   .form-center{
     margin-left: -140px;
+  }
+  .signupContainer{
+    margin-left: 15rem;
+    width: 90%;
+    height: 40em;
+    margin-bottom: 2em;
   }
 }

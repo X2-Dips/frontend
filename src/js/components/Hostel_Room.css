@@ -19,10 +19,6 @@
   margin-left: 15%;
   margin-top: 0%;
  
-
-
- 
-  
 }
 .btn8{
   margin-left: 15%;
@@ -52,8 +48,7 @@
   flex: 1;
   min-width: 350px;
   height:450px ;
-  
-  /* min-height: 400px; */
+ 
   overflow: hidden;
   margin: 10px;
   padding: 10px;
@@ -123,15 +118,16 @@ margin-top: 15px;
   background:transparent;
   color: beige;
 }
-@media (max-width: 650px){
+@media (max-width: 750px){
   .image2{
-    width: 80%;
+    width: 60%;
     
     display: block;
   }
   .leftright h5{
     margin-top: 30%;
   }
+
   
 }
 

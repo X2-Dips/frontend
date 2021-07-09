@@ -5,7 +5,7 @@ import "./index.css";
 import App from "../src/js/App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
-import Carousel from "./testing/Carousel"
+
 ReactDOM.render(
   <React.StrictMode>
     {/* <CssBaseline /> */}

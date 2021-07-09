@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-import './bootstrap.css'
+import "./Hostel_and_Property_form.css";
 
 import profimage from '../../images/ants/square_profile.png';
 import './Profile.css';

@@ -7,11 +7,10 @@ import {FaBath} from "react-icons/fa";
 import {FiShare2} from "react-icons/fi";
 
 import {MdLocationOn} from "react-icons/md";
-import {HiArrowCircleLeft} from "react-icons/hi";
-import {HiArrowCircleRight} from "react-icons/hi";
+
 import { Link } from 'react-router-dom'
 import pic from '../images/adds/pic.png'
-import "../components/Productcard.css"
+import "../components/Hostel_Room.css"
 
 
 
@@ -21,38 +20,7 @@ function RentCard(props) {
     <div className="rentdetail">
     <Link to={`/rent/${props.rent.id}`} >
     
-   
-{/* 
-    
-    <Link to={`/rent/${props.rent.id}`}>
-    <div className="image2">
-    <div 
-    style={{
-      width: "100%", height: "300px" ,marginInlineStart:"15%", marginBottom:"10%", 
-         backgroundImage:`url(${pic})`,
-      
-    }}>
-    </div>
-    <div className="p3">
-      <h3 className="picdetail">
-      <Link to={`/rent/${props.rent.id}`}>
-      {props.rent.apartmentName} 
-      </Link>
-      </h3>
-      <div className="picdetail">
-     Rs {props.rent.expectedRent}
-      </div>
-      <Link to={`/rent/${props.rent.id}`}>
-      <button className="btn8">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;View&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
-      </Link>
-    
-    
 
-
-    </div>
-    </div>
-    </Link>
-     */}
      <div className="image2">
        <div className="boxes">
        <div 

@@ -1,9 +1,11 @@
 import React,{useState, useEffect} from 'react';
 import axios from "axios";
 import RentCard from "../../components/RentCard";
+import * as AddPropertyService from "../../addservices/AddPropertyService";
 
 const ViewMore_Room = () => {
-    const urll = `http://localhost:8080/api/getProperty`
+    // const urll = `http://localhost:8080/api/getProperty`
+    const urll=AddPropertyService.GET_ROOM_REST_API_URL
     const [rents, setRents]=useState({
        loading:false,
       data:null,

@@ -10,11 +10,11 @@ const Footer = () => {
  className="main-footer">
 
 <form action="">
-                
-<button style={{marginLeft:"35%", marginTop:"-1.2em"}} 
-type="submit" class="btnList">List Your Property</button>
-
-<h2 style={{marginLeft:"10px"}}>Rent Pay Rooms The world’s Fastest Growing 
+<div className="listUrProperty">     
+<button 
+type="submit" className="btnList">List Your Property</button>
+</div>
+<h2 style={{marginLeft:"10px"}} className="footerHeading">Rent Pay Rooms The world’s Fastest Growing 
 rental
  chain services Join Our 
  network
@@ -38,25 +38,28 @@ rental
  
 
     <div className="col">
-    <h3 style={{marginLeft:"50px", marginBottom:"7px"}}>Download RPR App for exciting Offers.</h3>
+    <div className="downloadApp">
+    <h3 className="Download">Download RPR App for exciting Offers.</h3>
     
-    <button style={{marginLeft:"50px", marginBottom:"7px"}}
+    <button 
     type="submit"  class="ios"><h2> GET IT ON </h2><h1>Google Play</h1>
     
     <div class="xyz"> 
     <img src={playstore} alt=""  /> 
 </div>
     </button>
-
+</div>
    
 </div>
   
 
 
-      <div 
-       className="col">
+      <div  className="col">
+      
      <hr class="vertical"/>
-        <h3 style={{marginLeft:"40px", marginBottom:"10px", fontWeight:700}}
+        
+        <div className="AboutUs">
+          <h3 
         className="about">About Us</h3>
         <ui 
         className="list-unstyled">
@@ -64,17 +67,20 @@ rental
           <li style={{marginLeft:"40px"}}>Blogs</li>
           <li style={{marginLeft:"40px"}}>Support</li>
         </ui>
+        </div>
       </div>
      
       <div className="col">
       
      <hr class="vertical"/>
-        <h3 style={{marginLeft:"40px", marginBottom:"10px", fontWeight:700}}>Teams and conditions</h3>
+     <div className="TnC">
+        <h3 className="terms" >Teams and conditions</h3>
         <ui className="list-unstyled">
           <li style={{marginLeft:"40px"}}>Tenant Policies</li>
           <li style={{marginLeft:"40px"}}> Landlord Policy</li>
           <li style={{marginLeft:"40px"}}>Privacy Policy</li>
         </ui>
+        </div>
       </div>
     </div>
     <br></br>

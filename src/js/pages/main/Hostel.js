@@ -1,7 +1,6 @@
 import React from 'react'
 import {Component} from 'react';
-import { Link } from 'react-router-dom'
-import {AiFillCamera} from "react-icons/ai";
+
 import {FcFilingCabinet} from "react-icons/fc";
 import {GoDeviceDesktop} from 'react-icons/go';
 import {FaBed} from 'react-icons/fa';
@@ -23,13 +22,14 @@ import {GiLift} from 'react-icons/gi';
 import {BsWifi} from 'react-icons/bs';
 import double1 from "../../images/adds/double1.png";
 import first2 from "../../images/adds/first2.png";
-import upload from "../../images/ants/upload.png";
+
 
 import third1 from "../../images/adds/third1.png";
 import four1 from "../../images/adds/four1.png";
 
 import AddPropertyService from '../../addservices/AddPropertyService';
-import "./bootstrap.css";
+import "./Hostel_and_Property_form.css";
+import UploadMultipleImages from './UploadMultipleImages';
 
 class Hostel extends Component {
 
@@ -286,9 +286,10 @@ class Hostel extends Component {
     {/* <hr class="hr"></hr> */}
     </div>
     <form action="" className="hostel_form">
-   <h2> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the type of rooms available in your Hostel/PG*</h2>
+   <h2 className="TypeOFRoom">Select the type of rooms available in your Hostel/PG*</h2>
    
    <div class="container ">
+   <div className="roomCheck">
    <div class="row">
                 <div class="col">
                 <div class="form-group3">
@@ -322,6 +323,7 @@ class Hostel extends Component {
                  <label for="four"> Four</label>
                  </div>
                  </div>
+                </div>
                 </div>
                 </div>
 
@@ -469,10 +471,12 @@ class Hostel extends Component {
             </div>
         <br></br>
         
-        <lable> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Property Available For</lable> 
+        <lable className="propAvailable"> Property Available For</lable> 
         <br></br> 
         <br></br>
-        <div style={{marginTop:"-35px", marginBottom:"-55px", marginLeft:"30px",marginRight:"20em"}}
+        <div className="maleFemale">
+        <div 
+        style={{marginTop:"-35px", marginBottom:"-55px"}}
          class ="row">
                      <div class ="col">
                      <div class="form-group2">
@@ -497,6 +501,7 @@ class Hostel extends Component {
                         </div>
                         </div>
                         
+                        </div>
                         </div>
       
                               
@@ -534,7 +539,7 @@ class Hostel extends Component {
             
             <div class = "container">
 
-            <div style={{marginTop:"-55px", marginBottom:"-55px",marginLeft:"20px"}}
+            <div style={{marginTop:"-55px", marginBottom:"-55px",marginLeft:"35px"}}
             className="row">
             <div className="col">
             <div class="form-group1">
@@ -654,13 +659,17 @@ class Hostel extends Component {
                    
            
                     </div>
+                    <br></br>
+                    
                     <div className="row">
                     <div className="col">
                     <div class="form-group">
+                    
                 <label for="label">Description</label>
                 
                 <textarea name="" class="form-control1" id="" cols="30" rows="10" value={this.state.description} onChange={this.changeDescriptionHandler}></textarea>
             </div>
+           
             </div>
                     </div>
                   
@@ -672,11 +681,12 @@ class Hostel extends Component {
                <h1 className="heading">Amenities </h1>
                 </div>
                    {/* <hr class="hr"/> */}
+               
                   
                     <h1 style={{marginLeft:"3em"}}>Available Services</h1>
+                  
                     
-                    
-            <div style={{marginTop:"-55px", marginBottom:"-55px"}}
+            <div style={{marginTop:"-45px", marginBottom:"-55px"}}
             class="row">
                 <div class="col">
                     <div class="form-group">
@@ -714,7 +724,7 @@ class Hostel extends Component {
 
             </div>
                              <br></br>
-                             <h1 style={{marginLeft:"3em"}}>Available Amenities</h1>
+                             <h1 className="hostelAmen">Available Amenities</h1>
                     
                     <div class="container">
                     <div style={{marginLeft:"3em"}}
@@ -766,7 +776,8 @@ class Hostel extends Component {
                         <label for="formGroupExampleInput"> <GiChickenOven/>  Cooking   </label>
                     </div>
                     </div>
-                    <div style={{marginRight:"3em"}}
+                    <div 
+                    style={{marginRight:"3em"}}
                 class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
                     <div class="form-group3">
                         <input type="checkbox"  value="Power BackUP" onChange={this.changePowerBackUp}/>
@@ -791,64 +802,13 @@ class Hostel extends Component {
 
             <div class="container">
                 
-            <h5 style={{marginLeft:"5em"}}>UPLOAD UPTO 20 PHOTOS</h5>
+            {/* <h5 >UPLOAD UPTO 20 PHOTOS</h5> */}
                 <br></br>
-                <div style={{marginLeft:"58em", marginTop:"-3em"}}
-                className="webcam">
-                {/* Click Here To Take Image From Camera */}
-                Image From Camera
-                <br></br>
-                <Link to="/camera">
-                <AiFillCamera size={50} style={{marginLeft:"3.5em"}}/>
-                
-                    
-                </Link>
-                
-                   
-                </div>
+               
                 
                 <div class="container d-flex align-items-center justify-content-center">
-                
-                <div style={{marginTop:"5em",marginLeft:"2em"}}
-                class="row d-flex align-items-center justify-content-between">
-                    
-                    ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                    class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                            
-                       
-                       
-                         </div> 
-                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                            
-                        </div> 
-                         ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                         class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                            
-                        </div> 
-                        ​<div  style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                        class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                            <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                        </div>
-                        ​<div 
-                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                        </div>
-                        ​<div 
-                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                        </div>
-                        ​<div 
-                         style={{marginTop:"-70px", marginBottom:"-55px",marginRight:"3em"}} 
-                          class="col-xl-3 col-lg-4 col-md-6 col-sm-12">
-                           <img src={upload} class="img-thumbnail" width="120px" alt=""/>
-                        </div>
-                        
+                <div className="imageContainer">
+                <UploadMultipleImages/>
                     </div>
 
                     <br></br>

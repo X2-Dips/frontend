@@ -20,29 +20,25 @@
 }
 
 form .btnList{
-    /* height:40px; */
+   
     height: 40px;
-    width: 13%;
+    width: 17%;
     background:rgb(79, 156, 69);
     border:none;
-  
-
-    /* padding:2px 30px ;  */
     border-radius: 6px;
- /* padding: 2px 30px; */
-
-    margin: 0px 40px 0px 360px;
+    /* margin: 0px 40px 0px 360px; */
     position:absolute;
     left:50%;
     font-weight: 600;
     cursor: pointer;
     color:#fff;
-    /* border-radius: 20px; */
-
+    margin-left: 31%;
+    margin-top: -1.2em;
 }
 .btn:hover{
     background: rgb(107,204,94);
 }
+
 
  .btn h2{
     color: white;
@@ -67,7 +63,8 @@ form .btnList{
     cursor: pointer;
     padding:10px 20px 30px 5px; 
     right: 100%;
-    margin-left: 10px;
+    margin-left: 80px;
+    margin-bottom: 7px;
     
  } 
 
@@ -129,5 +126,54 @@ form .btnList{
   
 border-radius: 0%;
 width: 0px;
+
+}
+.about{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+.Download{
+    margin-left: 50px;
+    margin-bottom: 7px;
+}
+.terms{
+    margin-left: 40px;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+@media (max-width: 1000px){
+    .downloadApp{
+        display: block;
+    
+        margin-bottom: 1em;
+        margin-right: 6em;
+        margin-left: -1em;
+    }
+    .footerHeading{
+        margin-bottom: 2em;
+    }
+    .Download{
+        margin-left: 5em;
+    }
+    .AboutUs{
+        display: block;
+        width: 100%;
+        margin-left: 2.5em;
+    }
+    .main-footer{
+        display: block;
+    }
+  .listUrProperty .btnList{
+      display: block;
+      margin-top: 4em;
+     width: 40%;
+      margin-left: -7em;
+  }
+   
+    .ios{
+        width: 80%;
+    }
+
 
 }

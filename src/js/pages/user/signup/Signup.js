@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import './Signup.css';
 import { Link, Redirect } from 'react-router-dom'
 import { signup } from '../../util/APIUtils';
-import fbLogo from '../../img/fb-logo.png'
-import googleLogo from '../../img/google-logo.png';
-import githubLogo from '../../img/github-logo.png';
-// import Alert from 'react-s-alert';
+
 import { RiLoginCircleFill } from "react-icons/ri";
 
 class Signup extends Component {
@@ -81,11 +78,13 @@ class SignupForm extends Component {
         return (
             
       <div className="form-center ">
+      <div className="signupContainer">
+
         <h1>Sign Up</h1>
-        <p>Register yourself to access all services.</p>
+        <p style={{marginBottom:"-2rem"}}>Register yourself to access all services.</p>
 
         <form action="" className="sign-up-form" onSubmit={this.handleSubmit}>
-          <div className="form-col-div">
+         
             <div className="form-group">
               <label htmlFor="firstName">First Name*</label>
               <input
@@ -98,6 +97,8 @@ class SignupForm extends Component {
                 required
               />
             </div>
+         
+            
 
             <div className="form-group">
               <label htmlFor="lastName">Last Name*</label>
@@ -111,7 +112,7 @@ class SignupForm extends Component {
                 required
               />
             </div>
-            </div>
+            
          
           
           <div className="form-group">
@@ -151,6 +152,7 @@ class SignupForm extends Component {
             </Link>
           </h4>
         </form>
+        </div>
       </div>
          
 

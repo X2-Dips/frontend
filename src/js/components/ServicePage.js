@@ -35,38 +35,39 @@ padding:10rem 10rem;
 export default function ServicePage(){
     return (
         <ServiceitemStyle>
-        <div className="container">
+        <div 
+        className="container">
         <div className="service-item"> 
             <ServiceSection/>
             <ServiceSection
-               icon={<img src={carpentry}/>}
+               icon={<img src={carpentry} alt=""/>}
             
                 title="Carpentry"
             />
             <ServiceSection
-                 icon={<img src={plumber}/>}
+                 icon={<img src={plumber} alt=""/>}
             
             title="Plumber"
             />
             <ServiceSection
-                 icon={<img src={movers}/>}
+                 icon={<img src={movers} alt=""/>}
             
             title="Movers & Packers"
             />
             <ServiceSection
-                 icon={<img src={electric}/>}
+                 icon={<img src={electric} alt=""/>}
             
             title="Electrician"
             />
 
             <ServiceSection
-                 icon={<img src={clean}/>}
+                 icon={<img src={clean} alt=""/>}
             
             title="Cleaning"
             />
 
             <ServiceSection
-                 icon={<img src={pest}/>}
+                 icon={<img src={pest} alt=""/>}
             
             title="Pest Control"
             />

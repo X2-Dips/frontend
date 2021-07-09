@@ -7,6 +7,7 @@ import rprLogo from "../../images/adds/rprLogo.jpg";
 import {CgProfile} from 'react-icons/cg';
 
 
+
 const Navbar = (props) => {
   const [click, setClick] = useState(false);
 
@@ -40,6 +41,7 @@ const Navbar = (props) => {
   return (
     <>
       <nav className="container nav flexBox jcspb h-100">
+    
         <Link to="/" className="brand-logo">
           
           <img src={rprLogo} alt="Logo" />
@@ -98,6 +100,7 @@ const Navbar = (props) => {
           </div>
         </div>
         </div>
+        
       </nav>
       <Menus click={click} closeMenu={closeMenu} authenticated={props.authenticated} onLogout={props.onLogout}  />
     </>

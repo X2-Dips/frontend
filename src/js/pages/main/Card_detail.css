@@ -149,4 +149,13 @@ img{
     padding-right: 40%;
    
 } */
-
+.luggageHeading{
+    margin-left: 10em;
+    font-size: x-large;
+    margin-bottom: 1em;
+    
+}
+.luggageCheckbox{
+    margin-left: 1em;
+    margin-bottom: 1em;
+}

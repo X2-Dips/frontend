@@ -218,13 +218,13 @@
     height:5rem
 
   }
-  .form-group{
+  /* .form-group{
     white-space: nowrap;
     padding-left: 0.4em;
     pointer-events: 0.4em;
     margin: 8px;
     
-  }
+  } */
   /* .form-group .formSelect1 .label{
     position:absolute;
     top:-.7rem;left:.65rem;

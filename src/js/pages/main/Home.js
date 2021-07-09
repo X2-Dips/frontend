@@ -4,22 +4,25 @@ import "./Card_detail.css";
 import axios from "axios";
 import { Link } from 'react-router-dom'
 import "../../components/Carousels.css";
+import * as AddPropertyService from "../../addservices/AddPropertyService";
 
-import ProductCard from "../../components/ProductCard";
+
+
 import RentCard from "../../components/RentCard";
 import ServicePage from "../../components/ServicePage";
 import WhyChooseUs from "../../components/WhyChooseUs";
 import Testimonial from "../../components/Testimonial";
-import ViewMore_Room from "../main/ViewMore_Room";
+
+import HostelDetailCard from "../../components/HostelDetailCard";
+import 'simplebar'; 
+import 'simplebar/dist/simplebar.css';
 
 
 
 
-// const Home = () => {
-//   const deals = data.products.filter((product) => product.deals === true);
 function Home(){
-
-    const url = `http://localhost:8080/api/getHostel?page=1&limit=4`
+ const url = AddPropertyService.GET_HOSTEL_REST_API_URL
+    // const url = `http://localhost:8080/api/getHostel?page=1&limit=4`
   const [products, setProducts]=useState({
      loading:false,
     data:null,
@@ -32,7 +35,7 @@ function Home(){
     data:null,
     error:false
     })
-    axios.get(url)
+     axios.get(url)
     .then(response => {
       setProducts({
         loading:false,
@@ -68,7 +71,7 @@ function Home(){
     products.data.map((product,key)=>
     <span>
       {/* {product.city} */}
-      <ProductCard 
+      <HostelDetailCard 
         product={product}
       />
     </span>
@@ -77,7 +80,8 @@ function Home(){
   }
 
   //*********************************************Rent*********************************************************************** */
-  const urll = `http://localhost:8080/api/getProperty`
+  // const urll = `http://localhost:8080/api/getProperty?limit=4`
+  const urll=AddPropertyService.GET_ROOM_REST_API_URL
   const [rents, setRents]=useState({
      loading:false,
     data:null,
@@ -136,18 +140,21 @@ function Home(){
 
 //************************************************end rent******************************************************************************* */
   return (
+    <div data-simplebar>
     <div>
+    {/* <ScrollBarTop/> */}
+    
       <Carousels />
      
 
                 <form className="container9">
-                {/* <div class="inputs"> */}
+        
                 <div>
                   <h1  style={{color:"black", textAlign:"center", fontWeight:"600"}}>Search Property</h1>
                 </div>
                 <br></br>
                 <div class="location-input">
-                <label>Landmark</label> 
+                <label>State</label> 
                 <input type="text" required placeholder="Enter your Location"/>
                 </div>
                 <br></br>
@@ -159,7 +166,7 @@ function Home(){
                   <br></br>
                   <div class="state-input">
 
-                    <label>State</label> <input type="text" required placeholder="Enter your State"/>
+                    <label>Landmark</label> <input type="text" required placeholder="Enter your State"/>
 
                </div>
                <br></br>
@@ -177,11 +184,7 @@ function Home(){
 
 </div>
                
-               {/* <div class="budget">
-                    <h3>Budget range</h3>
-
-                    <span class="mini">Minimum</span> <span class="max">Maximum</span>
-                </div> */}
+              
                 <div class="budget">
                       <label for="price">Rs.500/- - Rs.1,00,000/- </label>
                       <input type="range" min="500" max="1000000" class="budget-range"/>
@@ -190,7 +193,7 @@ function Home(){
                 
                 <div class="btn-box">
 
- {/* <p>By joining, you agree to the and Privacy policy</p>  */}
+
 
 <button>Search</button>
 
@@ -198,6 +201,7 @@ function Home(){
 
 
                 </form>
+                <br></br>
                 {/* </div> */}
       <hr className="hr1"></hr>
       <h1 className="heading2" >Hostel & PG</h1>
@@ -207,10 +211,8 @@ function Home(){
       <br></br>
       <br></br>
       <Link  to="/viewmoreHostel">
-      <button 
-      style={{background:"black", border:"none", color:"white",width:"150px",height:"30px",
-      borderRadius:"5px",marginLeft:"45em"
-      }}>View More</button>
+      <button className="viewMoreBtn">
+      View More</button>
       </Link>
       <br></br>
       <br></br>
@@ -223,14 +225,12 @@ function Home(){
       <br />
       <br></br>
       <Link  to="/viewmoreRoom">
-      <button 
-      style={{background:"black", border:"none", color:"white",width:"150px",height:"30px",
-      borderRadius:"5px",marginLeft:"45em"
-      }}>View More
+      <button className="viewMoreBtn">View More
       </button>
      
       </Link>
-      {/* <br></br> */}
+      <br></br>
+      <br></br>
      
      
       <hr className="hr1"></hr>
@@ -265,8 +265,9 @@ function Home(){
     
 
           
-     
+ 
       
+    </div>
     </div>
   );
 };

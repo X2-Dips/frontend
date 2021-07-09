@@ -15,6 +15,7 @@ import { Redirect } from "react-router";
 
 
 
+
 import { withRouter } from 'react-router';
 class App extends Component {
   
@@ -93,12 +94,14 @@ class App extends Component {
   return (
    
     <div className="grid-container">
+ 
       <Header  authenticated={this.state.authenticated} currentUser={this.state.currentUser} handleLogout={this.handleLogout}/>
       <Main authenticated={this.state.authenticated} currentUser={this.state.currentUser} handleLogout={this.handleLogout} />
       <Footer />
+  
       
       
-      
+    
       
     </div>
   );

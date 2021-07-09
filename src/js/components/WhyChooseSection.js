@@ -20,7 +20,7 @@ text-align:center;
 
 export default function WhyChooseSection({
    
-        icon=<img src={clean}/>,
+        icon=<img src={clean} alt=""/>,
         title="Avoid Brokers",
         desc="we directly connect you to verified owners to save brokerage" 
         

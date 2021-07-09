@@ -27,6 +27,16 @@
 .App-link {
   color: #61dafb;
 }
+::-webkit-scrollbar{
+  width: 25px;
+}
+::-webkit-scrollbar-track{
+  background: #9698a6;
+}
+::-webkit-scrollbar-thumb{
+  background-image: linear-gradient(red, yellow);
+  border-radius: 25px
+}
 
 @keyframes App-logo-spin {
   from {
